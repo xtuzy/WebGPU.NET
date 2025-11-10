@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <LangVersion>preview</LangVersion>
+    <StartupObject />
+    <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == '' AND '$(PackAsTool)' != 'true'">$(NETCoreSdkRuntimeIdentifier)</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CppAst.CodeGen" Version="0.27.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Headers\Dawn\" />
+    <Folder Include="Headers\wgpu_native\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\WebGPU.NET.Dawn.Native\runtimes\win-x64\native\webgpu.h" Link="Headers\Dawn\webgpu.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WebGPU.NET.Wgpu.Native\runtimes\win-x64\native\webgpu.h" Link="Headers\wgpu_native\webgpu.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\WebGPU.NET.Wgpu.Native\runtimes\win-x64\native\wgpu.h" Link="Headers\wgpu_native\wgpu.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="FakeCStdHeaders\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

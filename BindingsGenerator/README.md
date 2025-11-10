@@ -1,0 +1,2 @@
+﻿- 为dawn和wgpu-native生成绑定
+- 最开始的源码来自[BindingsGenerator](https://github.com/Trivaxy/WGPU.NET/tree/master/BindingsGenerator)，但是其之后没有更新了，因此弄过来对接新版本WebGPU

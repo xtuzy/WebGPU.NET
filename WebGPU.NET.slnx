@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/解决方案项/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="BindingsGenerator/BindingsGenerator.csproj" />
+  <Project Path="WebGPU.NET.Dawn.Desktop.Demo/WebGPU.NET.Dawn.Desktop.Demo.csproj" />
+  <Project Path="WebGPU.NET.Dawn.Native/WebGPU.NET.Dawn.Native.csproj" />
+  <Project Path="WebGPU.NET.Dawn/WebGPU.NET.Dawn.csproj" />
+  <Project Path="WebGPU.NET.Wgpu.Desktop.Demo/WebGPU.NET.Wgpu.Desktop.Demo.csproj" />
+  <Project Path="WebGPU.NET.Wgpu.Native/WebGPU.NET.Wgpu.Native.csproj" />
+  <Project Path="WebGPU.NET.Wgpu/WebGPU.NET.Wgpu.csproj" />
+</Solution>

@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants);WGPUNATIVE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants);WGPUNATIVE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\WebGPU.NET.Dawn.Desktop.Demo\BaseApp.cs" Link="BaseApp.cs" />
+    <Compile Include="..\WebGPU.NET.Dawn.Desktop.Demo\EvergineTeamHelloTriangle.cs" Link="EvergineTeamHelloTriangle.cs" />
+    <Compile Include="..\WebGPU.NET.Dawn.Desktop.Demo\HelloTriangle.cs" Link="HelloTriangle.cs" />
+    <Compile Include="..\WebGPU.NET.Dawn.Desktop.Demo\Program.cs" Link="Program.cs" />
+    <Compile Include="..\WebGPU.NET.Dawn.Desktop.Demo\wgpu-native_examples_triangle.cs" Link="wgpu-native_examples_triangle.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Silk.NET.Maths" Version="2.22.0" />
+    <PackageReference Include="Silk.NET.Windowing" Version="2.22.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebGPU.NET.WGPU.Native\WebGPU.NET.WGPU.Native.csproj" />
+    <ProjectReference Include="..\WebGPU.NET.WGPU\WebGPU.NET.WGPU.csproj" />
+  </ItemGroup>
+
+</Project>
