@@ -122,16 +122,7 @@ namespace BindingsGenerator
 
                          member.Name = member.Name.Replace("_", "");
                      }));
-            options.MappingRules.Add(
 
-                    //让结构的Field的首字母大写
-                    r => r.MapAll<CppElement>().CSharpAction((converter, element) =>
-                     {
-                         if (element is not CSharpField member)
-                             return;
-                         // field 首字母大写
-                         member.Name = member.Name.Substring(0, 1).ToUpper() + member.Name.Substring(1);
-                     }));
             options.MappingRules.Add(
 
                     //避免结构中的指针类型被转换
@@ -284,6 +275,18 @@ namespace BindingsGenerator
                            }
                        }
                    }));
+            options.MappingRules.Add(
+                    //让生成的包含Impl结尾结构名去除Impl
+                    r => r.MapAll<CppElement>().CSharpAction((converter, element) =>
+                    {
+                        if (element is CSharpStruct member)
+                        {
+                            if (member.Name.EndsWith("Impl"))
+                            {
+                                member.Name = member.Name.Substring(0, member.Name.Length - "Impl".Length);
+                            }
+                        }
+                    }));
 
             //要编译的头文件所依赖的头文件
             options.IncludeFolders.AddRange(sourceHeaderDirectory);

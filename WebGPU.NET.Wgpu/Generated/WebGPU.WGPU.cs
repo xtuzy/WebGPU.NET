@@ -2719,449 +2719,449 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUStringView
         {
-            public byte* Data;
+            public byte* data;
             
-            public nuint Length;
+            public nuint length;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUAdapterImpl : IEquatable<WebGPU.WGPUAdapterImpl>
+        public readonly partial struct WGPUAdapter : IEquatable<WebGPU.WGPUAdapter>
         {
-            public WGPUAdapterImpl(nint handle) => Handle = handle;
+            public WGPUAdapter(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUAdapterImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUAdapter other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUAdapterImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUAdapter other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUAdapterImpl left, WGPUAdapterImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUAdapter left, WGPUAdapter right) => left.Equals(right);
             
-            public static bool operator !=(WGPUAdapterImpl left, WGPUAdapterImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUAdapter left, WGPUAdapter right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUBindGroupImpl : IEquatable<WebGPU.WGPUBindGroupImpl>
+        public readonly partial struct WGPUBindGroup : IEquatable<WebGPU.WGPUBindGroup>
         {
-            public WGPUBindGroupImpl(nint handle) => Handle = handle;
+            public WGPUBindGroup(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUBindGroupImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUBindGroup other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUBindGroupImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUBindGroup other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUBindGroupImpl left, WGPUBindGroupImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUBindGroup left, WGPUBindGroup right) => left.Equals(right);
             
-            public static bool operator !=(WGPUBindGroupImpl left, WGPUBindGroupImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUBindGroup left, WGPUBindGroup right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUBindGroupLayoutImpl : IEquatable<WebGPU.WGPUBindGroupLayoutImpl>
+        public readonly partial struct WGPUBindGroupLayout : IEquatable<WebGPU.WGPUBindGroupLayout>
         {
-            public WGPUBindGroupLayoutImpl(nint handle) => Handle = handle;
+            public WGPUBindGroupLayout(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUBindGroupLayoutImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUBindGroupLayout other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUBindGroupLayoutImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUBindGroupLayout other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUBindGroupLayoutImpl left, WGPUBindGroupLayoutImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUBindGroupLayout left, WGPUBindGroupLayout right) => left.Equals(right);
             
-            public static bool operator !=(WGPUBindGroupLayoutImpl left, WGPUBindGroupLayoutImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUBindGroupLayout left, WGPUBindGroupLayout right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUBufferImpl : IEquatable<WebGPU.WGPUBufferImpl>
+        public readonly partial struct WGPUBuffer : IEquatable<WebGPU.WGPUBuffer>
         {
-            public WGPUBufferImpl(nint handle) => Handle = handle;
+            public WGPUBuffer(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUBufferImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUBuffer other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUBufferImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUBuffer other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUBufferImpl left, WGPUBufferImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUBuffer left, WGPUBuffer right) => left.Equals(right);
             
-            public static bool operator !=(WGPUBufferImpl left, WGPUBufferImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUBuffer left, WGPUBuffer right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUCommandBufferImpl : IEquatable<WebGPU.WGPUCommandBufferImpl>
+        public readonly partial struct WGPUCommandBuffer : IEquatable<WebGPU.WGPUCommandBuffer>
         {
-            public WGPUCommandBufferImpl(nint handle) => Handle = handle;
+            public WGPUCommandBuffer(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUCommandBufferImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUCommandBuffer other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUCommandBufferImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUCommandBuffer other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUCommandBufferImpl left, WGPUCommandBufferImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUCommandBuffer left, WGPUCommandBuffer right) => left.Equals(right);
             
-            public static bool operator !=(WGPUCommandBufferImpl left, WGPUCommandBufferImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUCommandBuffer left, WGPUCommandBuffer right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUCommandEncoderImpl : IEquatable<WebGPU.WGPUCommandEncoderImpl>
+        public readonly partial struct WGPUCommandEncoder : IEquatable<WebGPU.WGPUCommandEncoder>
         {
-            public WGPUCommandEncoderImpl(nint handle) => Handle = handle;
+            public WGPUCommandEncoder(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUCommandEncoderImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUCommandEncoder other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUCommandEncoderImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUCommandEncoder other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUCommandEncoderImpl left, WGPUCommandEncoderImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUCommandEncoder left, WGPUCommandEncoder right) => left.Equals(right);
             
-            public static bool operator !=(WGPUCommandEncoderImpl left, WGPUCommandEncoderImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUCommandEncoder left, WGPUCommandEncoder right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUComputePassEncoderImpl : IEquatable<WebGPU.WGPUComputePassEncoderImpl>
+        public readonly partial struct WGPUComputePassEncoder : IEquatable<WebGPU.WGPUComputePassEncoder>
         {
-            public WGPUComputePassEncoderImpl(nint handle) => Handle = handle;
+            public WGPUComputePassEncoder(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUComputePassEncoderImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUComputePassEncoder other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUComputePassEncoderImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUComputePassEncoder other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUComputePassEncoderImpl left, WGPUComputePassEncoderImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUComputePassEncoder left, WGPUComputePassEncoder right) => left.Equals(right);
             
-            public static bool operator !=(WGPUComputePassEncoderImpl left, WGPUComputePassEncoderImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUComputePassEncoder left, WGPUComputePassEncoder right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUComputePipelineImpl : IEquatable<WebGPU.WGPUComputePipelineImpl>
+        public readonly partial struct WGPUComputePipeline : IEquatable<WebGPU.WGPUComputePipeline>
         {
-            public WGPUComputePipelineImpl(nint handle) => Handle = handle;
+            public WGPUComputePipeline(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUComputePipelineImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUComputePipeline other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUComputePipelineImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUComputePipeline other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUComputePipelineImpl left, WGPUComputePipelineImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUComputePipeline left, WGPUComputePipeline right) => left.Equals(right);
             
-            public static bool operator !=(WGPUComputePipelineImpl left, WGPUComputePipelineImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUComputePipeline left, WGPUComputePipeline right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUDeviceImpl : IEquatable<WebGPU.WGPUDeviceImpl>
+        public readonly partial struct WGPUDevice : IEquatable<WebGPU.WGPUDevice>
         {
-            public WGPUDeviceImpl(nint handle) => Handle = handle;
+            public WGPUDevice(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUDeviceImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUDevice other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUDeviceImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUDevice other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUDeviceImpl left, WGPUDeviceImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUDevice left, WGPUDevice right) => left.Equals(right);
             
-            public static bool operator !=(WGPUDeviceImpl left, WGPUDeviceImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUDevice left, WGPUDevice right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUInstanceImpl : IEquatable<WebGPU.WGPUInstanceImpl>
+        public readonly partial struct WGPUInstance : IEquatable<WebGPU.WGPUInstance>
         {
-            public WGPUInstanceImpl(nint handle) => Handle = handle;
+            public WGPUInstance(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUInstanceImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUInstance other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUInstanceImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUInstance other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUInstanceImpl left, WGPUInstanceImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUInstance left, WGPUInstance right) => left.Equals(right);
             
-            public static bool operator !=(WGPUInstanceImpl left, WGPUInstanceImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUInstance left, WGPUInstance right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUPipelineLayoutImpl : IEquatable<WebGPU.WGPUPipelineLayoutImpl>
+        public readonly partial struct WGPUPipelineLayout : IEquatable<WebGPU.WGPUPipelineLayout>
         {
-            public WGPUPipelineLayoutImpl(nint handle) => Handle = handle;
+            public WGPUPipelineLayout(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUPipelineLayoutImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUPipelineLayout other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUPipelineLayoutImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUPipelineLayout other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUPipelineLayoutImpl left, WGPUPipelineLayoutImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUPipelineLayout left, WGPUPipelineLayout right) => left.Equals(right);
             
-            public static bool operator !=(WGPUPipelineLayoutImpl left, WGPUPipelineLayoutImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUPipelineLayout left, WGPUPipelineLayout right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUQuerySetImpl : IEquatable<WebGPU.WGPUQuerySetImpl>
+        public readonly partial struct WGPUQuerySet : IEquatable<WebGPU.WGPUQuerySet>
         {
-            public WGPUQuerySetImpl(nint handle) => Handle = handle;
+            public WGPUQuerySet(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUQuerySetImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUQuerySet other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUQuerySetImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUQuerySet other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUQuerySetImpl left, WGPUQuerySetImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUQuerySet left, WGPUQuerySet right) => left.Equals(right);
             
-            public static bool operator !=(WGPUQuerySetImpl left, WGPUQuerySetImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUQuerySet left, WGPUQuerySet right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUQueueImpl : IEquatable<WebGPU.WGPUQueueImpl>
+        public readonly partial struct WGPUQueue : IEquatable<WebGPU.WGPUQueue>
         {
-            public WGPUQueueImpl(nint handle) => Handle = handle;
+            public WGPUQueue(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUQueueImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUQueue other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUQueueImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUQueue other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUQueueImpl left, WGPUQueueImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUQueue left, WGPUQueue right) => left.Equals(right);
             
-            public static bool operator !=(WGPUQueueImpl left, WGPUQueueImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUQueue left, WGPUQueue right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPURenderBundleImpl : IEquatable<WebGPU.WGPURenderBundleImpl>
+        public readonly partial struct WGPURenderBundle : IEquatable<WebGPU.WGPURenderBundle>
         {
-            public WGPURenderBundleImpl(nint handle) => Handle = handle;
+            public WGPURenderBundle(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPURenderBundleImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPURenderBundle other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPURenderBundleImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPURenderBundle other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPURenderBundleImpl left, WGPURenderBundleImpl right) => left.Equals(right);
+            public static bool operator ==(WGPURenderBundle left, WGPURenderBundle right) => left.Equals(right);
             
-            public static bool operator !=(WGPURenderBundleImpl left, WGPURenderBundleImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPURenderBundle left, WGPURenderBundle right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPURenderBundleEncoderImpl : IEquatable<WebGPU.WGPURenderBundleEncoderImpl>
+        public readonly partial struct WGPURenderBundleEncoder : IEquatable<WebGPU.WGPURenderBundleEncoder>
         {
-            public WGPURenderBundleEncoderImpl(nint handle) => Handle = handle;
+            public WGPURenderBundleEncoder(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPURenderBundleEncoderImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPURenderBundleEncoder other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPURenderBundleEncoderImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPURenderBundleEncoder other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPURenderBundleEncoderImpl left, WGPURenderBundleEncoderImpl right) => left.Equals(right);
+            public static bool operator ==(WGPURenderBundleEncoder left, WGPURenderBundleEncoder right) => left.Equals(right);
             
-            public static bool operator !=(WGPURenderBundleEncoderImpl left, WGPURenderBundleEncoderImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPURenderBundleEncoder left, WGPURenderBundleEncoder right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPURenderPassEncoderImpl : IEquatable<WebGPU.WGPURenderPassEncoderImpl>
+        public readonly partial struct WGPURenderPassEncoder : IEquatable<WebGPU.WGPURenderPassEncoder>
         {
-            public WGPURenderPassEncoderImpl(nint handle) => Handle = handle;
+            public WGPURenderPassEncoder(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPURenderPassEncoderImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPURenderPassEncoder other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPURenderPassEncoderImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPURenderPassEncoder other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPURenderPassEncoderImpl left, WGPURenderPassEncoderImpl right) => left.Equals(right);
+            public static bool operator ==(WGPURenderPassEncoder left, WGPURenderPassEncoder right) => left.Equals(right);
             
-            public static bool operator !=(WGPURenderPassEncoderImpl left, WGPURenderPassEncoderImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPURenderPassEncoder left, WGPURenderPassEncoder right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPURenderPipelineImpl : IEquatable<WebGPU.WGPURenderPipelineImpl>
+        public readonly partial struct WGPURenderPipeline : IEquatable<WebGPU.WGPURenderPipeline>
         {
-            public WGPURenderPipelineImpl(nint handle) => Handle = handle;
+            public WGPURenderPipeline(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPURenderPipelineImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPURenderPipeline other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPURenderPipelineImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPURenderPipeline other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPURenderPipelineImpl left, WGPURenderPipelineImpl right) => left.Equals(right);
+            public static bool operator ==(WGPURenderPipeline left, WGPURenderPipeline right) => left.Equals(right);
             
-            public static bool operator !=(WGPURenderPipelineImpl left, WGPURenderPipelineImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPURenderPipeline left, WGPURenderPipeline right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUSamplerImpl : IEquatable<WebGPU.WGPUSamplerImpl>
+        public readonly partial struct WGPUSampler : IEquatable<WebGPU.WGPUSampler>
         {
-            public WGPUSamplerImpl(nint handle) => Handle = handle;
+            public WGPUSampler(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUSamplerImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUSampler other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUSamplerImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUSampler other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUSamplerImpl left, WGPUSamplerImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUSampler left, WGPUSampler right) => left.Equals(right);
             
-            public static bool operator !=(WGPUSamplerImpl left, WGPUSamplerImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUSampler left, WGPUSampler right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUShaderModuleImpl : IEquatable<WebGPU.WGPUShaderModuleImpl>
+        public readonly partial struct WGPUShaderModule : IEquatable<WebGPU.WGPUShaderModule>
         {
-            public WGPUShaderModuleImpl(nint handle) => Handle = handle;
+            public WGPUShaderModule(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUShaderModuleImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUShaderModule other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUShaderModuleImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUShaderModule other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUShaderModuleImpl left, WGPUShaderModuleImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUShaderModule left, WGPUShaderModule right) => left.Equals(right);
             
-            public static bool operator !=(WGPUShaderModuleImpl left, WGPUShaderModuleImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUShaderModule left, WGPUShaderModule right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUSurfaceImpl : IEquatable<WebGPU.WGPUSurfaceImpl>
+        public readonly partial struct WGPUSurface : IEquatable<WebGPU.WGPUSurface>
         {
-            public WGPUSurfaceImpl(nint handle) => Handle = handle;
+            public WGPUSurface(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUSurfaceImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUSurface other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUSurfaceImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUSurface other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUSurfaceImpl left, WGPUSurfaceImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUSurface left, WGPUSurface right) => left.Equals(right);
             
-            public static bool operator !=(WGPUSurfaceImpl left, WGPUSurfaceImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUSurface left, WGPUSurface right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUTextureImpl : IEquatable<WebGPU.WGPUTextureImpl>
+        public readonly partial struct WGPUTexture : IEquatable<WebGPU.WGPUTexture>
         {
-            public WGPUTextureImpl(nint handle) => Handle = handle;
+            public WGPUTexture(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUTextureImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUTexture other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUTextureImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUTexture other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUTextureImpl left, WGPUTextureImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUTexture left, WGPUTexture right) => left.Equals(right);
             
-            public static bool operator !=(WGPUTextureImpl left, WGPUTextureImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUTexture left, WGPUTexture right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUTextureViewImpl : IEquatable<WebGPU.WGPUTextureViewImpl>
+        public readonly partial struct WGPUTextureView : IEquatable<WebGPU.WGPUTextureView>
         {
-            public WGPUTextureViewImpl(nint handle) => Handle = handle;
+            public WGPUTextureView(nint handle) => Handle = handle;
             
             public nint Handle { get; }
             
-            public bool Equals(WGPUTextureViewImpl other) => Handle.Equals(other.Handle);
+            public bool Equals(WGPUTextureView other) => Handle.Equals(other.Handle);
             
-            public override bool Equals(object obj) => obj is WGPUTextureViewImpl other && Equals(other);
+            public override bool Equals(object obj) => obj is WGPUTextureView other && Equals(other);
             
             public override int GetHashCode() => Handle.GetHashCode();
             
             public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
             
-            public static bool operator ==(WGPUTextureViewImpl left, WGPUTextureViewImpl right) => left.Equals(right);
+            public static bool operator ==(WGPUTextureView left, WGPUTextureView right) => left.Equals(right);
             
-            public static bool operator !=(WGPUTextureViewImpl left, WGPUTextureViewImpl right) => !left.Equals(right);
+            public static bool operator !=(WGPUTextureView left, WGPUTextureView right) => !left.Equals(right);
         }
         
         /// <summary>
@@ -3171,61 +3171,61 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUAdapterInfo
         {
-            public WebGPU.WGPUChainedStructOut* NextInChain;
+            public WebGPU.WGPUChainedStructOut* nextInChain;
             
             /// <summary>
             /// This is an @ref OutputString.
             /// </summary>
-            public WebGPU.WGPUStringView Vendor;
+            public WebGPU.WGPUStringView vendor;
             
             /// <summary>
             /// This is an @ref OutputString.
             /// </summary>
-            public WebGPU.WGPUStringView Architecture;
+            public WebGPU.WGPUStringView architecture;
             
             /// <summary>
             /// This is an @ref OutputString.
             /// </summary>
-            public WebGPU.WGPUStringView Device;
+            public WebGPU.WGPUStringView device;
             
             /// <summary>
             /// This is an @ref OutputString.
             /// </summary>
-            public WebGPU.WGPUStringView Description;
+            public WebGPU.WGPUStringView description;
             
-            public WebGPU.WGPUBackendType BackendType;
+            public WebGPU.WGPUBackendType backendType;
             
-            public WebGPU.WGPUAdapterType AdapterType;
+            public WebGPU.WGPUAdapterType adapterType;
             
-            public uint VendorID;
+            public uint vendorID;
             
-            public uint DeviceID;
+            public uint deviceID;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUChainedStructOut
         {
-            public WebGPU.WGPUChainedStructOut* Next;
+            public WebGPU.WGPUChainedStructOut* next;
             
-            public WebGPU.WGPUSType SType;
+            public WebGPU.WGPUSType sType;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUBindGroupEntry
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public uint Binding;
+            public uint binding;
             
-            public WebGPU.WGPUBufferImpl Buffer;
+            public WebGPU.WGPUBuffer buffer;
             
-            public ulong Offset;
+            public ulong offset;
             
-            public ulong Size;
+            public ulong size;
             
-            public WebGPU.WGPUSamplerImpl Sampler;
+            public WebGPU.WGPUSampler sampler;
             
-            public WebGPU.WGPUTextureViewImpl TextureView;
+            public WebGPU.WGPUTextureView textureView;
         }
         
         /// <summary>
@@ -3239,88 +3239,88 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUChainedStruct
         {
-            public WebGPU.WGPUChainedStruct* Next;
+            public WebGPU.WGPUChainedStruct* next;
             
-            public WebGPU.WGPUSType SType;
+            public WebGPU.WGPUSType sType;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUBlendComponent
         {
-            public WebGPU.WGPUBlendOperation Operation;
+            public WebGPU.WGPUBlendOperation operation;
             
-            public WebGPU.WGPUBlendFactor SrcFactor;
+            public WebGPU.WGPUBlendFactor srcFactor;
             
-            public WebGPU.WGPUBlendFactor DstFactor;
+            public WebGPU.WGPUBlendFactor dstFactor;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUBufferBindingLayout
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUBufferBindingType Type;
+            public WebGPU.WGPUBufferBindingType type;
             
-            public uint HasDynamicOffset;
+            public uint hasDynamicOffset;
             
-            public ulong MinBindingSize;
+            public ulong minBindingSize;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUBufferDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
             
-            public WebGPU.WGPUBufferUsage Usage;
+            public WebGPU.WGPUBufferUsage usage;
             
-            public ulong Size;
+            public ulong size;
             
-            public uint MappedAtCreation;
+            public uint mappedAtCreation;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUColor
         {
-            public double R;
+            public double r;
             
-            public double G;
+            public double g;
             
-            public double B;
+            public double b;
             
-            public double A;
+            public double a;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUCommandBufferDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUCommandEncoderDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUCompilationMessage
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// A @ref LocalizableHumanReadableMessageString.
@@ -3328,65 +3328,65 @@ namespace WebGPU.NET.Wgpu
             /// <remarks>
             /// This is an @ref OutputString.
             /// </remarks>
-            public WebGPU.WGPUStringView Message;
+            public WebGPU.WGPUStringView message;
             
             /// <summary>
             /// Severity level of the message.
             /// </summary>
-            public WebGPU.WGPUCompilationMessageType Type;
+            public WebGPU.WGPUCompilationMessageType type;
             
             /// <summary>
             /// Line number where the message is attached, starting at 1.
             /// </summary>
-            public ulong LineNum;
+            public ulong lineNum;
             
             /// <summary>
             /// Offset in UTF-8 code units (bytes) from the beginning of the line, starting at 1.
             /// </summary>
-            public ulong LinePos;
+            public ulong linePos;
             
             /// <summary>
             /// Offset in UTF-8 code units (bytes) from the beginning of the shader code, starting at 0.
             /// </summary>
-            public ulong Offset;
+            public ulong offset;
             
             /// <summary>
             /// Length in UTF-8 code units (bytes) of the span the message corresponds to.
             /// </summary>
-            public ulong Length;
+            public ulong length;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUComputePassTimestampWrites
         {
-            public WebGPU.WGPUQuerySetImpl QuerySet;
+            public WebGPU.WGPUQuerySet querySet;
             
-            public uint BeginningOfPassWriteIndex;
+            public uint beginningOfPassWriteIndex;
             
-            public uint EndOfPassWriteIndex;
+            public uint endOfPassWriteIndex;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUConstantEntry
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Key;
+            public WebGPU.WGPUStringView key;
             
-            public double Value;
+            public double value;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUExtent3D
         {
-            public uint Width;
+            public uint width;
             
-            public uint Height;
+            public uint height;
             
-            public uint DepthOrArrayLayers;
+            public uint depthOrArrayLayers;
         }
         
         /// <summary>
@@ -3398,7 +3398,7 @@ namespace WebGPU.NET.Wgpu
             /// <summary>
             /// Opaque id of the @ref WGPUFuture
             /// </summary>
-            public ulong Id;
+            public ulong id;
         }
         
         /// <summary>
@@ -3410,17 +3410,17 @@ namespace WebGPU.NET.Wgpu
             /// <summary>
             /// This struct chain is used as mutable in some places and immutable in others.
             /// </summary>
-            public WebGPU.WGPUChainedStructOut* NextInChain;
+            public WebGPU.WGPUChainedStructOut* nextInChain;
             
             /// <summary>
             /// Enable use of ::wgpuInstanceWaitAny with `timeoutNS &gt; 0`.
             /// </summary>
-            public uint TimedWaitAnyEnable;
+            public uint timedWaitAnyEnable;
             
             /// <summary>
             /// The maximum number @ref WGPUFutureWaitInfo supported in a call to ::wgpuInstanceWaitAny with `timeoutNS &gt; 0`.
             /// </summary>
-            public nuint TimedWaitAnyMaxCount;
+            public nuint timedWaitAnyMaxCount;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -3429,228 +3429,228 @@ namespace WebGPU.NET.Wgpu
             /// <summary>
             /// This struct chain is used as mutable in some places and immutable in others.
             /// </summary>
-            public WebGPU.WGPUChainedStructOut* NextInChain;
+            public WebGPU.WGPUChainedStructOut* nextInChain;
             
-            public uint MaxTextureDimension1D;
+            public uint maxTextureDimension1D;
             
-            public uint MaxTextureDimension2D;
+            public uint maxTextureDimension2D;
             
-            public uint MaxTextureDimension3D;
+            public uint maxTextureDimension3D;
             
-            public uint MaxTextureArrayLayers;
+            public uint maxTextureArrayLayers;
             
-            public uint MaxBindGroups;
+            public uint maxBindGroups;
             
-            public uint MaxBindGroupsPlusVertexBuffers;
+            public uint maxBindGroupsPlusVertexBuffers;
             
-            public uint MaxBindingsPerBindGroup;
+            public uint maxBindingsPerBindGroup;
             
-            public uint MaxDynamicUniformBuffersPerPipelineLayout;
+            public uint maxDynamicUniformBuffersPerPipelineLayout;
             
-            public uint MaxDynamicStorageBuffersPerPipelineLayout;
+            public uint maxDynamicStorageBuffersPerPipelineLayout;
             
-            public uint MaxSampledTexturesPerShaderStage;
+            public uint maxSampledTexturesPerShaderStage;
             
-            public uint MaxSamplersPerShaderStage;
+            public uint maxSamplersPerShaderStage;
             
-            public uint MaxStorageBuffersPerShaderStage;
+            public uint maxStorageBuffersPerShaderStage;
             
-            public uint MaxStorageTexturesPerShaderStage;
+            public uint maxStorageTexturesPerShaderStage;
             
-            public uint MaxUniformBuffersPerShaderStage;
+            public uint maxUniformBuffersPerShaderStage;
             
-            public ulong MaxUniformBufferBindingSize;
+            public ulong maxUniformBufferBindingSize;
             
-            public ulong MaxStorageBufferBindingSize;
+            public ulong maxStorageBufferBindingSize;
             
-            public uint MinUniformBufferOffsetAlignment;
+            public uint minUniformBufferOffsetAlignment;
             
-            public uint MinStorageBufferOffsetAlignment;
+            public uint minStorageBufferOffsetAlignment;
             
-            public uint MaxVertexBuffers;
+            public uint maxVertexBuffers;
             
-            public ulong MaxBufferSize;
+            public ulong maxBufferSize;
             
-            public uint MaxVertexAttributes;
+            public uint maxVertexAttributes;
             
-            public uint MaxVertexBufferArrayStride;
+            public uint maxVertexBufferArrayStride;
             
-            public uint MaxInterStageShaderVariables;
+            public uint maxInterStageShaderVariables;
             
-            public uint MaxColorAttachments;
+            public uint maxColorAttachments;
             
-            public uint MaxColorAttachmentBytesPerSample;
+            public uint maxColorAttachmentBytesPerSample;
             
-            public uint MaxComputeWorkgroupStorageSize;
+            public uint maxComputeWorkgroupStorageSize;
             
-            public uint MaxComputeInvocationsPerWorkgroup;
+            public uint maxComputeInvocationsPerWorkgroup;
             
-            public uint MaxComputeWorkgroupSizeX;
+            public uint maxComputeWorkgroupSizeX;
             
-            public uint MaxComputeWorkgroupSizeY;
+            public uint maxComputeWorkgroupSizeY;
             
-            public uint MaxComputeWorkgroupSizeZ;
+            public uint maxComputeWorkgroupSizeZ;
             
-            public uint MaxComputeWorkgroupsPerDimension;
+            public uint maxComputeWorkgroupsPerDimension;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUMultisampleState
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public uint Count;
+            public uint count;
             
-            public uint Mask;
+            public uint mask;
             
-            public uint AlphaToCoverageEnabled;
+            public uint alphaToCoverageEnabled;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUOrigin3D
         {
-            public uint X;
+            public uint x;
             
-            public uint Y;
+            public uint y;
             
-            public uint Z;
+            public uint z;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUPipelineLayoutDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
             
-            public nuint BindGroupLayoutCount;
+            public nuint bindGroupLayoutCount;
             
-            public WebGPU.WGPUBindGroupLayoutImpl* BindGroupLayouts;
+            public WebGPU.WGPUBindGroupLayout* bindGroupLayouts;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUPrimitiveState
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUPrimitiveTopology Topology;
+            public WebGPU.WGPUPrimitiveTopology topology;
             
-            public WebGPU.WGPUIndexFormat StripIndexFormat;
+            public WebGPU.WGPUIndexFormat stripIndexFormat;
             
-            public WebGPU.WGPUFrontFace FrontFace;
+            public WebGPU.WGPUFrontFace frontFace;
             
-            public WebGPU.WGPUCullMode CullMode;
+            public WebGPU.WGPUCullMode cullMode;
             
-            public uint UnclippedDepth;
+            public uint unclippedDepth;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUQuerySetDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
             
-            public WebGPU.WGPUQueryType Type;
+            public WebGPU.WGPUQueryType type;
             
-            public uint Count;
+            public uint count;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUQueueDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPURenderBundleDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPURenderBundleEncoderDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
             
-            public nuint ColorFormatCount;
+            public nuint colorFormatCount;
             
-            public WebGPU.WGPUTextureFormat* ColorFormats;
+            public WebGPU.WGPUTextureFormat* colorFormats;
             
-            public WebGPU.WGPUTextureFormat DepthStencilFormat;
+            public WebGPU.WGPUTextureFormat depthStencilFormat;
             
-            public uint SampleCount;
+            public uint sampleCount;
             
-            public uint DepthReadOnly;
+            public uint depthReadOnly;
             
-            public uint StencilReadOnly;
+            public uint stencilReadOnly;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPURenderPassDepthStencilAttachment
         {
-            public WebGPU.WGPUTextureViewImpl View;
+            public WebGPU.WGPUTextureView view;
             
-            public WebGPU.WGPULoadOp DepthLoadOp;
+            public WebGPU.WGPULoadOp depthLoadOp;
             
-            public WebGPU.WGPUStoreOp DepthStoreOp;
+            public WebGPU.WGPUStoreOp depthStoreOp;
             
-            public float DepthClearValue;
+            public float depthClearValue;
             
-            public uint DepthReadOnly;
+            public uint depthReadOnly;
             
-            public WebGPU.WGPULoadOp StencilLoadOp;
+            public WebGPU.WGPULoadOp stencilLoadOp;
             
-            public WebGPU.WGPUStoreOp StencilStoreOp;
+            public WebGPU.WGPUStoreOp stencilStoreOp;
             
-            public uint StencilClearValue;
+            public uint stencilClearValue;
             
-            public uint StencilReadOnly;
+            public uint stencilReadOnly;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPURenderPassMaxDrawCount
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
-            public ulong MaxDrawCount;
+            public ulong maxDrawCount;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPURenderPassTimestampWrites
         {
-            public WebGPU.WGPUQuerySetImpl QuerySet;
+            public WebGPU.WGPUQuerySet querySet;
             
-            public uint BeginningOfPassWriteIndex;
+            public uint beginningOfPassWriteIndex;
             
-            public uint EndOfPassWriteIndex;
+            public uint endOfPassWriteIndex;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPURequestAdapterOptions
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// "Feature level" for the adapter request. If an adapter is returned, it must support the features and limits in the requested feature level.
@@ -3658,138 +3658,138 @@ namespace WebGPU.NET.Wgpu
             /// <remarks>
             /// Implementations may ignore @ref WGPUFeatureLevel_Compatibility and provide @ref WGPUFeatureLevel_Core instead. @ref WGPUFeatureLevel_Core is the default in the JS API, but in C, this field is **required** (must not be undefined).
             /// </remarks>
-            public WebGPU.WGPUFeatureLevel FeatureLevel;
+            public WebGPU.WGPUFeatureLevel featureLevel;
             
-            public WebGPU.WGPUPowerPreference PowerPreference;
+            public WebGPU.WGPUPowerPreference powerPreference;
             
             /// <summary>
             /// If true, requires the adapter to be a "fallback" adapter as defined by the JS spec.
             /// If this is not possible, the request returns null.
             /// </summary>
-            public uint ForceFallbackAdapter;
+            public uint forceFallbackAdapter;
             
             /// <summary>
             /// If set, requires the adapter to have a particular backend type.
             /// If this is not possible, the request returns null.
             /// </summary>
-            public WebGPU.WGPUBackendType BackendType;
+            public WebGPU.WGPUBackendType backendType;
             
             /// <summary>
             /// If set, requires the adapter to be able to output to a particular surface.
             /// If this is not possible, the request returns null.
             /// </summary>
-            public WebGPU.WGPUSurfaceImpl CompatibleSurface;
+            public WebGPU.WGPUSurface compatibleSurface;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSamplerBindingLayout
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUSamplerBindingType Type;
+            public WebGPU.WGPUSamplerBindingType type;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSamplerDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
             
-            public WebGPU.WGPUAddressMode AddressModeU;
+            public WebGPU.WGPUAddressMode addressModeU;
             
-            public WebGPU.WGPUAddressMode AddressModeV;
+            public WebGPU.WGPUAddressMode addressModeV;
             
-            public WebGPU.WGPUAddressMode AddressModeW;
+            public WebGPU.WGPUAddressMode addressModeW;
             
-            public WebGPU.WGPUFilterMode MagFilter;
+            public WebGPU.WGPUFilterMode magFilter;
             
-            public WebGPU.WGPUFilterMode MinFilter;
+            public WebGPU.WGPUFilterMode minFilter;
             
-            public WebGPU.WGPUMipmapFilterMode MipmapFilter;
+            public WebGPU.WGPUMipmapFilterMode mipmapFilter;
             
-            public float LodMinClamp;
+            public float lodMinClamp;
             
-            public float LodMaxClamp;
+            public float lodMaxClamp;
             
-            public WebGPU.WGPUCompareFunction Compare;
+            public WebGPU.WGPUCompareFunction compare;
             
-            public ushort MaxAnisotropy;
+            public ushort maxAnisotropy;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUShaderModuleDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUShaderSourceSPIRV
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
-            public uint CodeSize;
+            public uint codeSize;
             
-            public uint* Code;
+            public uint* code;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUShaderSourceWGSL
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Code;
+            public WebGPU.WGPUStringView code;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUStencilFaceState
         {
-            public WebGPU.WGPUCompareFunction Compare;
+            public WebGPU.WGPUCompareFunction compare;
             
-            public WebGPU.WGPUStencilOperation FailOp;
+            public WebGPU.WGPUStencilOperation failOp;
             
-            public WebGPU.WGPUStencilOperation DepthFailOp;
+            public WebGPU.WGPUStencilOperation depthFailOp;
             
-            public WebGPU.WGPUStencilOperation PassOp;
+            public WebGPU.WGPUStencilOperation passOp;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUStorageTextureBindingLayout
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUStorageTextureAccess Access;
+            public WebGPU.WGPUStorageTextureAccess access;
             
-            public WebGPU.WGPUTextureFormat Format;
+            public WebGPU.WGPUTextureFormat format;
             
-            public WebGPU.WGPUTextureViewDimension ViewDimension;
+            public WebGPU.WGPUTextureViewDimension viewDimension;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSupportedFeatures
         {
-            public nuint FeatureCount;
+            public nuint featureCount;
             
-            public WebGPU.WGPUFeatureName* Features;
+            public WebGPU.WGPUFeatureName* features;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSupportedWGSLLanguageFeatures
         {
-            public nuint FeatureCount;
+            public nuint featureCount;
             
-            public WebGPU.WGPUWGSLLanguageFeatureName* Features;
+            public WebGPU.WGPUWGSLLanguageFeatureName* features;
         }
         
         /// <summary>
@@ -3798,36 +3798,36 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSurfaceCapabilities
         {
-            public WebGPU.WGPUChainedStructOut* NextInChain;
+            public WebGPU.WGPUChainedStructOut* nextInChain;
             
             /// <summary>
             /// The bit set of supported @ref WGPUTextureUsage bits.
             /// Guaranteed to contain @ref WGPUTextureUsage_RenderAttachment.
             /// </summary>
-            public WebGPU.WGPUTextureUsage Usages;
+            public WebGPU.WGPUTextureUsage usages;
             
             /// <summary>
             /// A list of supported @ref WGPUTextureFormat values, in order of preference.
             /// </summary>
-            public nuint FormatCount;
+            public nuint formatCount;
             
-            public WebGPU.WGPUTextureFormat* Formats;
+            public WebGPU.WGPUTextureFormat* formats;
             
             /// <summary>
             /// A list of supported @ref WGPUPresentMode values.
             /// Guaranteed to contain @ref WGPUPresentMode_Fifo.
             /// </summary>
-            public nuint PresentModeCount;
+            public nuint presentModeCount;
             
-            public WebGPU.WGPUPresentMode* PresentModes;
+            public WebGPU.WGPUPresentMode* presentModes;
             
             /// <summary>
             /// A list of supported @ref WGPUCompositeAlphaMode values.
             /// @ref WGPUCompositeAlphaMode_Auto will be an alias for the first element and will never be present in this array.
             /// </summary>
-            public nuint AlphaModeCount;
+            public nuint alphaModeCount;
             
-            public WebGPU.WGPUCompositeAlphaMode* AlphaModes;
+            public WebGPU.WGPUCompositeAlphaMode* alphaModes;
         }
         
         /// <summary>
@@ -3837,49 +3837,49 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSurfaceConfiguration
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// The @ref WGPUDevice to use to render to surface's textures.
             /// </summary>
-            public WebGPU.WGPUDeviceImpl Device;
+            public WebGPU.WGPUDevice device;
             
             /// <summary>
             /// The @ref WGPUTextureFormat of the surface's textures.
             /// </summary>
-            public WebGPU.WGPUTextureFormat Format;
+            public WebGPU.WGPUTextureFormat format;
             
             /// <summary>
             /// The @ref WGPUTextureUsage of the surface's textures.
             /// </summary>
-            public WebGPU.WGPUTextureUsage Usage;
+            public WebGPU.WGPUTextureUsage usage;
             
             /// <summary>
             /// The width of the surface's textures.
             /// </summary>
-            public uint Width;
+            public uint width;
             
             /// <summary>
             /// The height of the surface's textures.
             /// </summary>
-            public uint Height;
+            public uint height;
             
             /// <summary>
             /// The additional @ref WGPUTextureFormat for @ref WGPUTextureView format reinterpretation of the surface's textures.
             /// </summary>
-            public nuint ViewFormatCount;
+            public nuint viewFormatCount;
             
-            public WebGPU.WGPUTextureFormat* ViewFormats;
+            public WebGPU.WGPUTextureFormat* viewFormats;
             
             /// <summary>
             /// How the surface's frames will be composited on the screen.
             /// </summary>
-            public WebGPU.WGPUCompositeAlphaMode AlphaMode;
+            public WebGPU.WGPUCompositeAlphaMode alphaMode;
             
             /// <summary>
             /// When and in which order the surface's frames will be shown on the screen. Defaults to @ref WGPUPresentMode_Fifo.
             /// </summary>
-            public WebGPU.WGPUPresentMode PresentMode;
+            public WebGPU.WGPUPresentMode presentMode;
         }
         
         /// <summary>
@@ -3890,7 +3890,7 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSurfaceDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// Label used to refer to the object.
@@ -3898,7 +3898,7 @@ namespace WebGPU.NET.Wgpu
             /// <remarks>
             /// This is a @ref NonNullInputString.
             /// </remarks>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
         }
         
         /// <summary>
@@ -3907,12 +3907,12 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSurfaceSourceAndroidNativeWindow
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
             /// <summary>
             /// The pointer to the [`ANativeWindow`](https://developer.android.com/ndk/reference/group/a-native-window) that will be wrapped by the @ref WGPUSurface.
             /// </summary>
-            public void* Window;
+            public void* window;
         }
         
         /// <summary>
@@ -3921,12 +3921,12 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSurfaceSourceMetalLayer
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
             /// <summary>
             /// The pointer to the [`CAMetalLayer`](https://developer.apple.com/documentation/quartzcore/cametallayer?language=objc) that will be wrapped by the @ref WGPUSurface.
             /// </summary>
-            public void* Layer;
+            public void* layer;
         }
         
         /// <summary>
@@ -3935,17 +3935,17 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSurfaceSourceWaylandSurface
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
             /// <summary>
             /// A [`wl_display`](https://wayland.freedesktop.org/docs/html/apa.html#protocol-spec-wl_display) for this Wayland instance.
             /// </summary>
-            public void* Display;
+            public void* display;
             
             /// <summary>
             /// A [`wl_surface`](https://wayland.freedesktop.org/docs/html/apa.html#protocol-spec-wl_surface) that will be wrapped by the @ref WGPUSurface
             /// </summary>
-            public void* Surface;
+            public void* surface;
         }
         
         /// <summary>
@@ -3954,18 +3954,18 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSurfaceSourceWindowsHWND
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
             /// <summary>
             /// The [`HINSTANCE`](https://learn.microsoft.com/en-us/windows/win32/learnwin32/winmain--the-application-entry-point) for this application.
             /// Most commonly `GetModuleHandle(nullptr)`.
             /// </summary>
-            public void* Hinstance;
+            public void* hinstance;
             
             /// <summary>
             /// The [`HWND`](https://learn.microsoft.com/en-us/windows/apps/develop/ui-input/retrieve-hwnd) that will be wrapped by the @ref WGPUSurface.
             /// </summary>
-            public void* Hwnd;
+            public void* hwnd;
         }
         
         /// <summary>
@@ -3974,17 +3974,17 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSurfaceSourceXCBWindow
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
             /// <summary>
             /// The `xcb_connection_t` for the connection to the X server.
             /// </summary>
-            public void* Connection;
+            public void* connection;
             
             /// <summary>
             /// The `xcb_window_t` for the window that will be wrapped by the @ref WGPUSurface.
             /// </summary>
-            public uint Window;
+            public uint window;
         }
         
         /// <summary>
@@ -3993,17 +3993,17 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSurfaceSourceXlibWindow
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
             /// <summary>
             /// A pointer to the [`Display`](https://www.x.org/releases/current/doc/libX11/libX11/libX11.html#Opening_the_Display) connected to the X server.
             /// </summary>
-            public void* Display;
+            public void* display;
             
             /// <summary>
             /// The [`Window`](https://www.x.org/releases/current/doc/libX11/libX11/libX11.html#Creating_Windows) that will be wrapped by the @ref WGPUSurface.
             /// </summary>
-            public ulong Window;
+            public ulong window;
         }
         
         /// <summary>
@@ -4013,218 +4013,218 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSurfaceTexture
         {
-            public WebGPU.WGPUChainedStructOut* NextInChain;
+            public WebGPU.WGPUChainedStructOut* nextInChain;
             
             /// <summary>
             /// The @ref WGPUTexture representing the frame that will be shown on the surface.
             /// It is @ref ReturnedWithOwnership from @ref wgpuSurfaceGetCurrentTexture.
             /// </summary>
-            public WebGPU.WGPUTextureImpl Texture;
+            public WebGPU.WGPUTexture texture;
             
             /// <summary>
             /// Whether the call to `::wgpuSurfaceGetCurrentTexture` succeeded and a hint as to why it might not have.
             /// </summary>
-            public WebGPU.WGPUSurfaceGetCurrentTextureStatus Status;
+            public WebGPU.WGPUSurfaceGetCurrentTextureStatus status;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUTexelCopyBufferLayout
         {
-            public ulong Offset;
+            public ulong offset;
             
-            public uint BytesPerRow;
+            public uint bytesPerRow;
             
-            public uint RowsPerImage;
+            public uint rowsPerImage;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUTextureBindingLayout
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUTextureSampleType SampleType;
+            public WebGPU.WGPUTextureSampleType sampleType;
             
-            public WebGPU.WGPUTextureViewDimension ViewDimension;
+            public WebGPU.WGPUTextureViewDimension viewDimension;
             
-            public uint Multisampled;
+            public uint multisampled;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUTextureViewDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
             
-            public WebGPU.WGPUTextureFormat Format;
+            public WebGPU.WGPUTextureFormat format;
             
-            public WebGPU.WGPUTextureViewDimension Dimension;
+            public WebGPU.WGPUTextureViewDimension dimension;
             
-            public uint BaseMipLevel;
+            public uint baseMipLevel;
             
-            public uint MipLevelCount;
+            public uint mipLevelCount;
             
-            public uint BaseArrayLayer;
+            public uint baseArrayLayer;
             
-            public uint ArrayLayerCount;
+            public uint arrayLayerCount;
             
-            public WebGPU.WGPUTextureAspect Aspect;
+            public WebGPU.WGPUTextureAspect aspect;
             
-            public WebGPU.WGPUTextureUsage Usage;
+            public WebGPU.WGPUTextureUsage usage;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUVertexAttribute
         {
-            public WebGPU.WGPUVertexFormat Format;
+            public WebGPU.WGPUVertexFormat format;
             
-            public ulong Offset;
+            public ulong offset;
             
-            public uint ShaderLocation;
+            public uint shaderLocation;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUBindGroupDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
             
-            public WebGPU.WGPUBindGroupLayoutImpl Layout;
+            public WebGPU.WGPUBindGroupLayout layout;
             
-            public nuint EntryCount;
+            public nuint entryCount;
             
-            public WebGPU.WGPUBindGroupEntry* Entries;
+            public WebGPU.WGPUBindGroupEntry* entries;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUBindGroupLayoutEntry
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public uint Binding;
+            public uint binding;
             
-            public WebGPU.WGPUShaderStage Visibility;
+            public WebGPU.WGPUShaderStage visibility;
             
-            public WebGPU.WGPUBufferBindingLayout Buffer;
+            public WebGPU.WGPUBufferBindingLayout buffer;
             
-            public WebGPU.WGPUSamplerBindingLayout Sampler;
+            public WebGPU.WGPUSamplerBindingLayout sampler;
             
-            public WebGPU.WGPUTextureBindingLayout Texture;
+            public WebGPU.WGPUTextureBindingLayout texture;
             
-            public WebGPU.WGPUStorageTextureBindingLayout StorageTexture;
+            public WebGPU.WGPUStorageTextureBindingLayout storageTexture;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUBlendState
         {
-            public WebGPU.WGPUBlendComponent Color;
+            public WebGPU.WGPUBlendComponent color;
             
-            public WebGPU.WGPUBlendComponent Alpha;
+            public WebGPU.WGPUBlendComponent alpha;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUCompilationInfo
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public nuint MessageCount;
+            public nuint messageCount;
             
-            public WebGPU.WGPUCompilationMessage* Messages;
+            public WebGPU.WGPUCompilationMessage* messages;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUComputePassDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
             
-            public WebGPU.WGPUComputePassTimestampWrites* TimestampWrites;
+            public WebGPU.WGPUComputePassTimestampWrites* timestampWrites;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUDepthStencilState
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUTextureFormat Format;
+            public WebGPU.WGPUTextureFormat format;
             
-            public WebGPU.WGPUOptionalBool DepthWriteEnabled;
+            public WebGPU.WGPUOptionalBool depthWriteEnabled;
             
-            public WebGPU.WGPUCompareFunction DepthCompare;
+            public WebGPU.WGPUCompareFunction depthCompare;
             
-            public WebGPU.WGPUStencilFaceState StencilFront;
+            public WebGPU.WGPUStencilFaceState stencilFront;
             
-            public WebGPU.WGPUStencilFaceState StencilBack;
+            public WebGPU.WGPUStencilFaceState stencilBack;
             
-            public uint StencilReadMask;
+            public uint stencilReadMask;
             
-            public uint StencilWriteMask;
+            public uint stencilWriteMask;
             
-            public int DepthBias;
+            public int depthBias;
             
-            public float DepthBiasSlopeScale;
+            public float depthBiasSlopeScale;
             
-            public float DepthBiasClamp;
+            public float depthBiasClamp;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUDeviceDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
             
-            public nuint RequiredFeatureCount;
+            public nuint requiredFeatureCount;
             
-            public WebGPU.WGPUFeatureName* RequiredFeatures;
+            public WebGPU.WGPUFeatureName* requiredFeatures;
             
-            public WebGPU.WGPULimits* RequiredLimits;
+            public WebGPU.WGPULimits* requiredLimits;
             
-            public WebGPU.WGPUQueueDescriptor DefaultQueue;
+            public WebGPU.WGPUQueueDescriptor defaultQueue;
             
-            public WebGPU.WGPUDeviceLostCallbackInfo DeviceLostCallbackInfo;
+            public WebGPU.WGPUDeviceLostCallbackInfo deviceLostCallbackInfo;
             
-            public WebGPU.WGPUUncapturedErrorCallbackInfo UncapturedErrorCallbackInfo;
+            public WebGPU.WGPUUncapturedErrorCallbackInfo uncapturedErrorCallbackInfo;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUDeviceLostCallbackInfo
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUCallbackMode Mode;
+            public WebGPU.WGPUCallbackMode mode;
             
-            public delegate*unmanaged[Cdecl]<WebGPU.WGPUDeviceImpl*, WebGPU.WGPUDeviceLostReason, WebGPU.WGPUStringView, void*, void*, void> Callback;
+            public delegate*unmanaged[Cdecl]<WebGPU.WGPUDevice*, WebGPU.WGPUDeviceLostReason, WebGPU.WGPUStringView, void*, void*, void> callback;
             
-            public void* Userdata1;
+            public void* userdata1;
             
-            public void* Userdata2;
+            public void* userdata2;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUUncapturedErrorCallbackInfo
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public delegate*unmanaged[Cdecl]<WebGPU.WGPUDeviceImpl*, WebGPU.WGPUErrorType, WebGPU.WGPUStringView, void*, void*, void> Callback;
+            public delegate*unmanaged[Cdecl]<WebGPU.WGPUDevice*, WebGPU.WGPUErrorType, WebGPU.WGPUStringView, void*, void*, void> callback;
             
-            public void* Userdata1;
+            public void* userdata1;
             
-            public void* Userdata2;
+            public void* userdata2;
         }
         
         /// <summary>
@@ -4236,105 +4236,105 @@ namespace WebGPU.NET.Wgpu
             /// <summary>
             /// The future to wait on.
             /// </summary>
-            public WebGPU.WGPUFuture Future;
+            public WebGPU.WGPUFuture future;
             
             /// <summary>
             /// Whether or not the future completed.
             /// </summary>
-            public uint Completed;
+            public uint completed;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUInstanceDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// Instance features to enable
             /// </summary>
-            public WebGPU.WGPUInstanceCapabilities Features;
+            public WebGPU.WGPUInstanceCapabilities features;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUProgrammableStageDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUShaderModuleImpl Module;
+            public WebGPU.WGPUShaderModule module;
             
             /// <summary>
             /// This is a @ref NullableInputString.
             /// </summary>
-            public WebGPU.WGPUStringView EntryPoint;
+            public WebGPU.WGPUStringView entryPoint;
             
-            public nuint ConstantCount;
+            public nuint constantCount;
             
-            public WebGPU.WGPUConstantEntry* Constants;
+            public WebGPU.WGPUConstantEntry* constants;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPURenderPassColorAttachment
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUTextureViewImpl View;
+            public WebGPU.WGPUTextureView view;
             
-            public uint DepthSlice;
+            public uint depthSlice;
             
-            public WebGPU.WGPUTextureViewImpl ResolveTarget;
+            public WebGPU.WGPUTextureView resolveTarget;
             
-            public WebGPU.WGPULoadOp LoadOp;
+            public WebGPU.WGPULoadOp loadOp;
             
-            public WebGPU.WGPUStoreOp StoreOp;
+            public WebGPU.WGPUStoreOp storeOp;
             
-            public WebGPU.WGPUColor ClearValue;
+            public WebGPU.WGPUColor clearValue;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUTexelCopyBufferInfo
         {
-            public WebGPU.WGPUTexelCopyBufferLayout Layout;
+            public WebGPU.WGPUTexelCopyBufferLayout layout;
             
-            public WebGPU.WGPUBufferImpl Buffer;
+            public WebGPU.WGPUBuffer buffer;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUTexelCopyTextureInfo
         {
-            public WebGPU.WGPUTextureImpl Texture;
+            public WebGPU.WGPUTexture texture;
             
-            public uint MipLevel;
+            public uint mipLevel;
             
-            public WebGPU.WGPUOrigin3D Origin;
+            public WebGPU.WGPUOrigin3D origin;
             
-            public WebGPU.WGPUTextureAspect Aspect;
+            public WebGPU.WGPUTextureAspect aspect;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUTextureDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
             
-            public WebGPU.WGPUTextureUsage Usage;
+            public WebGPU.WGPUTextureUsage usage;
             
-            public WebGPU.WGPUTextureDimension Dimension;
+            public WebGPU.WGPUTextureDimension dimension;
             
-            public WebGPU.WGPUExtent3D Size;
+            public WebGPU.WGPUExtent3D size;
             
-            public WebGPU.WGPUTextureFormat Format;
+            public WebGPU.WGPUTextureFormat format;
             
-            public uint MipLevelCount;
+            public uint mipLevelCount;
             
-            public uint SampleCount;
+            public uint sampleCount;
             
-            public nuint ViewFormatCount;
+            public nuint viewFormatCount;
             
-            public WebGPU.WGPUTextureFormat* ViewFormats;
+            public WebGPU.WGPUTextureFormat* viewFormats;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -4344,145 +4344,145 @@ namespace WebGPU.NET.Wgpu
             /// The step mode for the vertex buffer. If @ref WGPUVertexStepMode_VertexBufferNotUsed, indicates a "hole" in the parent @ref WGPUVertexState `buffers` array:
             /// the pipeline does not use a vertex buffer at this `location`.
             /// </summary>
-            public WebGPU.WGPUVertexStepMode StepMode;
+            public WebGPU.WGPUVertexStepMode stepMode;
             
-            public ulong ArrayStride;
+            public ulong arrayStride;
             
-            public nuint AttributeCount;
+            public nuint attributeCount;
             
-            public WebGPU.WGPUVertexAttribute* Attributes;
+            public WebGPU.WGPUVertexAttribute* attributes;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUBindGroupLayoutDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
             
-            public nuint EntryCount;
+            public nuint entryCount;
             
-            public WebGPU.WGPUBindGroupLayoutEntry* Entries;
+            public WebGPU.WGPUBindGroupLayoutEntry* entries;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUColorTargetState
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// The texture format of the target. If @ref WGPUTextureFormat_Undefined, indicates a "hole" in the parent @ref WGPUFragmentState `targets` array:
             /// the pipeline does not output a value at this `location`.
             /// </summary>
-            public WebGPU.WGPUTextureFormat Format;
+            public WebGPU.WGPUTextureFormat format;
             
-            public WebGPU.WGPUBlendState* Blend;
+            public WebGPU.WGPUBlendState* blend;
             
-            public WebGPU.WGPUColorWriteMask WriteMask;
+            public WebGPU.WGPUColorWriteMask writeMask;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUComputePipelineDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
             
-            public WebGPU.WGPUPipelineLayoutImpl Layout;
+            public WebGPU.WGPUPipelineLayout layout;
             
-            public WebGPU.WGPUProgrammableStageDescriptor Compute;
+            public WebGPU.WGPUProgrammableStageDescriptor compute;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPURenderPassDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
             
-            public nuint ColorAttachmentCount;
+            public nuint colorAttachmentCount;
             
-            public WebGPU.WGPURenderPassColorAttachment* ColorAttachments;
+            public WebGPU.WGPURenderPassColorAttachment* colorAttachments;
             
-            public WebGPU.WGPURenderPassDepthStencilAttachment* DepthStencilAttachment;
+            public WebGPU.WGPURenderPassDepthStencilAttachment* depthStencilAttachment;
             
-            public WebGPU.WGPUQuerySetImpl OcclusionQuerySet;
+            public WebGPU.WGPUQuerySet occlusionQuerySet;
             
-            public WebGPU.WGPURenderPassTimestampWrites* TimestampWrites;
+            public WebGPU.WGPURenderPassTimestampWrites* timestampWrites;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUVertexState
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUShaderModuleImpl Module;
+            public WebGPU.WGPUShaderModule module;
             
             /// <summary>
             /// This is a @ref NullableInputString.
             /// </summary>
-            public WebGPU.WGPUStringView EntryPoint;
+            public WebGPU.WGPUStringView entryPoint;
             
-            public nuint ConstantCount;
+            public nuint constantCount;
             
-            public WebGPU.WGPUConstantEntry* Constants;
+            public WebGPU.WGPUConstantEntry* constants;
             
-            public nuint BufferCount;
+            public nuint bufferCount;
             
-            public WebGPU.WGPUVertexBufferLayout* Buffers;
+            public WebGPU.WGPUVertexBufferLayout* buffers;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUFragmentState
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUShaderModuleImpl Module;
+            public WebGPU.WGPUShaderModule module;
             
             /// <summary>
             /// This is a @ref NullableInputString.
             /// </summary>
-            public WebGPU.WGPUStringView EntryPoint;
+            public WebGPU.WGPUStringView entryPoint;
             
-            public nuint ConstantCount;
+            public nuint constantCount;
             
-            public WebGPU.WGPUConstantEntry* Constants;
+            public WebGPU.WGPUConstantEntry* constants;
             
-            public nuint TargetCount;
+            public nuint targetCount;
             
-            public WebGPU.WGPUColorTargetState* Targets;
+            public WebGPU.WGPUColorTargetState* targets;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPURenderPipelineDescriptor
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
             /// <summary>
             /// This is a @ref NonNullInputString.
             /// </summary>
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
             
-            public WebGPU.WGPUPipelineLayoutImpl Layout;
+            public WebGPU.WGPUPipelineLayout layout;
             
-            public WebGPU.WGPUVertexState Vertex;
+            public WebGPU.WGPUVertexState vertex;
             
-            public WebGPU.WGPUPrimitiveState Primitive;
+            public WebGPU.WGPUPrimitiveState primitive;
             
-            public WebGPU.WGPUDepthStencilState* DepthStencil;
+            public WebGPU.WGPUDepthStencilState* depthStencil;
             
-            public WebGPU.WGPUMultisampleState Multisample;
+            public WebGPU.WGPUMultisampleState multisample;
             
-            public WebGPU.WGPUFragmentState* Fragment;
+            public WebGPU.WGPUFragmentState* fragment;
         }
         
         /// <summary>
@@ -4495,145 +4495,145 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUBufferMapCallbackInfo
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUCallbackMode Mode;
+            public WebGPU.WGPUCallbackMode mode;
             
-            public delegate*unmanaged[Cdecl]<WebGPU.WGPUMapAsyncStatus, WebGPU.WGPUStringView, void*, void*, void> Callback;
+            public delegate*unmanaged[Cdecl]<WebGPU.WGPUMapAsyncStatus, WebGPU.WGPUStringView, void*, void*, void> callback;
             
-            public void* Userdata1;
+            public void* userdata1;
             
-            public void* Userdata2;
+            public void* userdata2;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUCompilationInfoCallbackInfo
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUCallbackMode Mode;
+            public WebGPU.WGPUCallbackMode mode;
             
-            public delegate*unmanaged[Cdecl]<WebGPU.WGPUCompilationInfoRequestStatus, WebGPU.WGPUCompilationInfo*, void*, void*, void> Callback;
+            public delegate*unmanaged[Cdecl]<WebGPU.WGPUCompilationInfoRequestStatus, WebGPU.WGPUCompilationInfo*, void*, void*, void> callback;
             
-            public void* Userdata1;
+            public void* userdata1;
             
-            public void* Userdata2;
+            public void* userdata2;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUCreateComputePipelineAsyncCallbackInfo
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUCallbackMode Mode;
+            public WebGPU.WGPUCallbackMode mode;
             
-            public delegate*unmanaged[Cdecl]<WebGPU.WGPUCreatePipelineAsyncStatus, WebGPU.WGPUComputePipelineImpl, WebGPU.WGPUStringView, void*, void*, void> Callback;
+            public delegate*unmanaged[Cdecl]<WebGPU.WGPUCreatePipelineAsyncStatus, WebGPU.WGPUComputePipeline, WebGPU.WGPUStringView, void*, void*, void> callback;
             
-            public void* Userdata1;
+            public void* userdata1;
             
-            public void* Userdata2;
+            public void* userdata2;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUCreateRenderPipelineAsyncCallbackInfo
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUCallbackMode Mode;
+            public WebGPU.WGPUCallbackMode mode;
             
-            public delegate*unmanaged[Cdecl]<WebGPU.WGPUCreatePipelineAsyncStatus, WebGPU.WGPURenderPipelineImpl, WebGPU.WGPUStringView, void*, void*, void> Callback;
+            public delegate*unmanaged[Cdecl]<WebGPU.WGPUCreatePipelineAsyncStatus, WebGPU.WGPURenderPipeline, WebGPU.WGPUStringView, void*, void*, void> callback;
             
-            public void* Userdata1;
+            public void* userdata1;
             
-            public void* Userdata2;
+            public void* userdata2;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUPopErrorScopeCallbackInfo
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUCallbackMode Mode;
+            public WebGPU.WGPUCallbackMode mode;
             
-            public delegate*unmanaged[Cdecl]<WebGPU.WGPUPopErrorScopeStatus, WebGPU.WGPUErrorType, WebGPU.WGPUStringView, void*, void*, void> Callback;
+            public delegate*unmanaged[Cdecl]<WebGPU.WGPUPopErrorScopeStatus, WebGPU.WGPUErrorType, WebGPU.WGPUStringView, void*, void*, void> callback;
             
-            public void* Userdata1;
+            public void* userdata1;
             
-            public void* Userdata2;
+            public void* userdata2;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUQueueWorkDoneCallbackInfo
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUCallbackMode Mode;
+            public WebGPU.WGPUCallbackMode mode;
             
-            public delegate*unmanaged[Cdecl]<WebGPU.WGPUQueueWorkDoneStatus, void*, void*, void> Callback;
+            public delegate*unmanaged[Cdecl]<WebGPU.WGPUQueueWorkDoneStatus, void*, void*, void> callback;
             
-            public void* Userdata1;
+            public void* userdata1;
             
-            public void* Userdata2;
+            public void* userdata2;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPURequestAdapterCallbackInfo
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUCallbackMode Mode;
+            public WebGPU.WGPUCallbackMode mode;
             
-            public delegate*unmanaged[Cdecl]<WebGPU.WGPURequestAdapterStatus, WebGPU.WGPUAdapterImpl, WebGPU.WGPUStringView, void*, void*, void> Callback;
+            public delegate*unmanaged[Cdecl]<WebGPU.WGPURequestAdapterStatus, WebGPU.WGPUAdapter, WebGPU.WGPUStringView, void*, void*, void> callback;
             
-            public void* Userdata1;
+            public void* userdata1;
             
-            public void* Userdata2;
+            public void* userdata2;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPURequestDeviceCallbackInfo
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUCallbackMode Mode;
+            public WebGPU.WGPUCallbackMode mode;
             
-            public delegate*unmanaged[Cdecl]<WebGPU.WGPURequestDeviceStatus, WebGPU.WGPUDeviceImpl, WebGPU.WGPUStringView, void*, void*, void> Callback;
+            public delegate*unmanaged[Cdecl]<WebGPU.WGPURequestDeviceStatus, WebGPU.WGPUDevice, WebGPU.WGPUStringView, void*, void*, void> callback;
             
-            public void* Userdata1;
+            public void* userdata1;
             
-            public void* Userdata2;
+            public void* userdata2;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUInstanceExtras
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
-            public WebGPU.WGPUInstanceBackend Backends;
+            public WebGPU.WGPUInstanceBackend backends;
             
-            public WebGPU.WGPUInstanceFlag Flags;
+            public WebGPU.WGPUInstanceFlag flags;
             
-            public WebGPU.WGPUDx12Compiler Dx12ShaderCompiler;
+            public WebGPU.WGPUDx12Compiler dx12ShaderCompiler;
             
-            public WebGPU.WGPUGles3MinorVersion Gles3MinorVersion;
+            public WebGPU.WGPUGles3MinorVersion gles3MinorVersion;
             
-            public WebGPU.WGPUGLFenceBehaviour GlFenceBehaviour;
+            public WebGPU.WGPUGLFenceBehaviour glFenceBehaviour;
             
-            public WebGPU.WGPUStringView DxcPath;
+            public WebGPU.WGPUStringView dxcPath;
             
-            public WebGPU.WGPUDxcMaxShaderModel DxcMaxShaderModel;
+            public WebGPU.WGPUDxcMaxShaderModel dxcMaxShaderModel;
             
-            public byte* BudgetForDeviceCreation;
+            public byte* budgetForDeviceCreation;
             
-            public byte* BudgetForDeviceLoss;
+            public byte* budgetForDeviceLoss;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUDeviceExtras
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
-            public WebGPU.WGPUStringView TracePath;
+            public WebGPU.WGPUStringView tracePath;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -4642,173 +4642,173 @@ namespace WebGPU.NET.Wgpu
             /// <summary>
             /// This struct chain is used as mutable in some places and immutable in others.
             /// </summary>
-            public WebGPU.WGPUChainedStructOut Chain;
+            public WebGPU.WGPUChainedStructOut chain;
             
-            public uint MaxPushConstantSize;
+            public uint maxPushConstantSize;
             
-            public uint MaxNonSamplerBindings;
+            public uint maxNonSamplerBindings;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUPushConstantRange
         {
-            public WebGPU.WGPUShaderStage Stages;
+            public WebGPU.WGPUShaderStage stages;
             
-            public uint Start;
+            public uint start;
             
-            public uint End;
+            public uint end;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUPipelineLayoutExtras
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
-            public nuint PushConstantRangeCount;
+            public nuint pushConstantRangeCount;
             
-            public WebGPU.WGPUPushConstantRange* PushConstantRanges;
+            public WebGPU.WGPUPushConstantRange* pushConstantRanges;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUShaderDefine
         {
-            public WebGPU.WGPUStringView Name;
+            public WebGPU.WGPUStringView name;
             
-            public WebGPU.WGPUStringView Value;
+            public WebGPU.WGPUStringView value;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUShaderSourceGLSL
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
-            public WebGPU.WGPUShaderStage Stage;
+            public WebGPU.WGPUShaderStage stage;
             
-            public WebGPU.WGPUStringView Code;
+            public WebGPU.WGPUStringView code;
             
-            public uint DefineCount;
+            public uint defineCount;
             
-            public WebGPU.WGPUShaderDefine* Defines;
+            public WebGPU.WGPUShaderDefine* defines;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUShaderModuleDescriptorSpirV
         {
-            public WebGPU.WGPUStringView Label;
+            public WebGPU.WGPUStringView label;
             
-            public uint SourceSize;
+            public uint sourceSize;
             
-            public uint* Source;
+            public uint* source;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPURegistryReport
         {
-            public nuint NumAllocated;
+            public nuint numAllocated;
             
-            public nuint NumKeptFromUser;
+            public nuint numKeptFromUser;
             
-            public nuint NumReleasedFromUser;
+            public nuint numReleasedFromUser;
             
-            public nuint ElementSize;
+            public nuint elementSize;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUHubReport
         {
-            public WebGPU.WGPURegistryReport Adapters;
+            public WebGPU.WGPURegistryReport adapters;
             
-            public WebGPU.WGPURegistryReport Devices;
+            public WebGPU.WGPURegistryReport devices;
             
-            public WebGPU.WGPURegistryReport Queues;
+            public WebGPU.WGPURegistryReport queues;
             
-            public WebGPU.WGPURegistryReport PipelineLayouts;
+            public WebGPU.WGPURegistryReport pipelineLayouts;
             
-            public WebGPU.WGPURegistryReport ShaderModules;
+            public WebGPU.WGPURegistryReport shaderModules;
             
-            public WebGPU.WGPURegistryReport BindGroupLayouts;
+            public WebGPU.WGPURegistryReport bindGroupLayouts;
             
-            public WebGPU.WGPURegistryReport BindGroups;
+            public WebGPU.WGPURegistryReport bindGroups;
             
-            public WebGPU.WGPURegistryReport CommandBuffers;
+            public WebGPU.WGPURegistryReport commandBuffers;
             
-            public WebGPU.WGPURegistryReport RenderBundles;
+            public WebGPU.WGPURegistryReport renderBundles;
             
-            public WebGPU.WGPURegistryReport RenderPipelines;
+            public WebGPU.WGPURegistryReport renderPipelines;
             
-            public WebGPU.WGPURegistryReport ComputePipelines;
+            public WebGPU.WGPURegistryReport computePipelines;
             
-            public WebGPU.WGPURegistryReport PipelineCaches;
+            public WebGPU.WGPURegistryReport pipelineCaches;
             
-            public WebGPU.WGPURegistryReport QuerySets;
+            public WebGPU.WGPURegistryReport querySets;
             
-            public WebGPU.WGPURegistryReport Buffers;
+            public WebGPU.WGPURegistryReport buffers;
             
-            public WebGPU.WGPURegistryReport Textures;
+            public WebGPU.WGPURegistryReport textures;
             
-            public WebGPU.WGPURegistryReport TextureViews;
+            public WebGPU.WGPURegistryReport textureViews;
             
-            public WebGPU.WGPURegistryReport Samplers;
+            public WebGPU.WGPURegistryReport samplers;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUGlobalReport
         {
-            public WebGPU.WGPURegistryReport Surfaces;
+            public WebGPU.WGPURegistryReport surfaces;
             
-            public WebGPU.WGPUHubReport Hub;
+            public WebGPU.WGPUHubReport hub;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUInstanceEnumerateAdapterOptions
         {
-            public WebGPU.WGPUChainedStruct* NextInChain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public WebGPU.WGPUInstanceBackend Backends;
+            public WebGPU.WGPUInstanceBackend backends;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUBindGroupEntryExtras
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
-            public WebGPU.WGPUBufferImpl* Buffers;
+            public WebGPU.WGPUBuffer* buffers;
             
-            public nuint BufferCount;
+            public nuint bufferCount;
             
-            public WebGPU.WGPUSamplerImpl* Samplers;
+            public WebGPU.WGPUSampler* samplers;
             
-            public nuint SamplerCount;
+            public nuint samplerCount;
             
-            public WebGPU.WGPUTextureViewImpl* TextureViews;
+            public WebGPU.WGPUTextureView* textureViews;
             
-            public nuint TextureViewCount;
+            public nuint textureViewCount;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUBindGroupLayoutEntryExtras
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
-            public uint Count;
+            public uint count;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUQuerySetDescriptorExtras
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
-            public WebGPU.WGPUPipelineStatisticName* PipelineStatistics;
+            public WebGPU.WGPUPipelineStatisticName* pipelineStatistics;
             
-            public nuint PipelineStatisticCount;
+            public nuint pipelineStatisticCount;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSurfaceConfigurationExtras
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
-            public uint DesiredMaximumFrameLatency;
+            public uint desiredMaximumFrameLatency;
         }
         
         /// <summary>
@@ -4817,23 +4817,23 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSurfaceSourceSwapChainPanel
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
             /// <summary>
             /// A pointer to the [`ISwapChainPanelNative`](https://learn.microsoft.com/en-us/windows/windows-app-sdk/api/win32/microsoft.ui.xaml.media.dxinterop/nn-microsoft-ui-xaml-media-dxinterop-iswapchainpanelnative)
             /// interface of the SwapChainPanel that will be wrapped by the @ref WGPUSurface.
             /// </summary>
-            public void* PanelNative;
+            public void* panelNative;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUPrimitiveStateExtras
         {
-            public WebGPU.WGPUChainedStruct Chain;
+            public WebGPU.WGPUChainedStruct chain;
             
-            public WebGPU.WGPUPolygonMode PolygonMode;
+            public WebGPU.WGPUPolygonMode polygonMode;
             
-            public uint Conservative;
+            public uint conservative;
         }
         
         /// <summary>
@@ -4845,7 +4845,7 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCreateInstance")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUInstanceImpl wgpuCreateInstance(WGPUInstanceDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPUInstance wgpuCreateInstance(WGPUInstanceDescriptor* descriptor);
         
         /// <summary>
         /// Query the supported instance capabilities.
@@ -4874,34 +4874,34 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuAdapterGetFeatures")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuAdapterGetFeatures(WebGPU.WGPUAdapterImpl adapter, WGPUSupportedFeatures* features);
+        public static unsafe partial void wgpuAdapterGetFeatures(WebGPU.WGPUAdapter adapter, WGPUSupportedFeatures* features);
         
         /// <param name="info">This parameter is @ref ReturnedWithOwnership.</param>
         /// <returns>Indicates if there was an @ref OutStructChainError.</returns>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuAdapterGetInfo")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuAdapterGetInfo(WebGPU.WGPUAdapterImpl adapter, WGPUAdapterInfo* info);
+        public static unsafe partial WebGPU.WGPUStatus wgpuAdapterGetInfo(WebGPU.WGPUAdapter adapter, WGPUAdapterInfo* info);
         
         /// <returns>Indicates if there was an @ref OutStructChainError.</returns>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuAdapterGetLimits")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuAdapterGetLimits(WebGPU.WGPUAdapterImpl adapter, WGPULimits* limits);
+        public static unsafe partial WebGPU.WGPUStatus wgpuAdapterGetLimits(WebGPU.WGPUAdapter adapter, WGPULimits* limits);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuAdapterHasFeature")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial uint wgpuAdapterHasFeature(WebGPU.WGPUAdapterImpl adapter, WebGPU.WGPUFeatureName feature);
+        public static partial uint wgpuAdapterHasFeature(WebGPU.WGPUAdapter adapter, WebGPU.WGPUFeatureName feature);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuAdapterRequestDevice")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUFuture wgpuAdapterRequestDevice(WebGPU.WGPUAdapterImpl adapter, WGPUDeviceDescriptor* descriptor, WebGPU.WGPURequestDeviceCallbackInfo callbackInfo);
+        public static unsafe partial WebGPU.WGPUFuture wgpuAdapterRequestDevice(WebGPU.WGPUAdapter adapter, WGPUDeviceDescriptor* descriptor, WebGPU.WGPURequestDeviceCallbackInfo callbackInfo);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuAdapterAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuAdapterAddRef(WebGPU.WGPUAdapterImpl adapter);
+        public static partial void wgpuAdapterAddRef(WebGPU.WGPUAdapter adapter);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuAdapterRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuAdapterRelease(WebGPU.WGPUAdapterImpl adapter);
+        public static partial void wgpuAdapterRelease(WebGPU.WGPUAdapter adapter);
         
         /// <summary>
         /// Functions whose first argument has type WGPUAdapterInfo.
@@ -4923,15 +4923,15 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBindGroupSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuBindGroupSetLabel(WebGPU.WGPUBindGroupImpl bindGroup, WebGPU.WGPUStringView label);
+        public static partial void wgpuBindGroupSetLabel(WebGPU.WGPUBindGroup bindGroup, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBindGroupAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuBindGroupAddRef(WebGPU.WGPUBindGroupImpl bindGroup);
+        public static partial void wgpuBindGroupAddRef(WebGPU.WGPUBindGroup bindGroup);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBindGroupRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuBindGroupRelease(WebGPU.WGPUBindGroupImpl bindGroup);
+        public static partial void wgpuBindGroupRelease(WebGPU.WGPUBindGroup bindGroup);
         
         /// <summary>
         /// Functions whose first argument has type WGPUBindGroupLayout.
@@ -4942,15 +4942,15 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBindGroupLayoutSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuBindGroupLayoutSetLabel(WebGPU.WGPUBindGroupLayoutImpl bindGroupLayout, WebGPU.WGPUStringView label);
+        public static partial void wgpuBindGroupLayoutSetLabel(WebGPU.WGPUBindGroupLayout bindGroupLayout, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBindGroupLayoutAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuBindGroupLayoutAddRef(WebGPU.WGPUBindGroupLayoutImpl bindGroupLayout);
+        public static partial void wgpuBindGroupLayoutAddRef(WebGPU.WGPUBindGroupLayout bindGroupLayout);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBindGroupLayoutRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuBindGroupLayoutRelease(WebGPU.WGPUBindGroupLayoutImpl bindGroupLayout);
+        public static partial void wgpuBindGroupLayoutRelease(WebGPU.WGPUBindGroupLayout bindGroupLayout);
         
         /// <summary>
         /// Functions whose first argument has type WGPUBuffer.
@@ -4961,7 +4961,7 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferDestroy")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuBufferDestroy(WebGPU.WGPUBufferImpl buffer);
+        public static partial void wgpuBufferDestroy(WebGPU.WGPUBuffer buffer);
         
         /// <param name="offset">Byte offset relative to the beginning of the buffer.</param>
         /// <param name="size">Byte size of the range to get. The returned pointer is valid for exactly this many bytes.</param>
@@ -4975,11 +4975,11 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferGetConstMappedRange")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void* wgpuBufferGetConstMappedRange(WebGPU.WGPUBufferImpl buffer, nuint offset, nuint size);
+        public static partial void* wgpuBufferGetConstMappedRange(WebGPU.WGPUBuffer buffer, nuint offset, nuint size);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferGetMapState")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUBufferMapState wgpuBufferGetMapState(WebGPU.WGPUBufferImpl buffer);
+        public static partial WebGPU.WGPUBufferMapState wgpuBufferGetMapState(WebGPU.WGPUBuffer buffer);
         
         /// <param name="offset">Byte offset relative to the beginning of the buffer.</param>
         /// <param name="size">Byte size of the range to get. The returned pointer is valid for exactly this many bytes.</param>
@@ -4991,35 +4991,35 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferGetMappedRange")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void* wgpuBufferGetMappedRange(WebGPU.WGPUBufferImpl buffer, nuint offset, nuint size);
+        public static partial void* wgpuBufferGetMappedRange(WebGPU.WGPUBuffer buffer, nuint offset, nuint size);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferGetSize")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial ulong wgpuBufferGetSize(WebGPU.WGPUBufferImpl buffer);
+        public static partial ulong wgpuBufferGetSize(WebGPU.WGPUBuffer buffer);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferGetUsage")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUBufferUsage wgpuBufferGetUsage(WebGPU.WGPUBufferImpl buffer);
+        public static partial WebGPU.WGPUBufferUsage wgpuBufferGetUsage(WebGPU.WGPUBuffer buffer);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferMapAsync")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUFuture wgpuBufferMapAsync(WebGPU.WGPUBufferImpl buffer, WebGPU.WGPUMapMode mode, nuint offset, nuint size, WebGPU.WGPUBufferMapCallbackInfo callbackInfo);
+        public static partial WebGPU.WGPUFuture wgpuBufferMapAsync(WebGPU.WGPUBuffer buffer, WebGPU.WGPUMapMode mode, nuint offset, nuint size, WebGPU.WGPUBufferMapCallbackInfo callbackInfo);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuBufferSetLabel(WebGPU.WGPUBufferImpl buffer, WebGPU.WGPUStringView label);
+        public static partial void wgpuBufferSetLabel(WebGPU.WGPUBuffer buffer, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferUnmap")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuBufferUnmap(WebGPU.WGPUBufferImpl buffer);
+        public static partial void wgpuBufferUnmap(WebGPU.WGPUBuffer buffer);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuBufferAddRef(WebGPU.WGPUBufferImpl buffer);
+        public static partial void wgpuBufferAddRef(WebGPU.WGPUBuffer buffer);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuBufferRelease(WebGPU.WGPUBufferImpl buffer);
+        public static partial void wgpuBufferRelease(WebGPU.WGPUBuffer buffer);
         
         /// <summary>
         /// Functions whose first argument has type WGPUCommandBuffer.
@@ -5030,15 +5030,15 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandBufferSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuCommandBufferSetLabel(WebGPU.WGPUCommandBufferImpl commandBuffer, WebGPU.WGPUStringView label);
+        public static partial void wgpuCommandBufferSetLabel(WebGPU.WGPUCommandBuffer commandBuffer, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandBufferAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuCommandBufferAddRef(WebGPU.WGPUCommandBufferImpl commandBuffer);
+        public static partial void wgpuCommandBufferAddRef(WebGPU.WGPUCommandBuffer commandBuffer);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandBufferRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuCommandBufferRelease(WebGPU.WGPUCommandBufferImpl commandBuffer);
+        public static partial void wgpuCommandBufferRelease(WebGPU.WGPUCommandBuffer commandBuffer);
         
         /// <summary>
         /// Functions whose first argument has type WGPUCommandEncoder.
@@ -5049,67 +5049,67 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderBeginComputePass")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUComputePassEncoderImpl wgpuCommandEncoderBeginComputePass(WebGPU.WGPUCommandEncoderImpl commandEncoder, WGPUComputePassDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPUComputePassEncoder wgpuCommandEncoderBeginComputePass(WebGPU.WGPUCommandEncoder commandEncoder, WGPUComputePassDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderBeginRenderPass")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPURenderPassEncoderImpl wgpuCommandEncoderBeginRenderPass(WebGPU.WGPUCommandEncoderImpl commandEncoder, WGPURenderPassDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPURenderPassEncoder wgpuCommandEncoderBeginRenderPass(WebGPU.WGPUCommandEncoder commandEncoder, WGPURenderPassDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderClearBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuCommandEncoderClearBuffer(WebGPU.WGPUCommandEncoderImpl commandEncoder, WebGPU.WGPUBufferImpl buffer, ulong offset, ulong size);
+        public static partial void wgpuCommandEncoderClearBuffer(WebGPU.WGPUCommandEncoder commandEncoder, WebGPU.WGPUBuffer buffer, ulong offset, ulong size);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderCopyBufferToBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuCommandEncoderCopyBufferToBuffer(WebGPU.WGPUCommandEncoderImpl commandEncoder, WebGPU.WGPUBufferImpl source, ulong sourceOffset, WebGPU.WGPUBufferImpl destination, ulong destinationOffset, ulong size);
+        public static partial void wgpuCommandEncoderCopyBufferToBuffer(WebGPU.WGPUCommandEncoder commandEncoder, WebGPU.WGPUBuffer source, ulong sourceOffset, WebGPU.WGPUBuffer destination, ulong destinationOffset, ulong size);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderCopyBufferToTexture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuCommandEncoderCopyBufferToTexture(WebGPU.WGPUCommandEncoderImpl commandEncoder, WGPUTexelCopyBufferInfo* source, WGPUTexelCopyTextureInfo* destination, WGPUExtent3D* copySize);
+        public static unsafe partial void wgpuCommandEncoderCopyBufferToTexture(WebGPU.WGPUCommandEncoder commandEncoder, WGPUTexelCopyBufferInfo* source, WGPUTexelCopyTextureInfo* destination, WGPUExtent3D* copySize);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderCopyTextureToBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuCommandEncoderCopyTextureToBuffer(WebGPU.WGPUCommandEncoderImpl commandEncoder, WGPUTexelCopyTextureInfo* source, WGPUTexelCopyBufferInfo* destination, WGPUExtent3D* copySize);
+        public static unsafe partial void wgpuCommandEncoderCopyTextureToBuffer(WebGPU.WGPUCommandEncoder commandEncoder, WGPUTexelCopyTextureInfo* source, WGPUTexelCopyBufferInfo* destination, WGPUExtent3D* copySize);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderCopyTextureToTexture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuCommandEncoderCopyTextureToTexture(WebGPU.WGPUCommandEncoderImpl commandEncoder, WGPUTexelCopyTextureInfo* source, WGPUTexelCopyTextureInfo* destination, WGPUExtent3D* copySize);
+        public static unsafe partial void wgpuCommandEncoderCopyTextureToTexture(WebGPU.WGPUCommandEncoder commandEncoder, WGPUTexelCopyTextureInfo* source, WGPUTexelCopyTextureInfo* destination, WGPUExtent3D* copySize);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderFinish")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUCommandBufferImpl wgpuCommandEncoderFinish(WebGPU.WGPUCommandEncoderImpl commandEncoder, WGPUCommandBufferDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPUCommandBuffer wgpuCommandEncoderFinish(WebGPU.WGPUCommandEncoder commandEncoder, WGPUCommandBufferDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderInsertDebugMarker")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuCommandEncoderInsertDebugMarker(WebGPU.WGPUCommandEncoderImpl commandEncoder, WebGPU.WGPUStringView markerLabel);
+        public static partial void wgpuCommandEncoderInsertDebugMarker(WebGPU.WGPUCommandEncoder commandEncoder, WebGPU.WGPUStringView markerLabel);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderPopDebugGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuCommandEncoderPopDebugGroup(WebGPU.WGPUCommandEncoderImpl commandEncoder);
+        public static partial void wgpuCommandEncoderPopDebugGroup(WebGPU.WGPUCommandEncoder commandEncoder);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderPushDebugGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuCommandEncoderPushDebugGroup(WebGPU.WGPUCommandEncoderImpl commandEncoder, WebGPU.WGPUStringView groupLabel);
+        public static partial void wgpuCommandEncoderPushDebugGroup(WebGPU.WGPUCommandEncoder commandEncoder, WebGPU.WGPUStringView groupLabel);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderResolveQuerySet")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuCommandEncoderResolveQuerySet(WebGPU.WGPUCommandEncoderImpl commandEncoder, WebGPU.WGPUQuerySetImpl querySet, uint firstQuery, uint queryCount, WebGPU.WGPUBufferImpl destination, ulong destinationOffset);
+        public static partial void wgpuCommandEncoderResolveQuerySet(WebGPU.WGPUCommandEncoder commandEncoder, WebGPU.WGPUQuerySet querySet, uint firstQuery, uint queryCount, WebGPU.WGPUBuffer destination, ulong destinationOffset);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuCommandEncoderSetLabel(WebGPU.WGPUCommandEncoderImpl commandEncoder, WebGPU.WGPUStringView label);
+        public static partial void wgpuCommandEncoderSetLabel(WebGPU.WGPUCommandEncoder commandEncoder, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderWriteTimestamp")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuCommandEncoderWriteTimestamp(WebGPU.WGPUCommandEncoderImpl commandEncoder, WebGPU.WGPUQuerySetImpl querySet, uint queryIndex);
+        public static partial void wgpuCommandEncoderWriteTimestamp(WebGPU.WGPUCommandEncoder commandEncoder, WebGPU.WGPUQuerySet querySet, uint queryIndex);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuCommandEncoderAddRef(WebGPU.WGPUCommandEncoderImpl commandEncoder);
+        public static partial void wgpuCommandEncoderAddRef(WebGPU.WGPUCommandEncoder commandEncoder);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuCommandEncoderRelease(WebGPU.WGPUCommandEncoderImpl commandEncoder);
+        public static partial void wgpuCommandEncoderRelease(WebGPU.WGPUCommandEncoder commandEncoder);
         
         /// <summary>
         /// Functions whose first argument has type WGPUComputePassEncoder.
@@ -5120,47 +5120,47 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderDispatchWorkgroups")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderDispatchWorkgroups(WebGPU.WGPUComputePassEncoderImpl computePassEncoder, uint workgroupCountX, uint workgroupCountY, uint workgroupCountZ);
+        public static partial void wgpuComputePassEncoderDispatchWorkgroups(WebGPU.WGPUComputePassEncoder computePassEncoder, uint workgroupCountX, uint workgroupCountY, uint workgroupCountZ);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderDispatchWorkgroupsIndirect")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderDispatchWorkgroupsIndirect(WebGPU.WGPUComputePassEncoderImpl computePassEncoder, WebGPU.WGPUBufferImpl indirectBuffer, ulong indirectOffset);
+        public static partial void wgpuComputePassEncoderDispatchWorkgroupsIndirect(WebGPU.WGPUComputePassEncoder computePassEncoder, WebGPU.WGPUBuffer indirectBuffer, ulong indirectOffset);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderEnd")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderEnd(WebGPU.WGPUComputePassEncoderImpl computePassEncoder);
+        public static partial void wgpuComputePassEncoderEnd(WebGPU.WGPUComputePassEncoder computePassEncoder);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderInsertDebugMarker")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderInsertDebugMarker(WebGPU.WGPUComputePassEncoderImpl computePassEncoder, WebGPU.WGPUStringView markerLabel);
+        public static partial void wgpuComputePassEncoderInsertDebugMarker(WebGPU.WGPUComputePassEncoder computePassEncoder, WebGPU.WGPUStringView markerLabel);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderPopDebugGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderPopDebugGroup(WebGPU.WGPUComputePassEncoderImpl computePassEncoder);
+        public static partial void wgpuComputePassEncoderPopDebugGroup(WebGPU.WGPUComputePassEncoder computePassEncoder);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderPushDebugGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderPushDebugGroup(WebGPU.WGPUComputePassEncoderImpl computePassEncoder, WebGPU.WGPUStringView groupLabel);
+        public static partial void wgpuComputePassEncoderPushDebugGroup(WebGPU.WGPUComputePassEncoder computePassEncoder, WebGPU.WGPUStringView groupLabel);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderSetBindGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderSetBindGroup(WebGPU.WGPUComputePassEncoderImpl computePassEncoder, uint groupIndex, WebGPU.WGPUBindGroupImpl group, nuint dynamicOffsetCount, ref uint dynamicOffsets);
+        public static partial void wgpuComputePassEncoderSetBindGroup(WebGPU.WGPUComputePassEncoder computePassEncoder, uint groupIndex, WebGPU.WGPUBindGroup group, nuint dynamicOffsetCount, ref uint dynamicOffsets);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderSetLabel(WebGPU.WGPUComputePassEncoderImpl computePassEncoder, WebGPU.WGPUStringView label);
+        public static partial void wgpuComputePassEncoderSetLabel(WebGPU.WGPUComputePassEncoder computePassEncoder, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderSetPipeline")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderSetPipeline(WebGPU.WGPUComputePassEncoderImpl computePassEncoder, WebGPU.WGPUComputePipelineImpl pipeline);
+        public static partial void wgpuComputePassEncoderSetPipeline(WebGPU.WGPUComputePassEncoder computePassEncoder, WebGPU.WGPUComputePipeline pipeline);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderAddRef(WebGPU.WGPUComputePassEncoderImpl computePassEncoder);
+        public static partial void wgpuComputePassEncoderAddRef(WebGPU.WGPUComputePassEncoder computePassEncoder);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderRelease(WebGPU.WGPUComputePassEncoderImpl computePassEncoder);
+        public static partial void wgpuComputePassEncoderRelease(WebGPU.WGPUComputePassEncoder computePassEncoder);
         
         /// <summary>
         /// Functions whose first argument has type WGPUComputePipeline.
@@ -5171,19 +5171,19 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePipelineGetBindGroupLayout")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUBindGroupLayoutImpl wgpuComputePipelineGetBindGroupLayout(WebGPU.WGPUComputePipelineImpl computePipeline, uint groupIndex);
+        public static partial WebGPU.WGPUBindGroupLayout wgpuComputePipelineGetBindGroupLayout(WebGPU.WGPUComputePipeline computePipeline, uint groupIndex);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePipelineSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePipelineSetLabel(WebGPU.WGPUComputePipelineImpl computePipeline, WebGPU.WGPUStringView label);
+        public static partial void wgpuComputePipelineSetLabel(WebGPU.WGPUComputePipeline computePipeline, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePipelineAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePipelineAddRef(WebGPU.WGPUComputePipelineImpl computePipeline);
+        public static partial void wgpuComputePipelineAddRef(WebGPU.WGPUComputePipeline computePipeline);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePipelineRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePipelineRelease(WebGPU.WGPUComputePipelineImpl computePipeline);
+        public static partial void wgpuComputePipelineRelease(WebGPU.WGPUComputePipeline computePipeline);
         
         /// <summary>
         /// Functions whose first argument has type WGPUDevice.
@@ -5194,67 +5194,67 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateBindGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUBindGroupImpl wgpuDeviceCreateBindGroup(WebGPU.WGPUDeviceImpl device, WGPUBindGroupDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPUBindGroup wgpuDeviceCreateBindGroup(WebGPU.WGPUDevice device, WGPUBindGroupDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateBindGroupLayout")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUBindGroupLayoutImpl wgpuDeviceCreateBindGroupLayout(WebGPU.WGPUDeviceImpl device, WGPUBindGroupLayoutDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPUBindGroupLayout wgpuDeviceCreateBindGroupLayout(WebGPU.WGPUDevice device, WGPUBindGroupLayoutDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUBufferImpl wgpuDeviceCreateBuffer(WebGPU.WGPUDeviceImpl device, WGPUBufferDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPUBuffer wgpuDeviceCreateBuffer(WebGPU.WGPUDevice device, WGPUBufferDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateCommandEncoder")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUCommandEncoderImpl wgpuDeviceCreateCommandEncoder(WebGPU.WGPUDeviceImpl device, WGPUCommandEncoderDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPUCommandEncoder wgpuDeviceCreateCommandEncoder(WebGPU.WGPUDevice device, WGPUCommandEncoderDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateComputePipeline")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUComputePipelineImpl wgpuDeviceCreateComputePipeline(WebGPU.WGPUDeviceImpl device, WGPUComputePipelineDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPUComputePipeline wgpuDeviceCreateComputePipeline(WebGPU.WGPUDevice device, WGPUComputePipelineDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateComputePipelineAsync")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUFuture wgpuDeviceCreateComputePipelineAsync(WebGPU.WGPUDeviceImpl device, WGPUComputePipelineDescriptor* descriptor, WebGPU.WGPUCreateComputePipelineAsyncCallbackInfo callbackInfo);
+        public static unsafe partial WebGPU.WGPUFuture wgpuDeviceCreateComputePipelineAsync(WebGPU.WGPUDevice device, WGPUComputePipelineDescriptor* descriptor, WebGPU.WGPUCreateComputePipelineAsyncCallbackInfo callbackInfo);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreatePipelineLayout")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUPipelineLayoutImpl wgpuDeviceCreatePipelineLayout(WebGPU.WGPUDeviceImpl device, WGPUPipelineLayoutDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPUPipelineLayout wgpuDeviceCreatePipelineLayout(WebGPU.WGPUDevice device, WGPUPipelineLayoutDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateQuerySet")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUQuerySetImpl wgpuDeviceCreateQuerySet(WebGPU.WGPUDeviceImpl device, WGPUQuerySetDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPUQuerySet wgpuDeviceCreateQuerySet(WebGPU.WGPUDevice device, WGPUQuerySetDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateRenderBundleEncoder")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPURenderBundleEncoderImpl wgpuDeviceCreateRenderBundleEncoder(WebGPU.WGPUDeviceImpl device, WGPURenderBundleEncoderDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPURenderBundleEncoder wgpuDeviceCreateRenderBundleEncoder(WebGPU.WGPUDevice device, WGPURenderBundleEncoderDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateRenderPipeline")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPURenderPipelineImpl wgpuDeviceCreateRenderPipeline(WebGPU.WGPUDeviceImpl device, WGPURenderPipelineDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPURenderPipeline wgpuDeviceCreateRenderPipeline(WebGPU.WGPUDevice device, WGPURenderPipelineDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateRenderPipelineAsync")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUFuture wgpuDeviceCreateRenderPipelineAsync(WebGPU.WGPUDeviceImpl device, WGPURenderPipelineDescriptor* descriptor, WebGPU.WGPUCreateRenderPipelineAsyncCallbackInfo callbackInfo);
+        public static unsafe partial WebGPU.WGPUFuture wgpuDeviceCreateRenderPipelineAsync(WebGPU.WGPUDevice device, WGPURenderPipelineDescriptor* descriptor, WebGPU.WGPUCreateRenderPipelineAsyncCallbackInfo callbackInfo);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateSampler")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUSamplerImpl wgpuDeviceCreateSampler(WebGPU.WGPUDeviceImpl device, WGPUSamplerDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPUSampler wgpuDeviceCreateSampler(WebGPU.WGPUDevice device, WGPUSamplerDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateShaderModule")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUShaderModuleImpl wgpuDeviceCreateShaderModule(WebGPU.WGPUDeviceImpl device, WGPUShaderModuleDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPUShaderModule wgpuDeviceCreateShaderModule(WebGPU.WGPUDevice device, WGPUShaderModuleDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateTexture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUTextureImpl wgpuDeviceCreateTexture(WebGPU.WGPUDeviceImpl device, WGPUTextureDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPUTexture wgpuDeviceCreateTexture(WebGPU.WGPUDevice device, WGPUTextureDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceDestroy")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuDeviceDestroy(WebGPU.WGPUDeviceImpl device);
+        public static partial void wgpuDeviceDestroy(WebGPU.WGPUDevice device);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceGetAdapterInfo")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUAdapterInfo wgpuDeviceGetAdapterInfo(WebGPU.WGPUDeviceImpl device);
+        public static partial WebGPU.WGPUAdapterInfo wgpuDeviceGetAdapterInfo(WebGPU.WGPUDevice device);
         
         /// <summary>
         /// Get the list of @ref WGPUFeatureName values supported by the device.
@@ -5262,45 +5262,45 @@ namespace WebGPU.NET.Wgpu
         /// <param name="features">This parameter is @ref ReturnedWithOwnership.</param>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceGetFeatures")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuDeviceGetFeatures(WebGPU.WGPUDeviceImpl device, WGPUSupportedFeatures* features);
+        public static unsafe partial void wgpuDeviceGetFeatures(WebGPU.WGPUDevice device, WGPUSupportedFeatures* features);
         
         /// <returns>Indicates if there was an @ref OutStructChainError.</returns>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceGetLimits")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuDeviceGetLimits(WebGPU.WGPUDeviceImpl device, WGPULimits* limits);
+        public static unsafe partial WebGPU.WGPUStatus wgpuDeviceGetLimits(WebGPU.WGPUDevice device, WGPULimits* limits);
         
         /// <returns>The @ref WGPUFuture for the device-lost event of the device.</returns>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceGetLostFuture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUFuture wgpuDeviceGetLostFuture(WebGPU.WGPUDeviceImpl device);
+        public static partial WebGPU.WGPUFuture wgpuDeviceGetLostFuture(WebGPU.WGPUDevice device);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceGetQueue")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUQueueImpl wgpuDeviceGetQueue(WebGPU.WGPUDeviceImpl device);
+        public static partial WebGPU.WGPUQueue wgpuDeviceGetQueue(WebGPU.WGPUDevice device);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceHasFeature")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial uint wgpuDeviceHasFeature(WebGPU.WGPUDeviceImpl device, WebGPU.WGPUFeatureName feature);
+        public static partial uint wgpuDeviceHasFeature(WebGPU.WGPUDevice device, WebGPU.WGPUFeatureName feature);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDevicePopErrorScope")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUFuture wgpuDevicePopErrorScope(WebGPU.WGPUDeviceImpl device, WebGPU.WGPUPopErrorScopeCallbackInfo callbackInfo);
+        public static partial WebGPU.WGPUFuture wgpuDevicePopErrorScope(WebGPU.WGPUDevice device, WebGPU.WGPUPopErrorScopeCallbackInfo callbackInfo);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDevicePushErrorScope")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuDevicePushErrorScope(WebGPU.WGPUDeviceImpl device, WebGPU.WGPUErrorFilter filter);
+        public static partial void wgpuDevicePushErrorScope(WebGPU.WGPUDevice device, WebGPU.WGPUErrorFilter filter);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuDeviceSetLabel(WebGPU.WGPUDeviceImpl device, WebGPU.WGPUStringView label);
+        public static partial void wgpuDeviceSetLabel(WebGPU.WGPUDevice device, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuDeviceAddRef(WebGPU.WGPUDeviceImpl device);
+        public static partial void wgpuDeviceAddRef(WebGPU.WGPUDevice device);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuDeviceRelease(WebGPU.WGPUDeviceImpl device);
+        public static partial void wgpuDeviceRelease(WebGPU.WGPUDevice device);
         
         /// <summary>
         /// Functions whose first argument has type WGPUInstance.
@@ -5313,18 +5313,18 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceCreateSurface")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUSurfaceImpl wgpuInstanceCreateSurface(WebGPU.WGPUInstanceImpl instance, WGPUSurfaceDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPUSurface wgpuInstanceCreateSurface(WebGPU.WGPUInstance instance, WGPUSurfaceDescriptor* descriptor);
         
         /// <summary>
         /// Get the list of @ref WGPUWGSLLanguageFeatureName values supported by the instance.
         /// </summary>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceGetWGSLLanguageFeatures")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuInstanceGetWGSLLanguageFeatures(WebGPU.WGPUInstanceImpl instance, WGPUSupportedWGSLLanguageFeatures* features);
+        public static unsafe partial WebGPU.WGPUStatus wgpuInstanceGetWGSLLanguageFeatures(WebGPU.WGPUInstance instance, WGPUSupportedWGSLLanguageFeatures* features);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceHasWGSLLanguageFeature")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial uint wgpuInstanceHasWGSLLanguageFeature(WebGPU.WGPUInstanceImpl instance, WebGPU.WGPUWGSLLanguageFeatureName feature);
+        public static partial uint wgpuInstanceHasWGSLLanguageFeature(WebGPU.WGPUInstance instance, WebGPU.WGPUWGSLLanguageFeatureName feature);
         
         /// <summary>
         /// Processes asynchronous events on this `WGPUInstance`, calling any callbacks for asynchronous operations created with `::WGPUCallbackMode_AllowProcessEvents`.
@@ -5334,11 +5334,11 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceProcessEvents")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuInstanceProcessEvents(WebGPU.WGPUInstanceImpl instance);
+        public static partial void wgpuInstanceProcessEvents(WebGPU.WGPUInstance instance);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceRequestAdapter")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUFuture wgpuInstanceRequestAdapter(WebGPU.WGPUInstanceImpl instance, WGPURequestAdapterOptions* options, WebGPU.WGPURequestAdapterCallbackInfo callbackInfo);
+        public static unsafe partial WebGPU.WGPUFuture wgpuInstanceRequestAdapter(WebGPU.WGPUInstance instance, WGPURequestAdapterOptions* options, WebGPU.WGPURequestAdapterCallbackInfo callbackInfo);
         
         /// <summary>
         /// Wait for at least one WGPUFuture in `futures` to complete, and call callbacks of the respective completed asynchronous operations.
@@ -5348,15 +5348,15 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceWaitAny")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUWaitStatus wgpuInstanceWaitAny(WebGPU.WGPUInstanceImpl instance, nuint futureCount, WGPUFutureWaitInfo* futures, ulong timeoutNS);
+        public static unsafe partial WebGPU.WGPUWaitStatus wgpuInstanceWaitAny(WebGPU.WGPUInstance instance, nuint futureCount, WGPUFutureWaitInfo* futures, ulong timeoutNS);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuInstanceAddRef(WebGPU.WGPUInstanceImpl instance);
+        public static partial void wgpuInstanceAddRef(WebGPU.WGPUInstance instance);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuInstanceRelease(WebGPU.WGPUInstanceImpl instance);
+        public static partial void wgpuInstanceRelease(WebGPU.WGPUInstance instance);
         
         /// <summary>
         /// Functions whose first argument has type WGPUPipelineLayout.
@@ -5367,15 +5367,15 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuPipelineLayoutSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuPipelineLayoutSetLabel(WebGPU.WGPUPipelineLayoutImpl pipelineLayout, WebGPU.WGPUStringView label);
+        public static partial void wgpuPipelineLayoutSetLabel(WebGPU.WGPUPipelineLayout pipelineLayout, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuPipelineLayoutAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuPipelineLayoutAddRef(WebGPU.WGPUPipelineLayoutImpl pipelineLayout);
+        public static partial void wgpuPipelineLayoutAddRef(WebGPU.WGPUPipelineLayout pipelineLayout);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuPipelineLayoutRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuPipelineLayoutRelease(WebGPU.WGPUPipelineLayoutImpl pipelineLayout);
+        public static partial void wgpuPipelineLayoutRelease(WebGPU.WGPUPipelineLayout pipelineLayout);
         
         /// <summary>
         /// Functions whose first argument has type WGPUQuerySet.
@@ -5386,27 +5386,27 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQuerySetDestroy")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuQuerySetDestroy(WebGPU.WGPUQuerySetImpl querySet);
+        public static partial void wgpuQuerySetDestroy(WebGPU.WGPUQuerySet querySet);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQuerySetGetCount")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial uint wgpuQuerySetGetCount(WebGPU.WGPUQuerySetImpl querySet);
+        public static partial uint wgpuQuerySetGetCount(WebGPU.WGPUQuerySet querySet);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQuerySetGetType")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUQueryType wgpuQuerySetGetType(WebGPU.WGPUQuerySetImpl querySet);
+        public static partial WebGPU.WGPUQueryType wgpuQuerySetGetType(WebGPU.WGPUQuerySet querySet);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQuerySetSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuQuerySetSetLabel(WebGPU.WGPUQuerySetImpl querySet, WebGPU.WGPUStringView label);
+        public static partial void wgpuQuerySetSetLabel(WebGPU.WGPUQuerySet querySet, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQuerySetAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuQuerySetAddRef(WebGPU.WGPUQuerySetImpl querySet);
+        public static partial void wgpuQuerySetAddRef(WebGPU.WGPUQuerySet querySet);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQuerySetRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuQuerySetRelease(WebGPU.WGPUQuerySetImpl querySet);
+        public static partial void wgpuQuerySetRelease(WebGPU.WGPUQuerySet querySet);
         
         /// <summary>
         /// Functions whose first argument has type WGPUQueue.
@@ -5417,15 +5417,15 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueOnSubmittedWorkDone")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUFuture wgpuQueueOnSubmittedWorkDone(WebGPU.WGPUQueueImpl queue, WebGPU.WGPUQueueWorkDoneCallbackInfo callbackInfo);
+        public static partial WebGPU.WGPUFuture wgpuQueueOnSubmittedWorkDone(WebGPU.WGPUQueue queue, WebGPU.WGPUQueueWorkDoneCallbackInfo callbackInfo);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuQueueSetLabel(WebGPU.WGPUQueueImpl queue, WebGPU.WGPUStringView label);
+        public static partial void wgpuQueueSetLabel(WebGPU.WGPUQueue queue, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueSubmit")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuQueueSubmit(WebGPU.WGPUQueueImpl queue, nuint commandCount, WGPUCommandBufferImpl* commands);
+        public static unsafe partial void wgpuQueueSubmit(WebGPU.WGPUQueue queue, nuint commandCount, WGPUCommandBuffer* commands);
         
         /// <summary>
         /// Produces a @ref DeviceError both content-timeline (`size` alignment) and device-timeline
@@ -5433,19 +5433,19 @@ namespace WebGPU.NET.Wgpu
         /// </summary>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueWriteBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuQueueWriteBuffer(WebGPU.WGPUQueueImpl queue, WebGPU.WGPUBufferImpl buffer, ulong bufferOffset, void* data, nuint size);
+        public static partial void wgpuQueueWriteBuffer(WebGPU.WGPUQueue queue, WebGPU.WGPUBuffer buffer, ulong bufferOffset, void* data, nuint size);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueWriteTexture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuQueueWriteTexture(WebGPU.WGPUQueueImpl queue, WGPUTexelCopyTextureInfo* destination, void* data, nuint dataSize, WGPUTexelCopyBufferLayout* dataLayout, WGPUExtent3D* writeSize);
+        public static unsafe partial void wgpuQueueWriteTexture(WebGPU.WGPUQueue queue, WGPUTexelCopyTextureInfo* destination, void* data, nuint dataSize, WGPUTexelCopyBufferLayout* dataLayout, WGPUExtent3D* writeSize);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuQueueAddRef(WebGPU.WGPUQueueImpl queue);
+        public static partial void wgpuQueueAddRef(WebGPU.WGPUQueue queue);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuQueueRelease(WebGPU.WGPUQueueImpl queue);
+        public static partial void wgpuQueueRelease(WebGPU.WGPUQueue queue);
         
         /// <summary>
         /// Functions whose first argument has type WGPURenderBundle.
@@ -5456,15 +5456,15 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleSetLabel(WebGPU.WGPURenderBundleImpl renderBundle, WebGPU.WGPUStringView label);
+        public static partial void wgpuRenderBundleSetLabel(WebGPU.WGPURenderBundle renderBundle, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleAddRef(WebGPU.WGPURenderBundleImpl renderBundle);
+        public static partial void wgpuRenderBundleAddRef(WebGPU.WGPURenderBundle renderBundle);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleRelease(WebGPU.WGPURenderBundleImpl renderBundle);
+        public static partial void wgpuRenderBundleRelease(WebGPU.WGPURenderBundle renderBundle);
         
         /// <summary>
         /// Functions whose first argument has type WGPURenderBundleEncoder.
@@ -5475,63 +5475,63 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderDraw")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderDraw(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder, uint vertexCount, uint instanceCount, uint firstVertex, uint firstInstance);
+        public static partial void wgpuRenderBundleEncoderDraw(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, uint vertexCount, uint instanceCount, uint firstVertex, uint firstInstance);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderDrawIndexed")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderDrawIndexed(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder, uint indexCount, uint instanceCount, uint firstIndex, int baseVertex, uint firstInstance);
+        public static partial void wgpuRenderBundleEncoderDrawIndexed(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, uint indexCount, uint instanceCount, uint firstIndex, int baseVertex, uint firstInstance);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderDrawIndexedIndirect")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderDrawIndexedIndirect(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder, WebGPU.WGPUBufferImpl indirectBuffer, ulong indirectOffset);
+        public static partial void wgpuRenderBundleEncoderDrawIndexedIndirect(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, WebGPU.WGPUBuffer indirectBuffer, ulong indirectOffset);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderDrawIndirect")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderDrawIndirect(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder, WebGPU.WGPUBufferImpl indirectBuffer, ulong indirectOffset);
+        public static partial void wgpuRenderBundleEncoderDrawIndirect(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, WebGPU.WGPUBuffer indirectBuffer, ulong indirectOffset);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderFinish")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPURenderBundleImpl wgpuRenderBundleEncoderFinish(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder, WGPURenderBundleDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPURenderBundle wgpuRenderBundleEncoderFinish(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, WGPURenderBundleDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderInsertDebugMarker")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderInsertDebugMarker(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder, WebGPU.WGPUStringView markerLabel);
+        public static partial void wgpuRenderBundleEncoderInsertDebugMarker(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, WebGPU.WGPUStringView markerLabel);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderPopDebugGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderPopDebugGroup(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder);
+        public static partial void wgpuRenderBundleEncoderPopDebugGroup(WebGPU.WGPURenderBundleEncoder renderBundleEncoder);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderPushDebugGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderPushDebugGroup(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder, WebGPU.WGPUStringView groupLabel);
+        public static partial void wgpuRenderBundleEncoderPushDebugGroup(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, WebGPU.WGPUStringView groupLabel);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderSetBindGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderSetBindGroup(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder, uint groupIndex, WebGPU.WGPUBindGroupImpl group, nuint dynamicOffsetCount, ref uint dynamicOffsets);
+        public static partial void wgpuRenderBundleEncoderSetBindGroup(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, uint groupIndex, WebGPU.WGPUBindGroup group, nuint dynamicOffsetCount, ref uint dynamicOffsets);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderSetIndexBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderSetIndexBuffer(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder, WebGPU.WGPUBufferImpl buffer, WebGPU.WGPUIndexFormat format, ulong offset, ulong size);
+        public static partial void wgpuRenderBundleEncoderSetIndexBuffer(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, WebGPU.WGPUBuffer buffer, WebGPU.WGPUIndexFormat format, ulong offset, ulong size);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderSetLabel(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder, WebGPU.WGPUStringView label);
+        public static partial void wgpuRenderBundleEncoderSetLabel(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderSetPipeline")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderSetPipeline(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder, WebGPU.WGPURenderPipelineImpl pipeline);
+        public static partial void wgpuRenderBundleEncoderSetPipeline(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, WebGPU.WGPURenderPipeline pipeline);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderSetVertexBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderSetVertexBuffer(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder, uint slot, WebGPU.WGPUBufferImpl buffer, ulong offset, ulong size);
+        public static partial void wgpuRenderBundleEncoderSetVertexBuffer(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, uint slot, WebGPU.WGPUBuffer buffer, ulong offset, ulong size);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderAddRef(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder);
+        public static partial void wgpuRenderBundleEncoderAddRef(WebGPU.WGPURenderBundleEncoder renderBundleEncoder);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderRelease(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder);
+        public static partial void wgpuRenderBundleEncoderRelease(WebGPU.WGPURenderBundleEncoder renderBundleEncoder);
         
         /// <summary>
         /// Functions whose first argument has type WGPURenderPassEncoder.
@@ -5542,91 +5542,91 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderBeginOcclusionQuery")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderBeginOcclusionQuery(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, uint queryIndex);
+        public static partial void wgpuRenderPassEncoderBeginOcclusionQuery(WebGPU.WGPURenderPassEncoder renderPassEncoder, uint queryIndex);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderDraw")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderDraw(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, uint vertexCount, uint instanceCount, uint firstVertex, uint firstInstance);
+        public static partial void wgpuRenderPassEncoderDraw(WebGPU.WGPURenderPassEncoder renderPassEncoder, uint vertexCount, uint instanceCount, uint firstVertex, uint firstInstance);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderDrawIndexed")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderDrawIndexed(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, uint indexCount, uint instanceCount, uint firstIndex, int baseVertex, uint firstInstance);
+        public static partial void wgpuRenderPassEncoderDrawIndexed(WebGPU.WGPURenderPassEncoder renderPassEncoder, uint indexCount, uint instanceCount, uint firstIndex, int baseVertex, uint firstInstance);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderDrawIndexedIndirect")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderDrawIndexedIndirect(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, WebGPU.WGPUBufferImpl indirectBuffer, ulong indirectOffset);
+        public static partial void wgpuRenderPassEncoderDrawIndexedIndirect(WebGPU.WGPURenderPassEncoder renderPassEncoder, WebGPU.WGPUBuffer indirectBuffer, ulong indirectOffset);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderDrawIndirect")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderDrawIndirect(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, WebGPU.WGPUBufferImpl indirectBuffer, ulong indirectOffset);
+        public static partial void wgpuRenderPassEncoderDrawIndirect(WebGPU.WGPURenderPassEncoder renderPassEncoder, WebGPU.WGPUBuffer indirectBuffer, ulong indirectOffset);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderEnd")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderEnd(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder);
+        public static partial void wgpuRenderPassEncoderEnd(WebGPU.WGPURenderPassEncoder renderPassEncoder);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderEndOcclusionQuery")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderEndOcclusionQuery(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder);
+        public static partial void wgpuRenderPassEncoderEndOcclusionQuery(WebGPU.WGPURenderPassEncoder renderPassEncoder);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderExecuteBundles")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuRenderPassEncoderExecuteBundles(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, nuint bundleCount, WGPURenderBundleImpl* bundles);
+        public static unsafe partial void wgpuRenderPassEncoderExecuteBundles(WebGPU.WGPURenderPassEncoder renderPassEncoder, nuint bundleCount, WGPURenderBundle* bundles);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderInsertDebugMarker")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderInsertDebugMarker(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, WebGPU.WGPUStringView markerLabel);
+        public static partial void wgpuRenderPassEncoderInsertDebugMarker(WebGPU.WGPURenderPassEncoder renderPassEncoder, WebGPU.WGPUStringView markerLabel);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderPopDebugGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderPopDebugGroup(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder);
+        public static partial void wgpuRenderPassEncoderPopDebugGroup(WebGPU.WGPURenderPassEncoder renderPassEncoder);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderPushDebugGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderPushDebugGroup(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, WebGPU.WGPUStringView groupLabel);
+        public static partial void wgpuRenderPassEncoderPushDebugGroup(WebGPU.WGPURenderPassEncoder renderPassEncoder, WebGPU.WGPUStringView groupLabel);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetBindGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderSetBindGroup(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, uint groupIndex, WebGPU.WGPUBindGroupImpl group, nuint dynamicOffsetCount, ref uint dynamicOffsets);
+        public static partial void wgpuRenderPassEncoderSetBindGroup(WebGPU.WGPURenderPassEncoder renderPassEncoder, uint groupIndex, WebGPU.WGPUBindGroup group, nuint dynamicOffsetCount, ref uint dynamicOffsets);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetBlendConstant")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuRenderPassEncoderSetBlendConstant(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, WGPUColor* color);
+        public static unsafe partial void wgpuRenderPassEncoderSetBlendConstant(WebGPU.WGPURenderPassEncoder renderPassEncoder, WGPUColor* color);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetIndexBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderSetIndexBuffer(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, WebGPU.WGPUBufferImpl buffer, WebGPU.WGPUIndexFormat format, ulong offset, ulong size);
+        public static partial void wgpuRenderPassEncoderSetIndexBuffer(WebGPU.WGPURenderPassEncoder renderPassEncoder, WebGPU.WGPUBuffer buffer, WebGPU.WGPUIndexFormat format, ulong offset, ulong size);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderSetLabel(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, WebGPU.WGPUStringView label);
+        public static partial void wgpuRenderPassEncoderSetLabel(WebGPU.WGPURenderPassEncoder renderPassEncoder, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetPipeline")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderSetPipeline(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, WebGPU.WGPURenderPipelineImpl pipeline);
+        public static partial void wgpuRenderPassEncoderSetPipeline(WebGPU.WGPURenderPassEncoder renderPassEncoder, WebGPU.WGPURenderPipeline pipeline);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetScissorRect")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderSetScissorRect(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, uint x, uint y, uint width, uint height);
+        public static partial void wgpuRenderPassEncoderSetScissorRect(WebGPU.WGPURenderPassEncoder renderPassEncoder, uint x, uint y, uint width, uint height);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetStencilReference")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderSetStencilReference(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, uint reference);
+        public static partial void wgpuRenderPassEncoderSetStencilReference(WebGPU.WGPURenderPassEncoder renderPassEncoder, uint reference);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetVertexBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderSetVertexBuffer(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, uint slot, WebGPU.WGPUBufferImpl buffer, ulong offset, ulong size);
+        public static partial void wgpuRenderPassEncoderSetVertexBuffer(WebGPU.WGPURenderPassEncoder renderPassEncoder, uint slot, WebGPU.WGPUBuffer buffer, ulong offset, ulong size);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetViewport")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderSetViewport(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, float x, float y, float width, float height, float minDepth, float maxDepth);
+        public static partial void wgpuRenderPassEncoderSetViewport(WebGPU.WGPURenderPassEncoder renderPassEncoder, float x, float y, float width, float height, float minDepth, float maxDepth);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderAddRef(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder);
+        public static partial void wgpuRenderPassEncoderAddRef(WebGPU.WGPURenderPassEncoder renderPassEncoder);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderRelease(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder);
+        public static partial void wgpuRenderPassEncoderRelease(WebGPU.WGPURenderPassEncoder renderPassEncoder);
         
         /// <summary>
         /// Functions whose first argument has type WGPURenderPipeline.
@@ -5637,19 +5637,19 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPipelineGetBindGroupLayout")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUBindGroupLayoutImpl wgpuRenderPipelineGetBindGroupLayout(WebGPU.WGPURenderPipelineImpl renderPipeline, uint groupIndex);
+        public static partial WebGPU.WGPUBindGroupLayout wgpuRenderPipelineGetBindGroupLayout(WebGPU.WGPURenderPipeline renderPipeline, uint groupIndex);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPipelineSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPipelineSetLabel(WebGPU.WGPURenderPipelineImpl renderPipeline, WebGPU.WGPUStringView label);
+        public static partial void wgpuRenderPipelineSetLabel(WebGPU.WGPURenderPipeline renderPipeline, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPipelineAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPipelineAddRef(WebGPU.WGPURenderPipelineImpl renderPipeline);
+        public static partial void wgpuRenderPipelineAddRef(WebGPU.WGPURenderPipeline renderPipeline);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPipelineRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPipelineRelease(WebGPU.WGPURenderPipelineImpl renderPipeline);
+        public static partial void wgpuRenderPipelineRelease(WebGPU.WGPURenderPipeline renderPipeline);
         
         /// <summary>
         /// Functions whose first argument has type WGPUSampler.
@@ -5660,15 +5660,15 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSamplerSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuSamplerSetLabel(WebGPU.WGPUSamplerImpl sampler, WebGPU.WGPUStringView label);
+        public static partial void wgpuSamplerSetLabel(WebGPU.WGPUSampler sampler, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSamplerAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuSamplerAddRef(WebGPU.WGPUSamplerImpl sampler);
+        public static partial void wgpuSamplerAddRef(WebGPU.WGPUSampler sampler);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSamplerRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuSamplerRelease(WebGPU.WGPUSamplerImpl sampler);
+        public static partial void wgpuSamplerRelease(WebGPU.WGPUSampler sampler);
         
         /// <summary>
         /// Functions whose first argument has type WGPUShaderModule.
@@ -5679,19 +5679,19 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuShaderModuleGetCompilationInfo")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUFuture wgpuShaderModuleGetCompilationInfo(WebGPU.WGPUShaderModuleImpl shaderModule, WebGPU.WGPUCompilationInfoCallbackInfo callbackInfo);
+        public static partial WebGPU.WGPUFuture wgpuShaderModuleGetCompilationInfo(WebGPU.WGPUShaderModule shaderModule, WebGPU.WGPUCompilationInfoCallbackInfo callbackInfo);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuShaderModuleSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuShaderModuleSetLabel(WebGPU.WGPUShaderModuleImpl shaderModule, WebGPU.WGPUStringView label);
+        public static partial void wgpuShaderModuleSetLabel(WebGPU.WGPUShaderModule shaderModule, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuShaderModuleAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuShaderModuleAddRef(WebGPU.WGPUShaderModuleImpl shaderModule);
+        public static partial void wgpuShaderModuleAddRef(WebGPU.WGPUShaderModule shaderModule);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuShaderModuleRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuShaderModuleRelease(WebGPU.WGPUShaderModuleImpl shaderModule);
+        public static partial void wgpuShaderModuleRelease(WebGPU.WGPUShaderModule shaderModule);
         
         /// <summary>
         /// Functions whose first argument has type WGPUSupportedFeatures.
@@ -5726,7 +5726,7 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSurfaceConfigure")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuSurfaceConfigure(WebGPU.WGPUSurfaceImpl surface, WGPUSurfaceConfiguration* config);
+        public static unsafe partial void wgpuSurfaceConfigure(WebGPU.WGPUSurface surface, WGPUSurfaceConfiguration* config);
         
         /// <summary>
         /// Provides information on how `adapter` is able to use `surface`.
@@ -5739,7 +5739,7 @@ namespace WebGPU.NET.Wgpu
         /// <returns>Indicates if there was an @ref OutStructChainError.</returns>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSurfaceGetCapabilities")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuSurfaceGetCapabilities(WebGPU.WGPUSurfaceImpl surface, WebGPU.WGPUAdapterImpl adapter, WGPUSurfaceCapabilities* capabilities);
+        public static unsafe partial WebGPU.WGPUStatus wgpuSurfaceGetCapabilities(WebGPU.WGPUSurface surface, WebGPU.WGPUAdapter adapter, WGPUSurfaceCapabilities* capabilities);
         
         /// <summary>
         /// Returns the @ref WGPUTexture to render to `surface` this frame along with metadata on the frame.
@@ -5751,7 +5751,7 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSurfaceGetCurrentTexture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuSurfaceGetCurrentTexture(WebGPU.WGPUSurfaceImpl surface, WGPUSurfaceTexture* surfaceTexture);
+        public static unsafe partial void wgpuSurfaceGetCurrentTexture(WebGPU.WGPUSurface surface, WGPUSurfaceTexture* surfaceTexture);
         
         /// <summary>
         /// Shows `surface`'s current texture to the user.
@@ -5760,7 +5760,7 @@ namespace WebGPU.NET.Wgpu
         /// <returns>Returns @ref WGPUStatus_Error if the surface doesn't have a current texture.</returns>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSurfacePresent")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUStatus wgpuSurfacePresent(WebGPU.WGPUSurfaceImpl surface);
+        public static partial WebGPU.WGPUStatus wgpuSurfacePresent(WebGPU.WGPUSurface surface);
         
         /// <summary>
         /// Modifies the label used to refer to `surface`.
@@ -5768,7 +5768,7 @@ namespace WebGPU.NET.Wgpu
         /// <param name="label">The new label.</param>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSurfaceSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuSurfaceSetLabel(WebGPU.WGPUSurfaceImpl surface, WebGPU.WGPUStringView label);
+        public static partial void wgpuSurfaceSetLabel(WebGPU.WGPUSurface surface, WebGPU.WGPUStringView label);
         
         /// <summary>
         /// Removes the configuration for `surface`.
@@ -5776,15 +5776,15 @@ namespace WebGPU.NET.Wgpu
         /// </summary>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSurfaceUnconfigure")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuSurfaceUnconfigure(WebGPU.WGPUSurfaceImpl surface);
+        public static partial void wgpuSurfaceUnconfigure(WebGPU.WGPUSurface surface);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSurfaceAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuSurfaceAddRef(WebGPU.WGPUSurfaceImpl surface);
+        public static partial void wgpuSurfaceAddRef(WebGPU.WGPUSurface surface);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSurfaceRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuSurfaceRelease(WebGPU.WGPUSurfaceImpl surface);
+        public static partial void wgpuSurfaceRelease(WebGPU.WGPUSurface surface);
         
         /// <summary>
         /// Functions whose first argument has type WGPUSurfaceCapabilities.
@@ -5806,55 +5806,55 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureCreateView")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUTextureViewImpl wgpuTextureCreateView(WebGPU.WGPUTextureImpl texture, WGPUTextureViewDescriptor* descriptor);
+        public static unsafe partial WebGPU.WGPUTextureView wgpuTextureCreateView(WebGPU.WGPUTexture texture, WGPUTextureViewDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureDestroy")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuTextureDestroy(WebGPU.WGPUTextureImpl texture);
+        public static partial void wgpuTextureDestroy(WebGPU.WGPUTexture texture);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureGetDepthOrArrayLayers")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial uint wgpuTextureGetDepthOrArrayLayers(WebGPU.WGPUTextureImpl texture);
+        public static partial uint wgpuTextureGetDepthOrArrayLayers(WebGPU.WGPUTexture texture);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureGetDimension")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUTextureDimension wgpuTextureGetDimension(WebGPU.WGPUTextureImpl texture);
+        public static partial WebGPU.WGPUTextureDimension wgpuTextureGetDimension(WebGPU.WGPUTexture texture);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureGetFormat")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUTextureFormat wgpuTextureGetFormat(WebGPU.WGPUTextureImpl texture);
+        public static partial WebGPU.WGPUTextureFormat wgpuTextureGetFormat(WebGPU.WGPUTexture texture);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureGetHeight")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial uint wgpuTextureGetHeight(WebGPU.WGPUTextureImpl texture);
+        public static partial uint wgpuTextureGetHeight(WebGPU.WGPUTexture texture);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureGetMipLevelCount")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial uint wgpuTextureGetMipLevelCount(WebGPU.WGPUTextureImpl texture);
+        public static partial uint wgpuTextureGetMipLevelCount(WebGPU.WGPUTexture texture);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureGetSampleCount")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial uint wgpuTextureGetSampleCount(WebGPU.WGPUTextureImpl texture);
+        public static partial uint wgpuTextureGetSampleCount(WebGPU.WGPUTexture texture);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureGetUsage")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUTextureUsage wgpuTextureGetUsage(WebGPU.WGPUTextureImpl texture);
+        public static partial WebGPU.WGPUTextureUsage wgpuTextureGetUsage(WebGPU.WGPUTexture texture);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureGetWidth")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial uint wgpuTextureGetWidth(WebGPU.WGPUTextureImpl texture);
+        public static partial uint wgpuTextureGetWidth(WebGPU.WGPUTexture texture);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuTextureSetLabel(WebGPU.WGPUTextureImpl texture, WebGPU.WGPUStringView label);
+        public static partial void wgpuTextureSetLabel(WebGPU.WGPUTexture texture, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuTextureAddRef(WebGPU.WGPUTextureImpl texture);
+        public static partial void wgpuTextureAddRef(WebGPU.WGPUTexture texture);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuTextureRelease(WebGPU.WGPUTextureImpl texture);
+        public static partial void wgpuTextureRelease(WebGPU.WGPUTexture texture);
         
         /// <summary>
         /// Functions whose first argument has type WGPUTextureView.
@@ -5865,38 +5865,38 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureViewSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuTextureViewSetLabel(WebGPU.WGPUTextureViewImpl textureView, WebGPU.WGPUStringView label);
+        public static partial void wgpuTextureViewSetLabel(WebGPU.WGPUTextureView textureView, WebGPU.WGPUStringView label);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureViewAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuTextureViewAddRef(WebGPU.WGPUTextureViewImpl textureView);
+        public static partial void wgpuTextureViewAddRef(WebGPU.WGPUTextureView textureView);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureViewRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuTextureViewRelease(WebGPU.WGPUTextureViewImpl textureView);
+        public static partial void wgpuTextureViewRelease(WebGPU.WGPUTextureView textureView);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuGenerateReport")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuGenerateReport(WebGPU.WGPUInstanceImpl instance, WGPUGlobalReport* report);
+        public static unsafe partial void wgpuGenerateReport(WebGPU.WGPUInstance instance, WGPUGlobalReport* report);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceEnumerateAdapters")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial ulong wgpuInstanceEnumerateAdapters(WebGPU.WGPUInstanceImpl instance, WGPUInstanceEnumerateAdapterOptions* options, WGPUAdapterImpl* adapters);
+        public static unsafe partial ulong wgpuInstanceEnumerateAdapters(WebGPU.WGPUInstance instance, WGPUInstanceEnumerateAdapterOptions* options, WGPUAdapter* adapters);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueSubmitForIndex")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial ulong wgpuQueueSubmitForIndex(WebGPU.WGPUQueueImpl queue, nuint commandCount, WGPUCommandBufferImpl* commands);
+        public static unsafe partial ulong wgpuQueueSubmitForIndex(WebGPU.WGPUQueue queue, nuint commandCount, WGPUCommandBuffer* commands);
         
         /// <summary>
         /// Returns true if the queue is empty, or false if there are more queue submissions still in flight.
         /// </summary>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDevicePoll")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial uint wgpuDevicePoll(WebGPU.WGPUDeviceImpl device, uint wait, ref ulong submissionIndex);
+        public static partial uint wgpuDevicePoll(WebGPU.WGPUDevice device, uint wait, ref ulong submissionIndex);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateShaderModuleSpirV")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUShaderModuleImpl wgpuDeviceCreateShaderModuleSpirV(WebGPU.WGPUDeviceImpl device, WGPUShaderModuleDescriptorSpirV* descriptor);
+        public static unsafe partial WebGPU.WGPUShaderModule wgpuDeviceCreateShaderModuleSpirV(WebGPU.WGPUDevice device, WGPUShaderModuleDescriptorSpirV* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSetLogCallback")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5912,54 +5912,54 @@ namespace WebGPU.NET.Wgpu
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetPushConstants")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderSetPushConstants(WebGPU.WGPURenderPassEncoderImpl encoder, WebGPU.WGPUShaderStage stages, uint offset, uint sizeBytes, void* data);
+        public static partial void wgpuRenderPassEncoderSetPushConstants(WebGPU.WGPURenderPassEncoder encoder, WebGPU.WGPUShaderStage stages, uint offset, uint sizeBytes, void* data);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderSetPushConstants")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderSetPushConstants(WebGPU.WGPUComputePassEncoderImpl encoder, uint offset, uint sizeBytes, void* data);
+        public static partial void wgpuComputePassEncoderSetPushConstants(WebGPU.WGPUComputePassEncoder encoder, uint offset, uint sizeBytes, void* data);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderSetPushConstants")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderSetPushConstants(WebGPU.WGPURenderBundleEncoderImpl encoder, WebGPU.WGPUShaderStage stages, uint offset, uint sizeBytes, void* data);
+        public static partial void wgpuRenderBundleEncoderSetPushConstants(WebGPU.WGPURenderBundleEncoder encoder, WebGPU.WGPUShaderStage stages, uint offset, uint sizeBytes, void* data);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderMultiDrawIndirect")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderMultiDrawIndirect(WebGPU.WGPURenderPassEncoderImpl encoder, WebGPU.WGPUBufferImpl buffer, ulong offset, uint count);
+        public static partial void wgpuRenderPassEncoderMultiDrawIndirect(WebGPU.WGPURenderPassEncoder encoder, WebGPU.WGPUBuffer buffer, ulong offset, uint count);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderMultiDrawIndexedIndirect")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderMultiDrawIndexedIndirect(WebGPU.WGPURenderPassEncoderImpl encoder, WebGPU.WGPUBufferImpl buffer, ulong offset, uint count);
+        public static partial void wgpuRenderPassEncoderMultiDrawIndexedIndirect(WebGPU.WGPURenderPassEncoder encoder, WebGPU.WGPUBuffer buffer, ulong offset, uint count);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderMultiDrawIndirectCount")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderMultiDrawIndirectCount(WebGPU.WGPURenderPassEncoderImpl encoder, WebGPU.WGPUBufferImpl buffer, ulong offset, WebGPU.WGPUBufferImpl countbuffer, ulong countbufferoffset, uint maxcount);
+        public static partial void wgpuRenderPassEncoderMultiDrawIndirectCount(WebGPU.WGPURenderPassEncoder encoder, WebGPU.WGPUBuffer buffer, ulong offset, WebGPU.WGPUBuffer countbuffer, ulong countbufferoffset, uint maxcount);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderMultiDrawIndexedIndirectCount")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderMultiDrawIndexedIndirectCount(WebGPU.WGPURenderPassEncoderImpl encoder, WebGPU.WGPUBufferImpl buffer, ulong offset, WebGPU.WGPUBufferImpl countbuffer, ulong countbufferoffset, uint maxcount);
+        public static partial void wgpuRenderPassEncoderMultiDrawIndexedIndirectCount(WebGPU.WGPURenderPassEncoder encoder, WebGPU.WGPUBuffer buffer, ulong offset, WebGPU.WGPUBuffer countbuffer, ulong countbufferoffset, uint maxcount);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderBeginPipelineStatisticsQuery")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderBeginPipelineStatisticsQuery(WebGPU.WGPUComputePassEncoderImpl computePassEncoder, WebGPU.WGPUQuerySetImpl querySet, uint queryIndex);
+        public static partial void wgpuComputePassEncoderBeginPipelineStatisticsQuery(WebGPU.WGPUComputePassEncoder computePassEncoder, WebGPU.WGPUQuerySet querySet, uint queryIndex);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderEndPipelineStatisticsQuery")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderEndPipelineStatisticsQuery(WebGPU.WGPUComputePassEncoderImpl computePassEncoder);
+        public static partial void wgpuComputePassEncoderEndPipelineStatisticsQuery(WebGPU.WGPUComputePassEncoder computePassEncoder);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderBeginPipelineStatisticsQuery")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderBeginPipelineStatisticsQuery(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, WebGPU.WGPUQuerySetImpl querySet, uint queryIndex);
+        public static partial void wgpuRenderPassEncoderBeginPipelineStatisticsQuery(WebGPU.WGPURenderPassEncoder renderPassEncoder, WebGPU.WGPUQuerySet querySet, uint queryIndex);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderEndPipelineStatisticsQuery")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderEndPipelineStatisticsQuery(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder);
+        public static partial void wgpuRenderPassEncoderEndPipelineStatisticsQuery(WebGPU.WGPURenderPassEncoder renderPassEncoder);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderWriteTimestamp")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderWriteTimestamp(WebGPU.WGPUComputePassEncoderImpl computePassEncoder, WebGPU.WGPUQuerySetImpl querySet, uint queryIndex);
+        public static partial void wgpuComputePassEncoderWriteTimestamp(WebGPU.WGPUComputePassEncoder computePassEncoder, WebGPU.WGPUQuerySet querySet, uint queryIndex);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderWriteTimestamp")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderWriteTimestamp(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, WebGPU.WGPUQuerySetImpl querySet, uint queryIndex);
+        public static partial void wgpuRenderPassEncoderWriteTimestamp(WebGPU.WGPURenderPassEncoder renderPassEncoder, WebGPU.WGPUQuerySet querySet, uint queryIndex);
     }
 }

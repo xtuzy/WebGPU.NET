@@ -22,19 +22,19 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
     {
         private class Demo
         {
-            public WGPUInstanceImpl instance;
-            public WGPUSurfaceImpl surface;
-            public WGPUAdapterImpl adapter;
-            public WGPUDeviceImpl device;
+            public WGPUInstance instance;
+            public WGPUSurface surface;
+            public WGPUAdapter adapter;
+            public WGPUDevice device;
             public WGPUSurfaceConfiguration config = new();
         }
 
         private Demo demo;
-        private WGPURenderPipelineImpl render_pipeline;
-        private WGPUQueueImpl queue;
-        private WGPUPipelineLayoutImpl pipeline_layout;
+        private WGPURenderPipeline render_pipeline;
+        private WGPUQueue queue;
+        private WGPUPipelineLayout pipeline_layout;
         private WGPUSurfaceCapabilities surface_capabilities;
-        private WGPUShaderModuleImpl shader_module;
+        private WGPUShaderModule shader_module;
 
         public wgpu_native_examples_triangle()
         {
@@ -48,8 +48,8 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
                 return;
             }
 
-            demo.config.Width = (uint)size.X;
-            demo.config.Height = (uint)size.Y;
+            demo.config.width = (uint)size.X;
+            demo.config.height = (uint)size.Y;
 
             unsafe
             {
@@ -70,7 +70,7 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
 
             var wGPURequestAdapterOptions = new WGPURequestAdapterOptions()
             {
-                CompatibleSurface = demo.surface,
+                compatibleSurface = demo.surface,
             };
             var pWGPURequestAdapterCallback = Marshal.GetFunctionPointerForDelegate<WGPURequestAdapterCallback>((status, _adapter, str, data1, data2) =>
             {
@@ -80,14 +80,14 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
                 }
                 else
                 {
-                    var bytes = new Span<byte>(str.Data, (int)str.Length);
+                    var bytes = new Span<byte>(str.data, (int)str.length);
                     Trace.WriteLine(Encoding.UTF8.GetString(bytes));
                 }
             });
             wgpuInstanceRequestAdapter(demo.instance, &wGPURequestAdapterOptions, new WGPURequestAdapterCallbackInfo()
             {
-                Mode = WGPUCallbackMode.AllowSpontaneous,
-                Callback = (delegate* unmanaged[Cdecl]<WGPURequestAdapterStatus, WGPUAdapterImpl, WGPUStringView, void*, void*, void>)pWGPURequestAdapterCallback
+                mode = WGPUCallbackMode.AllowSpontaneous,
+                callback = (delegate* unmanaged[Cdecl]<WGPURequestAdapterStatus, WGPUAdapter, WGPUStringView, void*, void*, void>)pWGPURequestAdapterCallback
             });
             Debug.Assert(demo.adapter.Handle != 0, $"{nameof(wgpuInstanceRequestAdapter)} failed");
 
@@ -99,38 +99,38 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
                 }
                 else
                 {
-                    var bytes = new Span<byte>(str.Data, (int)str.Length);
+                    var bytes = new Span<byte>(str.data, (int)str.length);
                     Trace.WriteLine(Encoding.UTF8.GetString(bytes));
                 }
             });
             wgpuAdapterRequestDevice(demo.adapter, null, new WGPURequestDeviceCallbackInfo()
             {
-                Mode = WGPUCallbackMode.AllowSpontaneous,
-                Callback = (delegate* unmanaged[Cdecl]<WGPURequestDeviceStatus, WGPUDeviceImpl, WGPUStringView, void*, void*, void>)pWGPURequestDeviceCallback
+                mode = WGPUCallbackMode.AllowSpontaneous,
+                callback = (delegate* unmanaged[Cdecl]<WGPURequestDeviceStatus, WGPUDevice, WGPUStringView, void*, void*, void>)pWGPURequestDeviceCallback
             });
             Debug.Assert(demo.device.Handle != 0, $"{nameof(wgpuAdapterRequestDevice)} failed");
 
             queue = wgpuDeviceGetQueue(demo.device);
             Debug.Assert(queue.Handle != 0, $"{nameof(wgpuDeviceGetQueue)} failed");
 
-            WGPUShaderModuleImpl frmwrk_load_shader_module(WGPUDeviceImpl device, string shaderStr)
+            WGPUShaderModule frmwrk_load_shader_module(WGPUDevice device, string shaderStr)
             {
                 byte[] shader_Utf8Bytes = Encoding.UTF8.GetBytes(shaderStr);
                 fixed (byte* p_shader_Utf8Bytes = shader_Utf8Bytes)
                 {
                     var shader = new WGPUShaderSourceWGSL()
                     {
-                        Code = new WGPUStringView() { Data = p_shader_Utf8Bytes, Length = (nuint)shaderStr.Length },
-                        Chain = new WGPUChainedStruct
+                        code = new WGPUStringView() { data = p_shader_Utf8Bytes, length = (nuint)shaderStr.Length },
+                        chain = new WGPUChainedStruct
                         {
-                            SType = WGPUSType.ShaderSourceWGSL,
+                            sType = WGPUSType.ShaderSourceWGSL,
                         }
                     };
 
                     var shaderModuleDescriptor = new WGPUShaderModuleDescriptor
                     {
-                        NextInChain = &shader.Chain,
-                        Label = new WGPUStringView() { Data = null, Length = 0 }
+                        nextInChain = &shader.chain,
+                        label = new WGPUStringView() { data = null, length = 0 }
                     };
 
                     return wgpuDeviceCreateShaderModule(device, &shaderModuleDescriptor);
@@ -152,25 +152,25 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
 
             var blendState = new WGPUBlendState
             {
-                Color = new WGPUBlendComponent
+                color = new WGPUBlendComponent
                 {
-                    SrcFactor = WGPUBlendFactor.One,
-                    DstFactor = WGPUBlendFactor.Zero,
-                    Operation = WGPUBlendOperation.Add
+                    srcFactor = WGPUBlendFactor.One,
+                    dstFactor = WGPUBlendFactor.Zero,
+                    operation = WGPUBlendOperation.Add
                 },
-                Alpha = new WGPUBlendComponent
+                alpha = new WGPUBlendComponent
                 {
-                    SrcFactor = WGPUBlendFactor.One,
-                    DstFactor = WGPUBlendFactor.Zero,
-                    Operation = WGPUBlendOperation.Add
+                    srcFactor = WGPUBlendFactor.One,
+                    dstFactor = WGPUBlendFactor.Zero,
+                    operation = WGPUBlendOperation.Add
                 }
             };
 
             var colorTargetState = new WGPUColorTargetState
             {
-                Format = surface_capabilities.Formats[0],
+                format = surface_capabilities.formats[0],
                 //Blend = &blendState,
-                WriteMask = WGPUColorWriteMask.All
+                writeMask = WGPUColorWriteMask.All
             };
 
             var fs_main_Str = "fs_main";
@@ -183,35 +183,35 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
                 {
                     var fragmentState = new WGPUFragmentState
                     {
-                        Module = shader_module,
-                        TargetCount = 1,
-                        Targets = &colorTargetState,
-                        EntryPoint = new WGPUStringView() { Data = p_fs_main_Utf8Bytes, Length = (nuint)fs_main_Str.Length }
+                        module = shader_module,
+                        targetCount = 1,
+                        targets = &colorTargetState,
+                        entryPoint = new WGPUStringView() { data = p_fs_main_Utf8Bytes, length = (nuint)fs_main_Str.Length }
                     };
 
                     var renderPipelineDescriptor = new WGPURenderPipelineDescriptor
                     {
-                        Layout = pipeline_layout,
-                        Vertex = new WGPUVertexState
+                        layout = pipeline_layout,
+                        vertex = new WGPUVertexState
                         {
-                            Module = shader_module,
-                            EntryPoint = new WGPUStringView() { Data = p_vs_main_Utf8Bytes, Length = (nuint)vs_main_Str.Length },
+                            module = shader_module,
+                            entryPoint = new WGPUStringView() { data = p_vs_main_Utf8Bytes, length = (nuint)vs_main_Str.Length },
                         },
-                        Primitive = new WGPUPrimitiveState
+                        primitive = new WGPUPrimitiveState
                         {
-                            Topology = WGPUPrimitiveTopology.TriangleList,
+                            topology = WGPUPrimitiveTopology.TriangleList,
                             //StripIndexFormat = WGPUIndexFormat.Undefined,
                             //FrontFace = WGPUFrontFace.CCW,
                             //CullMode = WGPUCullMode.None
                         },
-                        Multisample = new WGPUMultisampleState
+                        multisample = new WGPUMultisampleState
                         {
-                            Count = 1,
-                            Mask = 0xFFFFFFFF,
+                            count = 1,
+                            mask = 0xFFFFFFFF,
                             //AlphaToCoverageEnabled = WGPU_FALSE
                         },
-                        Fragment = (&fragmentState),
-                        DepthStencil = null
+                        fragment = (&fragmentState),
+                        depthStencil = null
                     };
 
                     render_pipeline = wgpuDeviceCreateRenderPipeline(demo.device, &renderPipelineDescriptor);
@@ -219,16 +219,16 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
 
                     demo.config = new WGPUSurfaceConfiguration()
                     {
-                        Device = demo.device,
-                        Usage = WGPUTextureUsage.RenderAttachment,
-                        Format = surface_capabilities.Formats[0],
-                        PresentMode = WGPUPresentMode.Fifo,
-                        AlphaMode = surface_capabilities.AlphaModes[0],
+                        device = demo.device,
+                        usage = WGPUTextureUsage.RenderAttachment,
+                        format = surface_capabilities.formats[0],
+                        presentMode = WGPUPresentMode.Fifo,
+                        alphaMode = surface_capabilities.alphaModes[0],
                     };
 
                     {
-                        demo.config.Width = this.GetWidth(this.Window);
-                        demo.config.Height = this.GetHeight(this.Window);
+                        demo.config.width = this.GetWidth(this.Window);
+                        demo.config.height = this.GetHeight(this.Window);
                     }
 
                     fixed (WGPUSurfaceConfiguration* pConfig = &demo.config)
@@ -243,7 +243,7 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
         {
             WGPUSurfaceTexture surface_texture;
             wgpuSurfaceGetCurrentTexture(demo.surface, &surface_texture);
-            switch (surface_texture.Status)
+            switch (surface_texture.status)
             {
                 case WGPUSurfaceGetCurrentTextureStatus.SuccessOptimal:
                 case WGPUSurfaceGetCurrentTextureStatus.SuccessSuboptimal:
@@ -255,16 +255,16 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
                 case WGPUSurfaceGetCurrentTextureStatus.Lost:
                     {
                         // Skip this frame, and re-configure surface.
-                        if (surface_texture.Texture.Handle != 0)
+                        if (surface_texture.texture.Handle != 0)
                         {
-                            wgpuTextureRelease(surface_texture.Texture);
+                            wgpuTextureRelease(surface_texture.texture);
                         }
                         var width = GetWidth(this.Window);
                         var height = GetHeight(this.Window);
                         if (width != 0 && height != 0)
                         {
-                            demo.config.Width = width;
-                            demo.config.Height = height;
+                            demo.config.width = width;
+                            demo.config.height = height;
                             fixed (WGPUSurfaceConfiguration* pConfig = &demo.config)
                             {
                                 wgpuSurfaceConfigure(demo.surface, pConfig);
@@ -278,46 +278,46 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
 #endif
                 case WGPUSurfaceGetCurrentTextureStatus.Force32:
                     // Fatal error
-                    Trace.TraceError($"get_current_texture status= {surface_texture.Status}");
+                    Trace.TraceError($"get_current_texture status= {surface_texture.status}");
                     throw new NotImplementedException();
             }
-            Debug.Assert(surface_texture.Texture.Handle != 0, $"{nameof(wgpuSurfaceGetCurrentTexture)} failed");
+            Debug.Assert(surface_texture.texture.Handle != 0, $"{nameof(wgpuSurfaceGetCurrentTexture)} failed");
 
-            WGPUTextureViewImpl frame = wgpuTextureCreateView(surface_texture.Texture, null);
+            WGPUTextureView frame = wgpuTextureCreateView(surface_texture.texture, null);
             Debug.Assert(frame.Handle != 0, $"{nameof(wgpuTextureCreateView)} failed");
 
             var wGPUCommandEncoderDescriptor = new WGPUCommandEncoderDescriptor()
             {
             };
 
-            WGPUCommandEncoderImpl command_encoder = wgpuDeviceCreateCommandEncoder(demo.device, &wGPUCommandEncoderDescriptor);
+            WGPUCommandEncoder command_encoder = wgpuDeviceCreateCommandEncoder(demo.device, &wGPUCommandEncoderDescriptor);
             Debug.Assert(command_encoder.Handle != 0, $"{nameof(wgpuDeviceCreateCommandEncoder)} failed");
 
             var colorAttachments = new WGPURenderPassColorAttachment[]
             {
                 new WGPURenderPassColorAttachment()
                 {
-                    View = frame,
-                    LoadOp = WGPULoadOp.Clear,
-                    StoreOp = WGPUStoreOp.Store,
-                    DepthSlice = WGPU_DEPTH_SLICE_UNDEFINED,
-                    ClearValue = new WGPUColor()
+                    view = frame,
+                    loadOp = WGPULoadOp.Clear,
+                    storeOp = WGPUStoreOp.Store,
+                    depthSlice = WGPU_DEPTH_SLICE_UNDEFINED,
+                    clearValue = new WGPUColor()
                     {
-                        R = 0,
-                        G = 1,
-                        B = 0,
-                        A = 1,
+                        r = 0,
+                        g = 1,
+                        b = 0,
+                        a = 1,
                     }
                 }
             };
 
-            WGPURenderPassEncoderImpl render_pass_encoder;
+            WGPURenderPassEncoder render_pass_encoder;
             fixed (WGPURenderPassColorAttachment* pWGPURenderPassColorAttachment = colorAttachments)
             {
                 var wGPURenderPassDescriptor = new WGPURenderPassDescriptor()
                 {
-                    ColorAttachmentCount = 1,
-                    ColorAttachments = pWGPURenderPassColorAttachment
+                    colorAttachmentCount = 1,
+                    colorAttachments = pWGPURenderPassColorAttachment
                 };
                 render_pass_encoder = wgpuCommandEncoderBeginRenderPass(command_encoder, &wGPURenderPassDescriptor);
             }
@@ -331,7 +331,7 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
             var wGPUCommandBufferDescriptor = new WGPUCommandBufferDescriptor()
             {
             };
-            WGPUCommandBufferImpl command_buffer = wgpuCommandEncoderFinish(command_encoder, &wGPUCommandBufferDescriptor);
+            WGPUCommandBuffer command_buffer = wgpuCommandEncoderFinish(command_encoder, &wGPUCommandBufferDescriptor);
             Debug.Assert(command_buffer.Handle != 0, $"{nameof(wgpuCommandEncoderFinish)} failed");
 
             wgpuQueueSubmit(queue, 1, &command_buffer);
@@ -340,7 +340,7 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
             wgpuCommandBufferRelease(command_buffer);
             wgpuCommandEncoderRelease(command_encoder);
             wgpuTextureViewRelease(frame);
-            wgpuTextureRelease(surface_texture.Texture);
+            wgpuTextureRelease(surface_texture.texture);
         }
 
         protected override void WindowClosing()

@@ -22,14 +22,14 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
     /// </summary>
     public unsafe class HelloTriangle : BaseApp
     {
-        private WGPUSurfaceImpl _Surface;
+        private WGPUSurface _Surface;
         private WGPUTextureFormat _Format;
 
-        private WGPUInstanceImpl _Instance;
-        private WGPUAdapterImpl _Adapter;
-        private WGPUDeviceImpl _Device;
-        private WGPUShaderModuleImpl _Shader;
-        private WGPURenderPipelineImpl _Pipeline;
+        private WGPUInstance _Instance;
+        private WGPUAdapter _Adapter;
+        private WGPUDevice _Device;
+        private WGPUShaderModule _Shader;
+        private WGPURenderPipeline _Pipeline;
         private WGPUPresentMode[] presentModes;
         private WGPUCompositeAlphaMode[] alphaModes;
 
@@ -63,7 +63,7 @@ fn fs_main() -> @location(0) vec4<f32> {
             wgpuSetLogLevel(WGPULogLevel.Debug);
             var pWGPULoggingCallback = Marshal.GetFunctionPointerForDelegate<WGPULoggingCallback>((level, str, data1) =>
             {
-                var bytes = new Span<byte>(str.Data, (int)str.Length);
+                var bytes = new Span<byte>(str.data, (int)str.length);
                 Trace.WriteLine(Encoding.UTF8.GetString(bytes));
             });
             wgpuSetLogCallback((delegate* unmanaged[Cdecl]<WGPULogLevel, WGPUStringView, void*, void>)pWGPULoggingCallback, (void*)IntPtr.Zero);
@@ -81,8 +81,8 @@ fn fs_main() -> @location(0) vec4<f32> {
 
             var requestAdapterOptions = new WGPURequestAdapterOptions
             {
-                CompatibleSurface = _Surface,
-                BackendType = WGPUBackendType.D3D12
+                compatibleSurface = _Surface,
+                backendType = WGPUBackendType.D3D12
             };
 
             unsafe
@@ -95,7 +95,7 @@ fn fs_main() -> @location(0) vec4<f32> {
                     }
                     else
                     {
-                        var bytes = new Span<byte>(str.Data, (int)str.Length);
+                        var bytes = new Span<byte>(str.data, (int)str.length);
                         Trace.WriteLine(Encoding.UTF8.GetString(bytes));
                     }
                 });
@@ -105,8 +105,8 @@ fn fs_main() -> @location(0) vec4<f32> {
                     &requestAdapterOptions,
                     new WGPURequestAdapterCallbackInfo()
                     {
-                        Mode = WGPUCallbackMode.AllowSpontaneous,
-                        Callback = (delegate* unmanaged[Cdecl]<WGPURequestAdapterStatus, WGPUAdapterImpl, WGPUStringView, void*, void*, void>)pWGPURequestAdapterCallback,
+                        mode = WGPUCallbackMode.AllowSpontaneous,
+                        callback = (delegate* unmanaged[Cdecl]<WGPURequestAdapterStatus, WGPUAdapter, WGPUStringView, void*, void*, void>)pWGPURequestAdapterCallback,
                     }
                 );
             }
@@ -127,26 +127,26 @@ fn fs_main() -> @location(0) vec4<f32> {
 
             var pWGPUDeviceLostCallback = Marshal.GetFunctionPointerForDelegate<WGPUDeviceLostCallback>((_device, type, str, data1, data2) =>
             {
-                var bytes = new Span<byte>(str.Data, (int)str.Length);
+                var bytes = new Span<byte>(str.data, (int)str.length);
                 Trace.WriteLine(Encoding.UTF8.GetString(bytes));
             });
 
             var pWGPUUncapturedErrorCallback = Marshal.GetFunctionPointerForDelegate<WGPUUncapturedErrorCallback>((_device, type, str, data1, data2) =>
             {
-                var bytes = new Span<byte>(str.Data, (int)str.Length);
+                var bytes = new Span<byte>(str.data, (int)str.length);
                 Trace.WriteLine(Encoding.UTF8.GetString(bytes));
             });
 
             var deviceDescriptor = new WGPUDeviceDescriptor
             {
-                DeviceLostCallbackInfo = new WGPUDeviceLostCallbackInfo()
+                deviceLostCallbackInfo = new WGPUDeviceLostCallbackInfo()
                 {
-                    Mode = WGPUCallbackMode.AllowSpontaneous,
-                    Callback = (delegate* unmanaged[Cdecl]<WGPUDeviceImpl*, WGPUDeviceLostReason, WGPUStringView, void*, void*, void>)pWGPUDeviceLostCallback
+                    mode = WGPUCallbackMode.AllowSpontaneous,
+                    callback = (delegate* unmanaged[Cdecl]<WGPUDevice*, WGPUDeviceLostReason, WGPUStringView, void*, void*, void>)pWGPUDeviceLostCallback
                 },
-                UncapturedErrorCallbackInfo = new WGPUUncapturedErrorCallbackInfo()
+                uncapturedErrorCallbackInfo = new WGPUUncapturedErrorCallbackInfo()
                 {
-                    Callback = (delegate* unmanaged[Cdecl]<WGPUDeviceImpl*, WGPUErrorType, WGPUStringView, void*, void*, void>)pWGPUUncapturedErrorCallback
+                    callback = (delegate* unmanaged[Cdecl]<WGPUDevice*, WGPUErrorType, WGPUStringView, void*, void*, void>)pWGPUUncapturedErrorCallback
                 }
             };
 
@@ -158,7 +158,7 @@ fn fs_main() -> @location(0) vec4<f32> {
                 }
                 else
                 {
-                    var bytes = new Span<byte>(str.Data, (int)str.Length);
+                    var bytes = new Span<byte>(str.data, (int)str.length);
                     Trace.WriteLine(Encoding.UTF8.GetString(bytes));
                 }
             });
@@ -169,8 +169,8 @@ fn fs_main() -> @location(0) vec4<f32> {
                 &deviceDescriptor,
                 new WGPURequestDeviceCallbackInfo()
                 {
-                    Mode = WGPUCallbackMode.AllowSpontaneous,
-                    Callback = (delegate* unmanaged[Cdecl]<WGPURequestDeviceStatus, WGPUDeviceImpl, WGPUStringView, void*, void*, void>)pWGPURequestDeviceCallback
+                    mode = WGPUCallbackMode.AllowSpontaneous,
+                    callback = (delegate* unmanaged[Cdecl]<WGPURequestDeviceStatus, WGPUDevice, WGPUStringView, void*, void*, void>)pWGPURequestDeviceCallback
                 }
             );
             Debug.WriteLine($"Got device {_Device:X}");
@@ -182,13 +182,13 @@ fn fs_main() -> @location(0) vec4<f32> {
 #if !WGPUNATIVE
             var pWGPULoggingCallback = Marshal.GetFunctionPointerForDelegate<WGPULoggingCallback>((status, message, userData1, userData2) =>
             {
-                var bytes = new Span<byte>(message.Data, (int)message.Length);
+                var bytes = new Span<byte>(message.data, (int)message.length);
                 Trace.WriteLine("Log:" + Encoding.UTF8.GetString(bytes));
             });
 
             wgpuDeviceSetLoggingCallback(_Device, new WGPULoggingCallbackInfo()
             {
-                Callback = (delegate* unmanaged[Cdecl]<WGPULoggingType, WGPUStringView, void*, void*, void>)pWGPULoggingCallback,
+                callback = (delegate* unmanaged[Cdecl]<WGPULoggingType, WGPUStringView, void*, void*, void>)pWGPULoggingCallback,
             });
 #endif
 
@@ -201,17 +201,17 @@ fn fs_main() -> @location(0) vec4<f32> {
             {
                 var shader = new WGPUShaderSourceWGSL()
                 {
-                    Code = new WGPUStringView() { Data = p_shader_Utf8Bytes, Length = (nuint)SHADER.Length },
-                    Chain = new WGPUChainedStruct
+                    code = new WGPUStringView() { data = p_shader_Utf8Bytes, length = (nuint)SHADER.Length },
+                    chain = new WGPUChainedStruct
                     {
-                        SType = WGPUSType.ShaderSourceWGSL,
+                        sType = WGPUSType.ShaderSourceWGSL,
                     }
                 };
 
                 var shaderModuleDescriptor = new WGPUShaderModuleDescriptor
                 {
-                    NextInChain = &shader.Chain,
-                    Label = new WGPUStringView() { Data = null, Length = 0 }
+                    nextInChain = &shader.chain,
+                    label = new WGPUStringView() { data = null, length = 0 }
                 };
 
                 _Shader = wgpuDeviceCreateShaderModule(_Device, &shaderModuleDescriptor);
@@ -223,38 +223,38 @@ fn fs_main() -> @location(0) vec4<f32> {
 
             WGPUSurfaceCapabilities surfaceCapabilities = default;
             wgpuSurfaceGetCapabilities(_Surface, _Adapter, &surfaceCapabilities);
-            if (surfaceCapabilities.FormatCount > 0)
+            if (surfaceCapabilities.formatCount > 0)
             {
-                Span<WGPUTextureFormat> surfaceFormats = new Span<WGPUTextureFormat>(surfaceCapabilities.Formats, (int)surfaceCapabilities.FormatCount);
+                Span<WGPUTextureFormat> surfaceFormats = new Span<WGPUTextureFormat>(surfaceCapabilities.formats, (int)surfaceCapabilities.formatCount);
                 WGPUTextureFormat surfaceFormat = surfaceFormats[0];
                 _Format = surfaceFormat;
             }
-            presentModes = new Span<WGPUPresentMode>(surfaceCapabilities.PresentModes, (int)surfaceCapabilities.PresentModeCount).ToArray();
-            alphaModes = new Span<WGPUCompositeAlphaMode>(surfaceCapabilities.AlphaModes, (int)surfaceCapabilities.AlphaModeCount).ToArray();
+            presentModes = new Span<WGPUPresentMode>(surfaceCapabilities.presentModes, (int)surfaceCapabilities.presentModeCount).ToArray();
+            alphaModes = new Span<WGPUCompositeAlphaMode>(surfaceCapabilities.alphaModes, (int)surfaceCapabilities.alphaModeCount).ToArray();
 
             #region Create pipeline
 
             var blendState = new WGPUBlendState
             {
-                Color = new WGPUBlendComponent
+                color = new WGPUBlendComponent
                 {
-                    SrcFactor = WGPUBlendFactor.One,
-                    DstFactor = WGPUBlendFactor.Zero,
-                    Operation = WGPUBlendOperation.Add
+                    srcFactor = WGPUBlendFactor.One,
+                    dstFactor = WGPUBlendFactor.Zero,
+                    operation = WGPUBlendOperation.Add
                 },
-                Alpha = new WGPUBlendComponent
+                alpha = new WGPUBlendComponent
                 {
-                    SrcFactor = WGPUBlendFactor.One,
-                    DstFactor = WGPUBlendFactor.Zero,
-                    Operation = WGPUBlendOperation.Add
+                    srcFactor = WGPUBlendFactor.One,
+                    dstFactor = WGPUBlendFactor.Zero,
+                    operation = WGPUBlendOperation.Add
                 }
             };
 
             var colorTargetState = new WGPUColorTargetState
             {
-                Format = _Format,
-                Blend = &blendState,
-                WriteMask = WGPUColorWriteMask.All
+                format = _Format,
+                blend = &blendState,
+                writeMask = WGPUColorWriteMask.All
             };
 
             byte[] fs_main_Utf8Bytes = Encoding.UTF8.GetBytes("fs_main");
@@ -262,36 +262,36 @@ fn fs_main() -> @location(0) vec4<f32> {
             {
                 var fragmentState = new WGPUFragmentState
                 {
-                    Module = _Shader,
-                    TargetCount = 1,
-                    Targets = &colorTargetState,
-                    EntryPoint = new WGPUStringView() { Data = p_fs_main_Utf8Bytes, Length = (nuint)"fs_main".Length }
+                    module = _Shader,
+                    targetCount = 1,
+                    targets = &colorTargetState,
+                    entryPoint = new WGPUStringView() { data = p_fs_main_Utf8Bytes, length = (nuint)"fs_main".Length }
                 };
                 byte[] vs_main_Utf8Bytes = Encoding.UTF8.GetBytes("vs_main");
                 fixed (byte* p_vs_main_Utf8Bytes = vs_main_Utf8Bytes)
                 {
                     var renderPipelineDescriptor = new WGPURenderPipelineDescriptor
                     {
-                        Vertex = new WGPUVertexState
+                        vertex = new WGPUVertexState
                         {
-                            Module = _Shader,
-                            EntryPoint = new WGPUStringView() { Data = p_vs_main_Utf8Bytes, Length = (nuint)"vs_main".Length },
+                            module = _Shader,
+                            entryPoint = new WGPUStringView() { data = p_vs_main_Utf8Bytes, length = (nuint)"vs_main".Length },
                         },
-                        Primitive = new WGPUPrimitiveState
+                        primitive = new WGPUPrimitiveState
                         {
-                            Topology = WGPUPrimitiveTopology.TriangleList,
-                            StripIndexFormat = WGPUIndexFormat.Undefined,
-                            FrontFace = WGPUFrontFace.CCW,
-                            CullMode = WGPUCullMode.None
+                            topology = WGPUPrimitiveTopology.TriangleList,
+                            stripIndexFormat = WGPUIndexFormat.Undefined,
+                            frontFace = WGPUFrontFace.CCW,
+                            cullMode = WGPUCullMode.None
                         },
-                        Multisample = new WGPUMultisampleState
+                        multisample = new WGPUMultisampleState
                         {
-                            Count = 1,
-                            Mask = 0xFFFFFFFF,
-                            AlphaToCoverageEnabled = WGPU_FALSE
+                            count = 1,
+                            mask = 0xFFFFFFFF,
+                            alphaToCoverageEnabled = WGPU_FALSE
                         },
-                        Fragment = (&fragmentState),
-                        DepthStencil = null
+                        fragment = (&fragmentState),
+                        depthStencil = null
                     };
 
                     _Pipeline = wgpuDeviceCreateRenderPipeline(_Device, &renderPipelineDescriptor);
@@ -309,13 +309,13 @@ fn fs_main() -> @location(0) vec4<f32> {
         {
             var surfaceConfiguration = new WGPUSurfaceConfiguration
             {
-                AlphaMode = alphaModes[0],
-                Usage = WGPUTextureUsage.RenderAttachment,
-                Format = _Format,
-                PresentMode = presentModes[0],
-                Device = _Device,
-                Width = (uint)GetWidth(Window),
-                Height = (uint)GetHeight(Window),
+                alphaMode = alphaModes[0],
+                usage = WGPUTextureUsage.RenderAttachment,
+                format = _Format,
+                presentMode = presentModes[0],
+                device = _Device,
+                width = (uint)GetWidth(Window),
+                height = (uint)GetHeight(Window),
             };
 
             wgpuSurfaceConfigure(_Surface, &surfaceConfiguration);
@@ -325,7 +325,7 @@ fn fs_main() -> @location(0) vec4<f32> {
         {
             WGPUSurfaceTexture surfaceTexture = default;
             wgpuSurfaceGetCurrentTexture(_Surface, &surfaceTexture);
-            switch (surfaceTexture.Status)
+            switch (surfaceTexture.status)
             {
                 case WGPUSurfaceGetCurrentTextureStatus.Timeout:
                 case WGPUSurfaceGetCurrentTextureStatus.Outdated:
@@ -333,33 +333,33 @@ fn fs_main() -> @location(0) vec4<f32> {
                 case WGPUSurfaceGetCurrentTextureStatus.Error:
 
                     // Recreate swapchain,
-                    if (surfaceTexture.Texture.Handle != 0)
-                        wgpuTextureRelease(surfaceTexture.Texture);
+                    if (surfaceTexture.texture.Handle != 0)
+                        wgpuTextureRelease(surfaceTexture.texture);
                     CreateSwapchain();
                     // Skip this frame
                     return;
 
                 case WGPUSurfaceGetCurrentTextureStatus.Force32:
-                    throw new Exception($"What is going on bros... {surfaceTexture.Status}");
+                    throw new Exception($"What is going on bros... {surfaceTexture.status}");
             }
             var descrip = new WGPUTextureDescriptor()
             {
-                Dimension = WGPUTextureDimension.TwoDimensions,
-                Format = WGPUTextureFormat.RGBA8Unorm,
-                Size = new WGPUExtent3D
+                dimension = WGPUTextureDimension.TwoDimensions,
+                format = WGPUTextureFormat.RGBA8Unorm,
+                size = new WGPUExtent3D
                 {
-                    Width = (uint)GetWidth(Window),
-                    Height = (uint)GetHeight(Window),
-                    DepthOrArrayLayers = 1
+                    width = (uint)GetWidth(Window),
+                    height = (uint)GetHeight(Window),
+                    depthOrArrayLayers = 1
                 },
-                Usage = WGPUTextureUsage.RenderAttachment | WGPUTextureUsage.CopySrc,
+                usage = WGPUTextureUsage.RenderAttachment | WGPUTextureUsage.CopySrc,
             };
 
-            var texture = surfaceTexture.Texture.Handle == 0 ? wgpuDeviceCreateTexture(_Device, &descrip) : surfaceTexture.Texture;
+            var texture = surfaceTexture.texture.Handle == 0 ? wgpuDeviceCreateTexture(_Device, &descrip) : surfaceTexture.texture;
             WGPUTextureViewDescriptor wGPUTextureViewDescriptor = new WGPUTextureViewDescriptor()
             {
-                ArrayLayerCount = 1,
-                MipLevelCount = 1,
+                arrayLayerCount = 1,
+                mipLevelCount = 1,
             };
             var view = wgpuTextureCreateView(texture, &wGPUTextureViewDescriptor);
 
@@ -369,25 +369,25 @@ fn fs_main() -> @location(0) vec4<f32> {
 
             var colorAttachment = new WGPURenderPassColorAttachment
             {
-                View = view,
+                view = view,
                 //resolveTarget = null,
-                LoadOp = WGPULoadOp.Clear,
-                StoreOp = WGPUStoreOp.Store,
-                ClearValue = new WGPUColor
+                loadOp = WGPULoadOp.Clear,
+                storeOp = WGPUStoreOp.Store,
+                clearValue = new WGPUColor
                 {
-                    R = 0,
-                    G = 1,
-                    B = 0,
-                    A = 1
+                    r = 0,
+                    g = 1,
+                    b = 0,
+                    a = 1
                 },
-                DepthSlice = WGPU_DEPTH_SLICE_UNDEFINED
+                depthSlice = WGPU_DEPTH_SLICE_UNDEFINED
             };
 
             var renderPassDescriptor = new WGPURenderPassDescriptor
             {
-                ColorAttachments = &colorAttachment,
-                ColorAttachmentCount = 1,
-                DepthStencilAttachment = null
+                colorAttachments = &colorAttachment,
+                colorAttachmentCount = 1,
+                depthStencilAttachment = null
             };
 
             var renderPass = wgpuCommandEncoderBeginRenderPass(encoder, &renderPassDescriptor);
@@ -427,9 +427,9 @@ fn fs_main() -> @location(0) vec4<f32> {
 
             Debug.WriteLine("Adapter features:");
 
-            for (var i = 0; i < (int)supportFeatures.FeatureCount; i++)
+            for (var i = 0; i < (int)supportFeatures.featureCount; i++)
             {
-                var feature = supportFeatures.Features[i];
+                var feature = supportFeatures.features[i];
                 Debug.WriteLine($"\t{feature.ToString()}");
             }
 

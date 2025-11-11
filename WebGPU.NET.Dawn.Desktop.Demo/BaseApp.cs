@@ -57,13 +57,13 @@ public abstract class BaseApp
     protected abstract void WindowClosing();
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    internal unsafe delegate void WGPURequestDeviceCallback(WGPURequestDeviceStatus status, WGPUDeviceImpl device, WGPUStringView str, void* userData1, void* userData2);
+    internal unsafe delegate void WGPURequestDeviceCallback(WGPURequestDeviceStatus status, WGPUDevice device, WGPUStringView str, void* userData1, void* userData2);
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    internal unsafe delegate void WGPUDeviceLostCallback(WGPUDeviceImpl* device, WGPUDeviceLostReason lost, WGPUStringView str, void* userData1, void* userData2);
+    internal unsafe delegate void WGPUDeviceLostCallback(WGPUDevice* device, WGPUDeviceLostReason lost, WGPUStringView str, void* userData1, void* userData2);
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    internal unsafe delegate void WGPURequestAdapterCallback(WGPURequestAdapterStatus status, WGPUAdapterImpl adapter, WGPUStringView str, void* userData1, void* userData2);
+    internal unsafe delegate void WGPURequestAdapterCallback(WGPURequestAdapterStatus status, WGPUAdapter adapter, WGPUStringView str, void* userData1, void* userData2);
 
 #if WGPUNATIVE
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
@@ -74,7 +74,7 @@ public abstract class BaseApp
 #endif
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    internal unsafe delegate void WGPUCreateRenderPipelineCallback(WGPUCreatePipelineAsyncStatus status, WGPURenderPipelineImpl pipeline, WGPUStringView str, void* userData1, void* userData2);
+    internal unsafe delegate void WGPUCreateRenderPipelineCallback(WGPUCreatePipelineAsyncStatus status, WGPURenderPipeline pipeline, WGPUStringView str, void* userData1, void* userData2);
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     internal unsafe delegate void WGPUBufferMapCallback(WGPUMapAsyncStatus status, WGPUStringView str, void* userData1, void* userData2);
@@ -83,28 +83,28 @@ public abstract class BaseApp
     internal unsafe delegate void WGPUQueueWorkDoneCallback(WGPUQueueWorkDoneStatus status, void* userData1, void* userData2);
 
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    internal unsafe delegate void WGPUUncapturedErrorCallback(WGPUDeviceImpl* device, WGPUErrorType type, WGPUStringView str, void* userData1, void* userData2);
+    internal unsafe delegate void WGPUUncapturedErrorCallback(WGPUDevice* device, WGPUErrorType type, WGPUStringView str, void* userData1, void* userData2);
 
-    public static unsafe WGPUSurfaceImpl CreateWebGPUSurface(IWindow view, WGPUInstanceImpl instance)
+    public static unsafe WGPUSurface CreateWebGPUSurface(IWindow view, WGPUInstance instance)
     {
         var fromWindowsHWND = new WGPUSurfaceSourceWindowsHWND()
         {
-            Chain = new WGPUChainedStruct()
+            chain = new WGPUChainedStruct()
             {
-                SType = WGPUSType.SurfaceSourceWindowsHWND,
+                sType = WGPUSType.SurfaceSourceWindowsHWND,
                 //Next = null
             },
-            Hwnd = (void*)view.Native.Win32.Value.Hwnd,
-            Hinstance = (void*)view.Native.Win32.Value.HInstance
+            hwnd = (void*)view.Native.Win32.Value.Hwnd,
+            hinstance = (void*)view.Native.Win32.Value.HInstance
         };
 
         WGPUSurfaceDescriptor descriptor = new()
         {
-            NextInChain = &fromWindowsHWND.Chain,
-            Label = new WGPUStringView() { Data = null, Length = 0 }
+            nextInChain = &fromWindowsHWND.chain,
+            label = new WGPUStringView() { data = null, length = 0 }
         };
 
-        WGPUSurfaceImpl result = wgpuInstanceCreateSurface(instance, &descriptor);
+        WGPUSurface result = wgpuInstanceCreateSurface(instance, &descriptor);
 
         return result;
     }

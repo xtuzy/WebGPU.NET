@@ -14,9 +14,9 @@
         {
             public void INIT()
             {
-                this.Width = 0;
-                this.Height = 1;
-                this.DepthOrArrayLayers = 1;
+                this.width = 0;
+                this.height = 1;
+                this.depthOrArrayLayers = 1;
             }
         }
 
@@ -24,9 +24,9 @@
         {
             public void INIT()
             {
-                this.Count = 1;
-                this.Mask = 0xFFFFFFFF;
-                this.AlphaToCoverageEnabled = WGPU_FALSE;
+                this.count = 1;
+                this.mask = 0xFFFFFFFF;
+                this.alphaToCoverageEnabled = WGPU_FALSE;
             }
         }
 
@@ -34,8 +34,8 @@
         {
             public void INIT()
             {
-                this.BeginningOfPassWriteIndex = WGPU_QUERY_SET_INDEX_UNDEFINED;
-                this.EndOfPassWriteIndex = WGPU_QUERY_SET_INDEX_UNDEFINED;
+                this.beginningOfPassWriteIndex = WGPU_QUERY_SET_INDEX_UNDEFINED;
+                this.endOfPassWriteIndex = WGPU_QUERY_SET_INDEX_UNDEFINED;
             }
         }
 
@@ -43,7 +43,7 @@
         {
             public void INIT()
             {
-                this.SampleCount = 1;
+                this.sampleCount = 1;
             }
         }
 
@@ -51,7 +51,7 @@
         {
             public void INIT()
             {
-                this.DepthClearValue = WGPU_DEPTH_CLEAR_VALUE_UNDEFINED;
+                this.depthClearValue = WGPU_DEPTH_CLEAR_VALUE_UNDEFINED;
             }
         }
 
@@ -59,7 +59,7 @@
         {
             public void INIT()
             {
-                this.MaxDrawCount = 50000000;
+                this.maxDrawCount = 50000000;
             }
         }
 
@@ -67,7 +67,7 @@
         {
             public void INIT()
             {
-                this.RequiresEndAccessFence = WGPU_TRUE;
+                this.requiresEndAccessFence = WGPU_TRUE;
             }
         }
 
@@ -75,7 +75,7 @@
         {
             public void INIT()
             {
-                this.AllowStorageBinding = WGPU_TRUE;
+                this.allowStorageBinding = WGPU_TRUE;
             }
         }
 
@@ -83,7 +83,7 @@
         {
             public void INIT()
             {
-                this.SampledTextureBinding = WGPU_LIMIT_U32_UNDEFINED;
+                this.sampledTextureBinding = WGPU_LIMIT_U32_UNDEFINED;
             }
         }
 
@@ -91,8 +91,8 @@
         {
             public void INIT()
             {
-                this.Usage = WGPUTextureUsage.RenderAttachment;
-                this.AlphaMode = WGPUCompositeAlphaMode.Auto;
+                this.usage = WGPUTextureUsage.RenderAttachment;
+                this.alphaMode = WGPUCompositeAlphaMode.Auto;
             }
         }
 
@@ -100,7 +100,7 @@
         {
             public void INIT()
             {
-                this.Size = WGPU_WHOLE_SIZE;
+                this.size = WGPU_WHOLE_SIZE;
             }
         }
 
@@ -108,8 +108,8 @@
         {
             public void INIT()
             {
-                this.BytesPerRow = WGPU_COPY_STRIDE_UNDEFINED;
-                this.RowsPerImage = WGPU_COPY_STRIDE_UNDEFINED;
+                this.bytesPerRow = WGPU_COPY_STRIDE_UNDEFINED;
+                this.rowsPerImage = WGPU_COPY_STRIDE_UNDEFINED;
             }
         }
 
@@ -117,8 +117,8 @@
         {
             public void INIT()
             {
-                this.StencilReadMask = 0xFFFFFFFF;
-                this.StencilWriteMask = 0xFFFFFFFF;
+                this.stencilReadMask = 0xFFFFFFFF;
+                this.stencilWriteMask = 0xFFFFFFFF;
             }
         }
 
@@ -126,38 +126,38 @@
         {
             public void INIT()
             {
-                this.MaxTextureDimension1D = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxTextureDimension2D = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxTextureDimension3D = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxTextureArrayLayers = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxBindGroups = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxBindGroupsPlusVertexBuffers = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxBindingsPerBindGroup = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxDynamicUniformBuffersPerPipelineLayout = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxDynamicStorageBuffersPerPipelineLayout = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxSampledTexturesPerShaderStage = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxSamplersPerShaderStage = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxStorageBuffersPerShaderStage = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxStorageTexturesPerShaderStage = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxUniformBuffersPerShaderStage = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxUniformBufferBindingSize = WGPU_LIMIT_U64_UNDEFINED;
-                this.MaxStorageBufferBindingSize = WGPU_LIMIT_U64_UNDEFINED;
-                this.MinUniformBufferOffsetAlignment = WGPU_LIMIT_U32_UNDEFINED;
-                this.MinStorageBufferOffsetAlignment = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxVertexBuffers = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxBufferSize = WGPU_LIMIT_U64_UNDEFINED;
-                this.MaxVertexAttributes = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxVertexBufferArrayStride = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxInterStageShaderVariables = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxColorAttachments = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxColorAttachmentBytesPerSample = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxComputeWorkgroupStorageSize = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxComputeInvocationsPerWorkgroup = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxComputeWorkgroupSizeX = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxComputeWorkgroupSizeY = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxComputeWorkgroupSizeZ = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxComputeWorkgroupsPerDimension = WGPU_LIMIT_U32_UNDEFINED;
-                this.MaxImmediateSize = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxTextureDimension1D = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxTextureDimension2D = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxTextureDimension3D = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxTextureArrayLayers = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxBindGroups = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxBindGroupsPlusVertexBuffers = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxBindingsPerBindGroup = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxDynamicUniformBuffersPerPipelineLayout = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxDynamicStorageBuffersPerPipelineLayout = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxSampledTexturesPerShaderStage = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxSamplersPerShaderStage = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxStorageBuffersPerShaderStage = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxStorageTexturesPerShaderStage = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxUniformBuffersPerShaderStage = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxUniformBufferBindingSize = WGPU_LIMIT_U64_UNDEFINED;
+                this.maxStorageBufferBindingSize = WGPU_LIMIT_U64_UNDEFINED;
+                this.minUniformBufferOffsetAlignment = WGPU_LIMIT_U32_UNDEFINED;
+                this.minStorageBufferOffsetAlignment = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxVertexBuffers = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxBufferSize = WGPU_LIMIT_U64_UNDEFINED;
+                this.maxVertexAttributes = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxVertexBufferArrayStride = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxInterStageShaderVariables = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxColorAttachments = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxColorAttachmentBytesPerSample = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxComputeWorkgroupStorageSize = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxComputeInvocationsPerWorkgroup = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxComputeWorkgroupSizeX = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxComputeWorkgroupSizeY = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxComputeWorkgroupSizeZ = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxComputeWorkgroupsPerDimension = WGPU_LIMIT_U32_UNDEFINED;
+                this.maxImmediateSize = WGPU_LIMIT_U32_UNDEFINED;
             }
         }
 
@@ -165,8 +165,8 @@
         {
             public void INIT()
             {
-                this.LodMaxClamp = 32.0f;
-                this.MaxAnisotropy = 1;
+                this.lodMaxClamp = 32.0f;
+                this.maxAnisotropy = 1;
             }
         }
 
@@ -174,8 +174,8 @@
         {
             public void INIT()
             {
-                this.MipLevelCount = 1;
-                this.SampleCount = 1;
+                this.mipLevelCount = 1;
+                this.sampleCount = 1;
             }
         }
 
@@ -183,7 +183,7 @@
         {
             public void INIT()
             {
-                this.WriteMask = WGPUColorWriteMask.All;
+                this.writeMask = WGPUColorWriteMask.All;
             }
         }
     }
