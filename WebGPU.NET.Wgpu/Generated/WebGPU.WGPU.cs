@@ -2721,7 +2721,7 @@ namespace WebGPU.NET.Wgpu
         {
             public byte* Data;
             
-            public ulong Length;
+            public nuint Length;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -3420,7 +3420,7 @@ namespace WebGPU.NET.Wgpu
             /// <summary>
             /// The maximum number @ref WGPUFutureWaitInfo supported in a call to ::wgpuInstanceWaitAny with `timeoutNS &gt; 0`.
             /// </summary>
-            public ulong TimedWaitAnyMaxCount;
+            public nuint TimedWaitAnyMaxCount;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -3526,7 +3526,7 @@ namespace WebGPU.NET.Wgpu
             /// </summary>
             public WebGPU.WGPUStringView Label;
             
-            public ulong BindGroupLayoutCount;
+            public nuint BindGroupLayoutCount;
             
             public WebGPU.WGPUBindGroupLayoutImpl* BindGroupLayouts;
         }
@@ -3594,7 +3594,7 @@ namespace WebGPU.NET.Wgpu
             /// </summary>
             public WebGPU.WGPUStringView Label;
             
-            public ulong ColorFormatCount;
+            public nuint ColorFormatCount;
             
             public WebGPU.WGPUTextureFormat* ColorFormats;
             
@@ -3779,7 +3779,7 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSupportedFeatures
         {
-            public ulong FeatureCount;
+            public nuint FeatureCount;
             
             public WebGPU.WGPUFeatureName* Features;
         }
@@ -3787,7 +3787,7 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPUSupportedWGSLLanguageFeatures
         {
-            public ulong FeatureCount;
+            public nuint FeatureCount;
             
             public WebGPU.WGPUWGSLLanguageFeatureName* Features;
         }
@@ -3809,7 +3809,7 @@ namespace WebGPU.NET.Wgpu
             /// <summary>
             /// A list of supported @ref WGPUTextureFormat values, in order of preference.
             /// </summary>
-            public ulong FormatCount;
+            public nuint FormatCount;
             
             public WebGPU.WGPUTextureFormat* Formats;
             
@@ -3817,7 +3817,7 @@ namespace WebGPU.NET.Wgpu
             /// A list of supported @ref WGPUPresentMode values.
             /// Guaranteed to contain @ref WGPUPresentMode_Fifo.
             /// </summary>
-            public ulong PresentModeCount;
+            public nuint PresentModeCount;
             
             public WebGPU.WGPUPresentMode* PresentModes;
             
@@ -3825,7 +3825,7 @@ namespace WebGPU.NET.Wgpu
             /// A list of supported @ref WGPUCompositeAlphaMode values.
             /// @ref WGPUCompositeAlphaMode_Auto will be an alias for the first element and will never be present in this array.
             /// </summary>
-            public ulong AlphaModeCount;
+            public nuint AlphaModeCount;
             
             public WebGPU.WGPUCompositeAlphaMode* AlphaModes;
         }
@@ -3867,7 +3867,7 @@ namespace WebGPU.NET.Wgpu
             /// <summary>
             /// The additional @ref WGPUTextureFormat for @ref WGPUTextureView format reinterpretation of the surface's textures.
             /// </summary>
-            public ulong ViewFormatCount;
+            public nuint ViewFormatCount;
             
             public WebGPU.WGPUTextureFormat* ViewFormats;
             
@@ -4098,7 +4098,7 @@ namespace WebGPU.NET.Wgpu
             
             public WebGPU.WGPUBindGroupLayoutImpl Layout;
             
-            public ulong EntryCount;
+            public nuint EntryCount;
             
             public WebGPU.WGPUBindGroupEntry* Entries;
         }
@@ -4134,7 +4134,7 @@ namespace WebGPU.NET.Wgpu
         {
             public WebGPU.WGPUChainedStruct* NextInChain;
             
-            public ulong MessageCount;
+            public nuint MessageCount;
             
             public WebGPU.WGPUCompilationMessage* Messages;
         }
@@ -4188,7 +4188,7 @@ namespace WebGPU.NET.Wgpu
             /// </summary>
             public WebGPU.WGPUStringView Label;
             
-            public ulong RequiredFeatureCount;
+            public nuint RequiredFeatureCount;
             
             public WebGPU.WGPUFeatureName* RequiredFeatures;
             
@@ -4267,7 +4267,7 @@ namespace WebGPU.NET.Wgpu
             /// </summary>
             public WebGPU.WGPUStringView EntryPoint;
             
-            public ulong ConstantCount;
+            public nuint ConstantCount;
             
             public WebGPU.WGPUConstantEntry* Constants;
         }
@@ -4332,7 +4332,7 @@ namespace WebGPU.NET.Wgpu
             
             public uint SampleCount;
             
-            public ulong ViewFormatCount;
+            public nuint ViewFormatCount;
             
             public WebGPU.WGPUTextureFormat* ViewFormats;
         }
@@ -4348,7 +4348,7 @@ namespace WebGPU.NET.Wgpu
             
             public ulong ArrayStride;
             
-            public ulong AttributeCount;
+            public nuint AttributeCount;
             
             public WebGPU.WGPUVertexAttribute* Attributes;
         }
@@ -4363,7 +4363,7 @@ namespace WebGPU.NET.Wgpu
             /// </summary>
             public WebGPU.WGPUStringView Label;
             
-            public ulong EntryCount;
+            public nuint EntryCount;
             
             public WebGPU.WGPUBindGroupLayoutEntry* Entries;
         }
@@ -4409,7 +4409,7 @@ namespace WebGPU.NET.Wgpu
             /// </summary>
             public WebGPU.WGPUStringView Label;
             
-            public ulong ColorAttachmentCount;
+            public nuint ColorAttachmentCount;
             
             public WebGPU.WGPURenderPassColorAttachment* ColorAttachments;
             
@@ -4432,11 +4432,11 @@ namespace WebGPU.NET.Wgpu
             /// </summary>
             public WebGPU.WGPUStringView EntryPoint;
             
-            public ulong ConstantCount;
+            public nuint ConstantCount;
             
             public WebGPU.WGPUConstantEntry* Constants;
             
-            public ulong BufferCount;
+            public nuint BufferCount;
             
             public WebGPU.WGPUVertexBufferLayout* Buffers;
         }
@@ -4453,11 +4453,11 @@ namespace WebGPU.NET.Wgpu
             /// </summary>
             public WebGPU.WGPUStringView EntryPoint;
             
-            public ulong ConstantCount;
+            public nuint ConstantCount;
             
             public WebGPU.WGPUConstantEntry* Constants;
             
-            public ulong TargetCount;
+            public nuint TargetCount;
             
             public WebGPU.WGPUColorTargetState* Targets;
         }
@@ -4664,7 +4664,7 @@ namespace WebGPU.NET.Wgpu
         {
             public WebGPU.WGPUChainedStruct Chain;
             
-            public ulong PushConstantRangeCount;
+            public nuint PushConstantRangeCount;
             
             public WebGPU.WGPUPushConstantRange* PushConstantRanges;
         }
@@ -4704,13 +4704,13 @@ namespace WebGPU.NET.Wgpu
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public partial struct WGPURegistryReport
         {
-            public ulong NumAllocated;
+            public nuint NumAllocated;
             
-            public ulong NumKeptFromUser;
+            public nuint NumKeptFromUser;
             
-            public ulong NumReleasedFromUser;
+            public nuint NumReleasedFromUser;
             
-            public ulong ElementSize;
+            public nuint ElementSize;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -4774,15 +4774,15 @@ namespace WebGPU.NET.Wgpu
             
             public WebGPU.WGPUBufferImpl* Buffers;
             
-            public ulong BufferCount;
+            public nuint BufferCount;
             
             public WebGPU.WGPUSamplerImpl* Samplers;
             
-            public ulong SamplerCount;
+            public nuint SamplerCount;
             
             public WebGPU.WGPUTextureViewImpl* TextureViews;
             
-            public ulong TextureViewCount;
+            public nuint TextureViewCount;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -4800,7 +4800,7 @@ namespace WebGPU.NET.Wgpu
             
             public WebGPU.WGPUPipelineStatisticName* PipelineStatistics;
             
-            public ulong PipelineStatisticCount;
+            public nuint PipelineStatisticCount;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -4975,7 +4975,7 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferGetConstMappedRange")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void* wgpuBufferGetConstMappedRange(WebGPU.WGPUBufferImpl buffer, ulong offset, ulong size);
+        public static partial void* wgpuBufferGetConstMappedRange(WebGPU.WGPUBufferImpl buffer, nuint offset, nuint size);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferGetMapState")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -4991,7 +4991,7 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferGetMappedRange")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void* wgpuBufferGetMappedRange(WebGPU.WGPUBufferImpl buffer, ulong offset, ulong size);
+        public static partial void* wgpuBufferGetMappedRange(WebGPU.WGPUBufferImpl buffer, nuint offset, nuint size);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferGetSize")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5003,7 +5003,7 @@ namespace WebGPU.NET.Wgpu
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferMapAsync")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial WebGPU.WGPUFuture wgpuBufferMapAsync(WebGPU.WGPUBufferImpl buffer, WebGPU.WGPUMapMode mode, ulong offset, ulong size, WebGPU.WGPUBufferMapCallbackInfo callbackInfo);
+        public static partial WebGPU.WGPUFuture wgpuBufferMapAsync(WebGPU.WGPUBufferImpl buffer, WebGPU.WGPUMapMode mode, nuint offset, nuint size, WebGPU.WGPUBufferMapCallbackInfo callbackInfo);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5144,7 +5144,7 @@ namespace WebGPU.NET.Wgpu
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderSetBindGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderSetBindGroup(WebGPU.WGPUComputePassEncoderImpl computePassEncoder, uint groupIndex, WebGPU.WGPUBindGroupImpl group, ulong dynamicOffsetCount, ref uint dynamicOffsets);
+        public static partial void wgpuComputePassEncoderSetBindGroup(WebGPU.WGPUComputePassEncoderImpl computePassEncoder, uint groupIndex, WebGPU.WGPUBindGroupImpl group, nuint dynamicOffsetCount, ref uint dynamicOffsets);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5348,7 +5348,7 @@ namespace WebGPU.NET.Wgpu
         /// </remarks>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceWaitAny")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUWaitStatus wgpuInstanceWaitAny(WebGPU.WGPUInstanceImpl instance, ulong futureCount, WGPUFutureWaitInfo* futures, ulong timeoutNS);
+        public static unsafe partial WebGPU.WGPUWaitStatus wgpuInstanceWaitAny(WebGPU.WGPUInstanceImpl instance, nuint futureCount, WGPUFutureWaitInfo* futures, ulong timeoutNS);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5425,7 +5425,7 @@ namespace WebGPU.NET.Wgpu
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueSubmit")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuQueueSubmit(WebGPU.WGPUQueueImpl queue, ulong commandCount, WGPUCommandBufferImpl* commands);
+        public static unsafe partial void wgpuQueueSubmit(WebGPU.WGPUQueueImpl queue, nuint commandCount, WGPUCommandBufferImpl* commands);
         
         /// <summary>
         /// Produces a @ref DeviceError both content-timeline (`size` alignment) and device-timeline
@@ -5433,11 +5433,11 @@ namespace WebGPU.NET.Wgpu
         /// </summary>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueWriteBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuQueueWriteBuffer(WebGPU.WGPUQueueImpl queue, WebGPU.WGPUBufferImpl buffer, ulong bufferOffset, void* data, ulong size);
+        public static partial void wgpuQueueWriteBuffer(WebGPU.WGPUQueueImpl queue, WebGPU.WGPUBufferImpl buffer, ulong bufferOffset, void* data, nuint size);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueWriteTexture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuQueueWriteTexture(WebGPU.WGPUQueueImpl queue, WGPUTexelCopyTextureInfo* destination, void* data, ulong dataSize, WGPUTexelCopyBufferLayout* dataLayout, WGPUExtent3D* writeSize);
+        public static unsafe partial void wgpuQueueWriteTexture(WebGPU.WGPUQueueImpl queue, WGPUTexelCopyTextureInfo* destination, void* data, nuint dataSize, WGPUTexelCopyBufferLayout* dataLayout, WGPUExtent3D* writeSize);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5507,7 +5507,7 @@ namespace WebGPU.NET.Wgpu
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderSetBindGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderSetBindGroup(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder, uint groupIndex, WebGPU.WGPUBindGroupImpl group, ulong dynamicOffsetCount, ref uint dynamicOffsets);
+        public static partial void wgpuRenderBundleEncoderSetBindGroup(WebGPU.WGPURenderBundleEncoderImpl renderBundleEncoder, uint groupIndex, WebGPU.WGPUBindGroupImpl group, nuint dynamicOffsetCount, ref uint dynamicOffsets);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderSetIndexBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5570,7 +5570,7 @@ namespace WebGPU.NET.Wgpu
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderExecuteBundles")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuRenderPassEncoderExecuteBundles(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, ulong bundleCount, WGPURenderBundleImpl* bundles);
+        public static unsafe partial void wgpuRenderPassEncoderExecuteBundles(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, nuint bundleCount, WGPURenderBundleImpl* bundles);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderInsertDebugMarker")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5586,7 +5586,7 @@ namespace WebGPU.NET.Wgpu
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetBindGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderSetBindGroup(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, uint groupIndex, WebGPU.WGPUBindGroupImpl group, ulong dynamicOffsetCount, ref uint dynamicOffsets);
+        public static partial void wgpuRenderPassEncoderSetBindGroup(WebGPU.WGPURenderPassEncoderImpl renderPassEncoder, uint groupIndex, WebGPU.WGPUBindGroupImpl group, nuint dynamicOffsetCount, ref uint dynamicOffsets);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetBlendConstant")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5885,7 +5885,7 @@ namespace WebGPU.NET.Wgpu
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueSubmitForIndex")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial ulong wgpuQueueSubmitForIndex(WebGPU.WGPUQueueImpl queue, ulong commandCount, WGPUCommandBufferImpl* commands);
+        public static unsafe partial ulong wgpuQueueSubmitForIndex(WebGPU.WGPUQueueImpl queue, nuint commandCount, WGPUCommandBufferImpl* commands);
         
         /// <summary>
         /// Returns true if the queue is empty, or false if there are more queue submissions still in flight.

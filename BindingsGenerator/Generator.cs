@@ -260,6 +260,30 @@ namespace BindingsGenerator
                            item.IntegerType = CppPrimitiveType.UnsignedLongLong;
                        }
                    }));
+            options.MappingRules.Add(
+                   // 使用size_t定义的使用nint
+                   r => r.MapAll<CppElement>().CSharpAction((converter, element) =>
+                   {
+                       if (element is CSharpField cSharpField)
+                       {
+                           if (cSharpField.FieldType.CppElement is CppTypedef cppTypedef)
+                           {
+                               if (cppTypedef.FullName == "size_t" || cppTypedef.FullName == "sizet")
+                               {
+                                   cSharpField.FieldType = CustomType.@nuint;
+                               }
+                           }
+                       }else if(element is CSharpParameter cSharpParameter)
+                       {
+                           if (cSharpParameter.ParameterType.CppElement is CppTypedef cppTypedef)
+                           {
+                               if (cppTypedef.FullName == "size_t" || cppTypedef.FullName == "sizet")
+                               {
+                                   cSharpParameter.ParameterType = CustomType.@nuint;
+                               }
+                           }
+                       }
+                   }));
 
             //要编译的头文件所依赖的头文件
             options.IncludeFolders.AddRange(sourceHeaderDirectory);
@@ -288,6 +312,28 @@ namespace BindingsGenerator
             CodeWriter writer = new CodeWriter(new CodeWriterOptions(subFileSystem));
 
             compilation.DumpTo(writer);
+        }
+
+        /// <summary>
+        /// 参考<see cref="CSharpPrimitiveType"/>实现
+        /// </summary>
+        class CustomType : CSharpType
+        {
+            public static CustomType @nuint = new CustomType("nuint");
+
+            public CustomType(string typeName)
+            {
+                TypeName = typeName;
+            }
+
+            string TypeName;
+
+            public override void DumpTo(CodeWriter writer)
+            {
+                writer.Write(TypeName);
+            }
+
+            public override void DumpReferenceTo(CodeWriter writer) => DumpTo(writer);
         }
 
         /// <summary>
