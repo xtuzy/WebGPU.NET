@@ -75,7 +75,7 @@ fn fs_main() -> @location(0) vec4<f32> {
 
             _Instance = wgpuCreateInstance(&instanceDescriptor);
 
-            _Surface = CreateWebGPUSurface(Window, _Instance);
+            _Surface = CreateWebGPUSurface(_Instance);
 
             #region Get adapter
 
@@ -314,8 +314,8 @@ fn fs_main() -> @location(0) vec4<f32> {
                 format = _Format,
                 presentMode = presentModes[0],
                 device = _Device,
-                width = (uint)GetWidth(Window),
-                height = (uint)GetHeight(Window),
+                width = (uint)GetWidth(),
+                height = (uint)GetHeight(),
             };
 
             wgpuSurfaceConfigure(_Surface, &surfaceConfiguration);
@@ -348,8 +348,8 @@ fn fs_main() -> @location(0) vec4<f32> {
                 format = WGPUTextureFormat.RGBA8Unorm,
                 size = new WGPUExtent3D
                 {
-                    width = (uint)GetWidth(Window),
-                    height = (uint)GetHeight(Window),
+                    width = (uint)GetWidth(),
+                    height = (uint)GetHeight(),
                     depthOrArrayLayers = 1
                 },
                 usage = WGPUTextureUsage.RenderAttachment | WGPUTextureUsage.CopySrc,

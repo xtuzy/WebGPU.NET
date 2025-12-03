@@ -65,7 +65,7 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
             demo.instance = wgpuCreateInstance(null);
             Debug.Assert(demo.instance.Handle != 0, $"{nameof(wgpuCreateInstance)} failed");
 
-            demo.surface = CreateWebGPUSurface(this.Window, demo.instance);
+            demo.surface = CreateWebGPUSurface(demo.instance);
             Debug.Assert(demo.surface.Handle != 0, $"{nameof(CreateWebGPUSurface)} failed");
 
             var wGPURequestAdapterOptions = new WGPURequestAdapterOptions()
@@ -227,8 +227,8 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
                     };
 
                     {
-                        demo.config.width = this.GetWidth(this.Window);
-                        demo.config.height = this.GetHeight(this.Window);
+                        demo.config.width = this.GetWidth();
+                        demo.config.height = this.GetHeight();
                     }
 
                     fixed (WGPUSurfaceConfiguration* pConfig = &demo.config)
@@ -259,8 +259,8 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
                         {
                             wgpuTextureRelease(surface_texture.texture);
                         }
-                        var width = GetWidth(this.Window);
-                        var height = GetHeight(this.Window);
+                        var width = GetWidth();
+                        var height = GetHeight();
                         if (width != 0 && height != 0)
                         {
                             demo.config.width = width;

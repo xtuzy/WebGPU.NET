@@ -78,7 +78,7 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
             _Instance = wgpuCreateInstance(null);
 #endif
 
-            _Surface = CreateWebGPUSurface(Window, _Instance);
+            _Surface = CreateWebGPUSurface(_Instance);
 
             WGPURequestAdapterOptions options = new WGPURequestAdapterOptions()
             {
@@ -162,8 +162,8 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
             var presentModes = new Span<WGPUPresentMode>(surfaceCapabilities.presentModes, (int)surfaceCapabilities.presentModeCount);
             var alphaModes = new Span<WGPUCompositeAlphaMode>(surfaceCapabilities.alphaModes, (int)surfaceCapabilities.alphaModeCount).ToArray();
 
-            var width = this.GetWidth(this.Window);
-            var height = this.GetHeight(this.Window);
+            var width = this.GetWidth();
+            var height = this.GetHeight();
 
             WGPUTextureFormat textureFormat = this.swapChainFormats[0];
             WGPUSurfaceConfiguration surfaceConfiguration = new WGPUSurfaceConfiguration()

@@ -21,6 +21,7 @@
     <Compile Include="..\WebGPU.NET.Dawn.Desktop.Demo\EvergineTeamHelloTriangle.cs" Link="EvergineTeamHelloTriangle.cs" />
     <Compile Include="..\WebGPU.NET.Dawn.Desktop.Demo\HelloTriangle.cs" Link="HelloTriangle.cs" />
     <Compile Include="..\WebGPU.NET.Dawn.Desktop.Demo\Program.cs" Link="Program.cs" />
+    <Compile Include="..\WebGPU.NET.Dawn.Desktop.Demo\WebGPUCallbacks.cs" Link="WebGPUCallbacks.cs" />
     <Compile Include="..\WebGPU.NET.Dawn.Desktop.Demo\wgpu-native_examples_triangle.cs" Link="wgpu-native_examples_triangle.cs" />
   </ItemGroup>
 
