@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\WebGPU.NET.Dawn.Desktop.Demo\EvergineTeamHelloTriangle.cs" Link="EvergineTeamHelloTriangle.cs" />
+    <Compile Include="..\WebGPU.NET.Dawn.Desktop.Demo\HelloTriangle.cs" Link="HelloTriangle.cs" />
+    <Compile Include="..\WebGPU.NET.Dawn.Desktop.Demo\WebGPUCallbacks.cs" Link="WebGPUCallbacks.cs" />
+    <Compile Include="..\WebGPU.NET.Dawn.Desktop.Demo\wgpu-native_examples_triangle.cs" Link="wgpu-native_examples_triangle.cs" />
+  </ItemGroup>
+
+<ItemGroup>
+    <PackageReference Include="Silk.NET.Maths" Version="2.22.0" />
+    <PackageReference Include="Silk.NET.Windowing" Version="2.22.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebGPU.NET.Dawn.Native\WebGPU.NET.Dawn.Native.csproj" />
+    <ProjectReference Include="..\WebGPU.NET.Dawn\WebGPU.NET.Dawn.csproj" />
+  </ItemGroup>
+
+</Project>
