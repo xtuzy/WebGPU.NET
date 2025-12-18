@@ -85,7 +85,7 @@ namespace WebGPU.NET.Dawn.Desktop.Demo
                 nextInChain = null,
                 compatibleSurface = _Surface,
                 powerPreference = WGPUPowerPreference.HighPerformance,
-                backendType = WGPUBackendType.Undefined
+                backendType = WGPUBackendType.Vulkan
             };
 
             var pWGPURequestAdapterCallback = Marshal.GetFunctionPointerForDelegate<WGPURequestAdapterCallback>((status, _adapter, str, data1, data2) =>

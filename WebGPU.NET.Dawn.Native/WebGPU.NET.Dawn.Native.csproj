@@ -7,7 +7,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageId>Yang.WebGPU.NET.Dawn.Native</PackageId>
     <Authors>zhouyang</Authors>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="runtimes\**" PackagePath="runtimes" Pack="true" />
