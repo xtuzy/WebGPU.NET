@@ -12,7 +12,7 @@
 
         partial struct WGPUExtent3D
         {
-            public void INIT()
+            public WGPUExtent3D()
             {
                 this.width = 0;
                 this.height = 1;
@@ -22,7 +22,7 @@
 
         partial struct WGPUMultisampleState
         {
-            public void INIT()
+            public WGPUMultisampleState()
             {
                 this.count = 1;
                 this.mask = 0xFFFFFFFF;
@@ -32,7 +32,7 @@
 
         partial struct WGPUPassTimestampWrites
         {
-            public void INIT()
+            public WGPUPassTimestampWrites()
             {
                 this.beginningOfPassWriteIndex = WGPU_QUERY_SET_INDEX_UNDEFINED;
                 this.endOfPassWriteIndex = WGPU_QUERY_SET_INDEX_UNDEFINED;
@@ -41,7 +41,7 @@
 
         partial struct WGPURenderBundleEncoderDescriptor
         {
-            public void INIT()
+            public WGPURenderBundleEncoderDescriptor()
             {
                 this.sampleCount = 1;
             }
@@ -49,7 +49,7 @@
 
         partial struct WGPURenderPassDepthStencilAttachment
         {
-            public void INIT()
+            public WGPURenderPassDepthStencilAttachment()
             {
                 this.depthClearValue = WGPU_DEPTH_CLEAR_VALUE_UNDEFINED;
             }
@@ -57,7 +57,7 @@
 
         partial struct WGPURenderPassMaxDrawCount
         {
-            public void INIT()
+            public WGPURenderPassMaxDrawCount()
             {
                 this.maxDrawCount = 50000000;
             }
@@ -65,7 +65,7 @@
 
         partial struct WGPUSharedTextureMemoryD3D11BeginState
         {
-            public void INIT()
+            public WGPUSharedTextureMemoryD3D11BeginState()
             {
                 this.requiresEndAccessFence = WGPU_TRUE;
             }
@@ -73,7 +73,7 @@
 
         partial struct WGPUSharedTextureMemoryIOSurfaceDescriptor
         {
-            public void INIT()
+            public WGPUSharedTextureMemoryIOSurfaceDescriptor()
             {
                 this.allowStorageBinding = WGPU_TRUE;
             }
@@ -81,7 +81,7 @@
 
         partial struct WGPUStaticSamplerBindingLayout
         {
-            public void INIT()
+            public WGPUStaticSamplerBindingLayout()
             {
                 this.sampledTextureBinding = WGPU_LIMIT_U32_UNDEFINED;
             }
@@ -89,7 +89,7 @@
 
         partial struct WGPUSurfaceConfiguration
         {
-            public void INIT()
+            public WGPUSurfaceConfiguration()
             {
                 this.usage = WGPUTextureUsage.RenderAttachment;
                 this.alphaMode = WGPUCompositeAlphaMode.Auto;
@@ -98,7 +98,7 @@
 
         partial struct WGPUTexelBufferViewDescriptor
         {
-            public void INIT()
+            public WGPUTexelBufferViewDescriptor()
             {
                 this.size = WGPU_WHOLE_SIZE;
             }
@@ -106,7 +106,7 @@
 
         partial struct WGPUTexelCopyBufferLayout
         {
-            public void INIT()
+            public WGPUTexelCopyBufferLayout()
             {
                 this.bytesPerRow = WGPU_COPY_STRIDE_UNDEFINED;
                 this.rowsPerImage = WGPU_COPY_STRIDE_UNDEFINED;
@@ -115,7 +115,7 @@
 
         partial struct WGPUDepthStencilState
         {
-            public void INIT()
+            public WGPUDepthStencilState()
             {
                 this.stencilReadMask = 0xFFFFFFFF;
                 this.stencilWriteMask = 0xFFFFFFFF;
@@ -124,7 +124,7 @@
 
         partial struct WGPULimits
         {
-            public void INIT()
+            public WGPULimits()
             {
                 this.maxTextureDimension1D = WGPU_LIMIT_U32_UNDEFINED;
                 this.maxTextureDimension2D = WGPU_LIMIT_U32_UNDEFINED;
@@ -163,7 +163,7 @@
 
         partial struct WGPUSamplerDescriptor
         {
-            public void INIT()
+            public WGPUSamplerDescriptor()
             {
                 this.lodMaxClamp = 32.0f;
                 this.maxAnisotropy = 1;
@@ -172,7 +172,7 @@
 
         partial struct WGPUTextureDescriptor
         {
-            public void INIT()
+            public WGPUTextureDescriptor()
             {
                 this.mipLevelCount = 1;
                 this.sampleCount = 1;
@@ -181,7 +181,7 @@
 
         partial struct WGPUColorTargetState
         {
-            public void INIT()
+            public WGPUColorTargetState()
             {
                 this.writeMask = WGPUColorWriteMask.All;
             }
