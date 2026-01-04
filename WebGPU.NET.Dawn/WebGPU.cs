@@ -10,6 +10,23 @@
         private const string webgpu_native_dll_name = "webgpu_dawn";
 #endif
 
+        partial struct WGPUCopyTextureForBrowserOptions
+        {
+            public WGPUCopyTextureForBrowserOptions()
+            {
+                this.srcAlphaMode = WGPUAlphaMode.Unpremultiplied;
+                this.dstAlphaMode = WGPUAlphaMode.Unpremultiplied;
+            }
+        }
+
+        partial struct WGPUDawnRenderPassColorAttachmentRenderToSingleSampled
+        {
+            public WGPUDawnRenderPassColorAttachmentRenderToSingleSampled()
+            {
+                this.implicitSampleCount = 1;
+            }
+        }
+
         partial struct WGPUExtent3D
         {
             public WGPUExtent3D()
@@ -113,12 +130,28 @@
             }
         }
 
+        partial struct WGPUBindGroupEntry
+        {
+            public WGPUBindGroupEntry()
+            {
+                this.size = WGPU_WHOLE_SIZE;
+            }
+        }
+
         partial struct WGPUDepthStencilState
         {
             public WGPUDepthStencilState()
             {
                 this.stencilReadMask = 0xFFFFFFFF;
                 this.stencilWriteMask = 0xFFFFFFFF;
+            }
+        }
+
+        partial struct WGPUExternalTextureDescriptor
+        {
+            public WGPUExternalTextureDescriptor()
+            {
+                this.rotation = WGPUExternalTextureRotation.Rotate0Degrees;
             }
         }
 
@@ -161,6 +194,14 @@
             }
         }
 
+        partial struct WGPURenderPassColorAttachment
+        {
+            public WGPURenderPassColorAttachment()
+            {
+                this.depthSlice = WGPU_DEPTH_SLICE_UNDEFINED;
+            }
+        }
+
         partial struct WGPUSamplerDescriptor
         {
             public WGPUSamplerDescriptor()
@@ -184,6 +225,15 @@
             public WGPUColorTargetState()
             {
                 this.writeMask = WGPUColorWriteMask.All;
+            }
+        }
+
+        partial struct WGPUTextureViewDescriptor
+        {
+            public WGPUTextureViewDescriptor()
+            {
+                this.mipLevelCount = WGPU_MIP_LEVEL_COUNT_UNDEFINED;
+                this.arrayLayerCount = WGPU_ARRAY_LAYER_COUNT_UNDEFINED;
             }
         }
     }
