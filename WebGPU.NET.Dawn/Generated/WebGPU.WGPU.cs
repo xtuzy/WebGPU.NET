@@ -4616,15 +4616,15 @@ namespace WebGPU.NET.Dawn
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCreateInstance")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUInstance wgpuCreateInstance(WGPUInstanceDescriptor* descriptor);
+        public static partial WebGPU.WGPUInstance wgpuCreateInstance(WebGPU.WGPUInstanceDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuGetInstanceFeatures")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuGetInstanceFeatures(WGPUSupportedInstanceFeatures* features);
+        public static partial void wgpuGetInstanceFeatures(WebGPU.WGPUSupportedInstanceFeatures* features);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuGetInstanceLimits")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuGetInstanceLimits(WGPUInstanceLimits* limits);
+        public static partial WebGPU.WGPUStatus wgpuGetInstanceLimits(WebGPU.WGPUInstanceLimits* limits);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuHasInstanceFeature")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -4639,19 +4639,19 @@ namespace WebGPU.NET.Dawn
         /// </summary>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuAdapterCreateDevice")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUDevice wgpuAdapterCreateDevice(WebGPU.WGPUAdapter adapter, WGPUDeviceDescriptor* descriptor);
+        public static partial WebGPU.WGPUDevice wgpuAdapterCreateDevice(WebGPU.WGPUAdapter adapter, WebGPU.WGPUDeviceDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuAdapterGetFeatures")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuAdapterGetFeatures(WebGPU.WGPUAdapter adapter, WGPUSupportedFeatures* features);
+        public static partial void wgpuAdapterGetFeatures(WebGPU.WGPUAdapter adapter, WebGPU.WGPUSupportedFeatures* features);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuAdapterGetFormatCapabilities")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuAdapterGetFormatCapabilities(WebGPU.WGPUAdapter adapter, WebGPU.WGPUTextureFormat format, WGPUDawnFormatCapabilities* capabilities);
+        public static partial WebGPU.WGPUStatus wgpuAdapterGetFormatCapabilities(WebGPU.WGPUAdapter adapter, WebGPU.WGPUTextureFormat format, WebGPU.WGPUDawnFormatCapabilities* capabilities);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuAdapterGetInfo")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuAdapterGetInfo(WebGPU.WGPUAdapter adapter, WGPUAdapterInfo* info);
+        public static partial WebGPU.WGPUStatus wgpuAdapterGetInfo(WebGPU.WGPUAdapter adapter, WebGPU.WGPUAdapterInfo* info);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuAdapterGetInstance")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -4659,7 +4659,7 @@ namespace WebGPU.NET.Dawn
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuAdapterGetLimits")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuAdapterGetLimits(WebGPU.WGPUAdapter adapter, WGPULimits* limits);
+        public static partial WebGPU.WGPUStatus wgpuAdapterGetLimits(WebGPU.WGPUAdapter adapter, WebGPU.WGPULimits* limits);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuAdapterHasFeature")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -4667,7 +4667,7 @@ namespace WebGPU.NET.Dawn
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuAdapterRequestDevice")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUFuture wgpuAdapterRequestDevice(WebGPU.WGPUAdapter adapter, WGPUDeviceDescriptor* descriptor, WebGPU.WGPURequestDeviceCallbackInfo callbackInfo);
+        public static partial WebGPU.WGPUFuture wgpuAdapterRequestDevice(WebGPU.WGPUAdapter adapter, WebGPU.WGPUDeviceDescriptor* descriptor, WebGPU.WGPURequestDeviceCallbackInfo callbackInfo);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuAdapterAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -4737,7 +4737,7 @@ namespace WebGPU.NET.Dawn
         /// </summary>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferCreateTexelView")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUTexelBufferView wgpuBufferCreateTexelView(WebGPU.WGPUBuffer buffer, WGPUTexelBufferViewDescriptor* descriptor);
+        public static partial WebGPU.WGPUTexelBufferView wgpuBufferCreateTexelView(WebGPU.WGPUBuffer buffer, WebGPU.WGPUTexelBufferViewDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBufferDestroy")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -4811,11 +4811,11 @@ namespace WebGPU.NET.Dawn
         /// </summary>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderBeginComputePass")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUComputePassEncoder wgpuCommandEncoderBeginComputePass(WebGPU.WGPUCommandEncoder commandEncoder, WGPUComputePassDescriptor* descriptor);
+        public static partial WebGPU.WGPUComputePassEncoder wgpuCommandEncoderBeginComputePass(WebGPU.WGPUCommandEncoder commandEncoder, WebGPU.WGPUComputePassDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderBeginRenderPass")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPURenderPassEncoder wgpuCommandEncoderBeginRenderPass(WebGPU.WGPUCommandEncoder commandEncoder, WGPURenderPassDescriptor* descriptor);
+        public static partial WebGPU.WGPURenderPassEncoder wgpuCommandEncoderBeginRenderPass(WebGPU.WGPUCommandEncoder commandEncoder, WebGPU.WGPURenderPassDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderClearBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -4827,19 +4827,19 @@ namespace WebGPU.NET.Dawn
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderCopyBufferToTexture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuCommandEncoderCopyBufferToTexture(WebGPU.WGPUCommandEncoder commandEncoder, WGPUTexelCopyBufferInfo* source, WGPUTexelCopyTextureInfo* destination, WGPUExtent3D* copySize);
+        public static partial void wgpuCommandEncoderCopyBufferToTexture(WebGPU.WGPUCommandEncoder commandEncoder, WebGPU.WGPUTexelCopyBufferInfo* source, WebGPU.WGPUTexelCopyTextureInfo* destination, WebGPU.WGPUExtent3D* copySize);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderCopyTextureToBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuCommandEncoderCopyTextureToBuffer(WebGPU.WGPUCommandEncoder commandEncoder, WGPUTexelCopyTextureInfo* source, WGPUTexelCopyBufferInfo* destination, WGPUExtent3D* copySize);
+        public static partial void wgpuCommandEncoderCopyTextureToBuffer(WebGPU.WGPUCommandEncoder commandEncoder, WebGPU.WGPUTexelCopyTextureInfo* source, WebGPU.WGPUTexelCopyBufferInfo* destination, WebGPU.WGPUExtent3D* copySize);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderCopyTextureToTexture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuCommandEncoderCopyTextureToTexture(WebGPU.WGPUCommandEncoder commandEncoder, WGPUTexelCopyTextureInfo* source, WGPUTexelCopyTextureInfo* destination, WGPUExtent3D* copySize);
+        public static partial void wgpuCommandEncoderCopyTextureToTexture(WebGPU.WGPUCommandEncoder commandEncoder, WebGPU.WGPUTexelCopyTextureInfo* source, WebGPU.WGPUTexelCopyTextureInfo* destination, WebGPU.WGPUExtent3D* copySize);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderFinish")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUCommandBuffer wgpuCommandEncoderFinish(WebGPU.WGPUCommandEncoder commandEncoder, WGPUCommandBufferDescriptor* descriptor);
+        public static partial WebGPU.WGPUCommandBuffer wgpuCommandEncoderFinish(WebGPU.WGPUCommandEncoder commandEncoder, WebGPU.WGPUCommandBufferDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuCommandEncoderInjectValidationError")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -4910,7 +4910,7 @@ namespace WebGPU.NET.Dawn
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderSetBindGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderSetBindGroup(WebGPU.WGPUComputePassEncoder computePassEncoder, uint groupIndex, WebGPU.WGPUBindGroup group, nuint dynamicOffsetCount, ref uint dynamicOffsets);
+        public static partial void wgpuComputePassEncoderSetBindGroup(WebGPU.WGPUComputePassEncoder computePassEncoder, uint groupIndex, WebGPU.WGPUBindGroup group, nuint dynamicOffsetCount, uint* dynamicOffsets);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderSetImmediateData")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -4967,31 +4967,31 @@ namespace WebGPU.NET.Dawn
         /// </summary>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateBindGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUBindGroup wgpuDeviceCreateBindGroup(WebGPU.WGPUDevice device, WGPUBindGroupDescriptor* descriptor);
+        public static partial WebGPU.WGPUBindGroup wgpuDeviceCreateBindGroup(WebGPU.WGPUDevice device, WebGPU.WGPUBindGroupDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateBindGroupLayout")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUBindGroupLayout wgpuDeviceCreateBindGroupLayout(WebGPU.WGPUDevice device, WGPUBindGroupLayoutDescriptor* descriptor);
+        public static partial WebGPU.WGPUBindGroupLayout wgpuDeviceCreateBindGroupLayout(WebGPU.WGPUDevice device, WebGPU.WGPUBindGroupLayoutDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUBuffer wgpuDeviceCreateBuffer(WebGPU.WGPUDevice device, WGPUBufferDescriptor* descriptor);
+        public static partial WebGPU.WGPUBuffer wgpuDeviceCreateBuffer(WebGPU.WGPUDevice device, WebGPU.WGPUBufferDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateCommandEncoder")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUCommandEncoder wgpuDeviceCreateCommandEncoder(WebGPU.WGPUDevice device, WGPUCommandEncoderDescriptor* descriptor);
+        public static partial WebGPU.WGPUCommandEncoder wgpuDeviceCreateCommandEncoder(WebGPU.WGPUDevice device, WebGPU.WGPUCommandEncoderDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateComputePipeline")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUComputePipeline wgpuDeviceCreateComputePipeline(WebGPU.WGPUDevice device, WGPUComputePipelineDescriptor* descriptor);
+        public static partial WebGPU.WGPUComputePipeline wgpuDeviceCreateComputePipeline(WebGPU.WGPUDevice device, WebGPU.WGPUComputePipelineDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateComputePipelineAsync")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUFuture wgpuDeviceCreateComputePipelineAsync(WebGPU.WGPUDevice device, WGPUComputePipelineDescriptor* descriptor, WebGPU.WGPUCreateComputePipelineAsyncCallbackInfo callbackInfo);
+        public static partial WebGPU.WGPUFuture wgpuDeviceCreateComputePipelineAsync(WebGPU.WGPUDevice device, WebGPU.WGPUComputePipelineDescriptor* descriptor, WebGPU.WGPUCreateComputePipelineAsyncCallbackInfo callbackInfo);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateErrorBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUBuffer wgpuDeviceCreateErrorBuffer(WebGPU.WGPUDevice device, WGPUBufferDescriptor* descriptor);
+        public static partial WebGPU.WGPUBuffer wgpuDeviceCreateErrorBuffer(WebGPU.WGPUDevice device, WebGPU.WGPUBufferDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateErrorExternalTexture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -4999,47 +4999,47 @@ namespace WebGPU.NET.Dawn
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateErrorShaderModule")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUShaderModule wgpuDeviceCreateErrorShaderModule(WebGPU.WGPUDevice device, WGPUShaderModuleDescriptor* descriptor, WebGPU.WGPUStringView errorMessage);
+        public static partial WebGPU.WGPUShaderModule wgpuDeviceCreateErrorShaderModule(WebGPU.WGPUDevice device, WebGPU.WGPUShaderModuleDescriptor* descriptor, WebGPU.WGPUStringView errorMessage);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateErrorTexture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUTexture wgpuDeviceCreateErrorTexture(WebGPU.WGPUDevice device, WGPUTextureDescriptor* descriptor);
+        public static partial WebGPU.WGPUTexture wgpuDeviceCreateErrorTexture(WebGPU.WGPUDevice device, WebGPU.WGPUTextureDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateExternalTexture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUExternalTexture wgpuDeviceCreateExternalTexture(WebGPU.WGPUDevice device, WGPUExternalTextureDescriptor* externalTextureDescriptor);
+        public static partial WebGPU.WGPUExternalTexture wgpuDeviceCreateExternalTexture(WebGPU.WGPUDevice device, WebGPU.WGPUExternalTextureDescriptor* externalTextureDescriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreatePipelineLayout")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUPipelineLayout wgpuDeviceCreatePipelineLayout(WebGPU.WGPUDevice device, WGPUPipelineLayoutDescriptor* descriptor);
+        public static partial WebGPU.WGPUPipelineLayout wgpuDeviceCreatePipelineLayout(WebGPU.WGPUDevice device, WebGPU.WGPUPipelineLayoutDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateQuerySet")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUQuerySet wgpuDeviceCreateQuerySet(WebGPU.WGPUDevice device, WGPUQuerySetDescriptor* descriptor);
+        public static partial WebGPU.WGPUQuerySet wgpuDeviceCreateQuerySet(WebGPU.WGPUDevice device, WebGPU.WGPUQuerySetDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateRenderBundleEncoder")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPURenderBundleEncoder wgpuDeviceCreateRenderBundleEncoder(WebGPU.WGPUDevice device, WGPURenderBundleEncoderDescriptor* descriptor);
+        public static partial WebGPU.WGPURenderBundleEncoder wgpuDeviceCreateRenderBundleEncoder(WebGPU.WGPUDevice device, WebGPU.WGPURenderBundleEncoderDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateRenderPipeline")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPURenderPipeline wgpuDeviceCreateRenderPipeline(WebGPU.WGPUDevice device, WGPURenderPipelineDescriptor* descriptor);
+        public static partial WebGPU.WGPURenderPipeline wgpuDeviceCreateRenderPipeline(WebGPU.WGPUDevice device, WebGPU.WGPURenderPipelineDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateRenderPipelineAsync")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUFuture wgpuDeviceCreateRenderPipelineAsync(WebGPU.WGPUDevice device, WGPURenderPipelineDescriptor* descriptor, WebGPU.WGPUCreateRenderPipelineAsyncCallbackInfo callbackInfo);
+        public static partial WebGPU.WGPUFuture wgpuDeviceCreateRenderPipelineAsync(WebGPU.WGPUDevice device, WebGPU.WGPURenderPipelineDescriptor* descriptor, WebGPU.WGPUCreateRenderPipelineAsyncCallbackInfo callbackInfo);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateSampler")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUSampler wgpuDeviceCreateSampler(WebGPU.WGPUDevice device, WGPUSamplerDescriptor* descriptor);
+        public static partial WebGPU.WGPUSampler wgpuDeviceCreateSampler(WebGPU.WGPUDevice device, WebGPU.WGPUSamplerDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateShaderModule")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUShaderModule wgpuDeviceCreateShaderModule(WebGPU.WGPUDevice device, WGPUShaderModuleDescriptor* descriptor);
+        public static partial WebGPU.WGPUShaderModule wgpuDeviceCreateShaderModule(WebGPU.WGPUDevice device, WebGPU.WGPUShaderModuleDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateTexture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUTexture wgpuDeviceCreateTexture(WebGPU.WGPUDevice device, WGPUTextureDescriptor* descriptor);
+        public static partial WebGPU.WGPUTexture wgpuDeviceCreateTexture(WebGPU.WGPUDevice device, WebGPU.WGPUTextureDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceDestroy")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5055,19 +5055,19 @@ namespace WebGPU.NET.Dawn
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceGetAdapterInfo")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuDeviceGetAdapterInfo(WebGPU.WGPUDevice device, WGPUAdapterInfo* adapterInfo);
+        public static partial WebGPU.WGPUStatus wgpuDeviceGetAdapterInfo(WebGPU.WGPUDevice device, WebGPU.WGPUAdapterInfo* adapterInfo);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceGetAHardwareBufferProperties")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuDeviceGetAHardwareBufferProperties(WebGPU.WGPUDevice device, void* handle, WGPUAHardwareBufferProperties* properties);
+        public static partial WebGPU.WGPUStatus wgpuDeviceGetAHardwareBufferProperties(WebGPU.WGPUDevice device, void* handle, WebGPU.WGPUAHardwareBufferProperties* properties);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceGetFeatures")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuDeviceGetFeatures(WebGPU.WGPUDevice device, WGPUSupportedFeatures* features);
+        public static partial void wgpuDeviceGetFeatures(WebGPU.WGPUDevice device, WebGPU.WGPUSupportedFeatures* features);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceGetLimits")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuDeviceGetLimits(WebGPU.WGPUDevice device, WGPULimits* limits);
+        public static partial WebGPU.WGPUStatus wgpuDeviceGetLimits(WebGPU.WGPUDevice device, WebGPU.WGPULimits* limits);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceGetLostFuture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5083,15 +5083,15 @@ namespace WebGPU.NET.Dawn
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceImportSharedBufferMemory")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUSharedBufferMemory wgpuDeviceImportSharedBufferMemory(WebGPU.WGPUDevice device, WGPUSharedBufferMemoryDescriptor* descriptor);
+        public static partial WebGPU.WGPUSharedBufferMemory wgpuDeviceImportSharedBufferMemory(WebGPU.WGPUDevice device, WebGPU.WGPUSharedBufferMemoryDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceImportSharedFence")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUSharedFence wgpuDeviceImportSharedFence(WebGPU.WGPUDevice device, WGPUSharedFenceDescriptor* descriptor);
+        public static partial WebGPU.WGPUSharedFence wgpuDeviceImportSharedFence(WebGPU.WGPUDevice device, WebGPU.WGPUSharedFenceDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceImportSharedTextureMemory")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUSharedTextureMemory wgpuDeviceImportSharedTextureMemory(WebGPU.WGPUDevice device, WGPUSharedTextureMemoryDescriptor* descriptor);
+        public static partial WebGPU.WGPUSharedTextureMemory wgpuDeviceImportSharedTextureMemory(WebGPU.WGPUDevice device, WebGPU.WGPUSharedTextureMemoryDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceInjectError")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5119,7 +5119,7 @@ namespace WebGPU.NET.Dawn
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceValidateTextureDescriptor")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuDeviceValidateTextureDescriptor(WebGPU.WGPUDevice device, WGPUTextureDescriptor* descriptor);
+        public static partial void wgpuDeviceValidateTextureDescriptor(WebGPU.WGPUDevice device, WebGPU.WGPUTextureDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5161,11 +5161,11 @@ namespace WebGPU.NET.Dawn
         /// </summary>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceCreateSurface")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUSurface wgpuInstanceCreateSurface(WebGPU.WGPUInstance instance, WGPUSurfaceDescriptor* descriptor);
+        public static partial WebGPU.WGPUSurface wgpuInstanceCreateSurface(WebGPU.WGPUInstance instance, WebGPU.WGPUSurfaceDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceGetWGSLLanguageFeatures")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuInstanceGetWGSLLanguageFeatures(WebGPU.WGPUInstance instance, WGPUSupportedWGSLLanguageFeatures* features);
+        public static partial void wgpuInstanceGetWGSLLanguageFeatures(WebGPU.WGPUInstance instance, WebGPU.WGPUSupportedWGSLLanguageFeatures* features);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceHasWGSLLanguageFeature")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5177,11 +5177,11 @@ namespace WebGPU.NET.Dawn
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceRequestAdapter")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUFuture wgpuInstanceRequestAdapter(WebGPU.WGPUInstance instance, WGPURequestAdapterOptions* options, WebGPU.WGPURequestAdapterCallbackInfo callbackInfo);
+        public static partial WebGPU.WGPUFuture wgpuInstanceRequestAdapter(WebGPU.WGPUInstance instance, WebGPU.WGPURequestAdapterOptions* options, WebGPU.WGPURequestAdapterCallbackInfo callbackInfo);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceWaitAny")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUWaitStatus wgpuInstanceWaitAny(WebGPU.WGPUInstance instance, nuint futureCount, WGPUFutureWaitInfo* futures, ulong timeoutNS);
+        public static partial WebGPU.WGPUWaitStatus wgpuInstanceWaitAny(WebGPU.WGPUInstance instance, nuint futureCount, WebGPU.WGPUFutureWaitInfo* futures, ulong timeoutNS);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuInstanceAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5238,11 +5238,11 @@ namespace WebGPU.NET.Dawn
         /// </summary>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueCopyExternalTextureForBrowser")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuQueueCopyExternalTextureForBrowser(WebGPU.WGPUQueue queue, WGPUImageCopyExternalTexture* source, WGPUTexelCopyTextureInfo* destination, WGPUExtent3D* copySize, WGPUCopyTextureForBrowserOptions* options);
+        public static partial void wgpuQueueCopyExternalTextureForBrowser(WebGPU.WGPUQueue queue, WebGPU.WGPUImageCopyExternalTexture* source, WebGPU.WGPUTexelCopyTextureInfo* destination, WebGPU.WGPUExtent3D* copySize, WebGPU.WGPUCopyTextureForBrowserOptions* options);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueCopyTextureForBrowser")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuQueueCopyTextureForBrowser(WebGPU.WGPUQueue queue, WGPUTexelCopyTextureInfo* source, WGPUTexelCopyTextureInfo* destination, WGPUExtent3D* copySize, WGPUCopyTextureForBrowserOptions* options);
+        public static partial void wgpuQueueCopyTextureForBrowser(WebGPU.WGPUQueue queue, WebGPU.WGPUTexelCopyTextureInfo* source, WebGPU.WGPUTexelCopyTextureInfo* destination, WebGPU.WGPUExtent3D* copySize, WebGPU.WGPUCopyTextureForBrowserOptions* options);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueOnSubmittedWorkDone")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5254,7 +5254,7 @@ namespace WebGPU.NET.Dawn
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueSubmit")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuQueueSubmit(WebGPU.WGPUQueue queue, nuint commandCount, WGPUCommandBuffer* commands);
+        public static partial void wgpuQueueSubmit(WebGPU.WGPUQueue queue, nuint commandCount, WebGPU.WGPUCommandBuffer* commands);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueWriteBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5262,7 +5262,7 @@ namespace WebGPU.NET.Dawn
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueWriteTexture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuQueueWriteTexture(WebGPU.WGPUQueue queue, WGPUTexelCopyTextureInfo* destination, void* data, nuint dataSize, WGPUTexelCopyBufferLayout* dataLayout, WGPUExtent3D* writeSize);
+        public static partial void wgpuQueueWriteTexture(WebGPU.WGPUQueue queue, WebGPU.WGPUTexelCopyTextureInfo* destination, void* data, nuint dataSize, WebGPU.WGPUTexelCopyBufferLayout* dataLayout, WebGPU.WGPUExtent3D* writeSize);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuQueueAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5308,7 +5308,7 @@ namespace WebGPU.NET.Dawn
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderFinish")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPURenderBundle wgpuRenderBundleEncoderFinish(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, WGPURenderBundleDescriptor* descriptor);
+        public static partial WebGPU.WGPURenderBundle wgpuRenderBundleEncoderFinish(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, WebGPU.WGPURenderBundleDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderInsertDebugMarker")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5324,7 +5324,7 @@ namespace WebGPU.NET.Dawn
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderSetBindGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderSetBindGroup(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, uint groupIndex, WebGPU.WGPUBindGroup group, nuint dynamicOffsetCount, ref uint dynamicOffsets);
+        public static partial void wgpuRenderBundleEncoderSetBindGroup(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, uint groupIndex, WebGPU.WGPUBindGroup group, nuint dynamicOffsetCount, uint* dynamicOffsets);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderSetImmediateData")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5387,7 +5387,7 @@ namespace WebGPU.NET.Dawn
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderExecuteBundles")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuRenderPassEncoderExecuteBundles(WebGPU.WGPURenderPassEncoder renderPassEncoder, nuint bundleCount, WGPURenderBundle* bundles);
+        public static partial void wgpuRenderPassEncoderExecuteBundles(WebGPU.WGPURenderPassEncoder renderPassEncoder, nuint bundleCount, WebGPU.WGPURenderBundle* bundles);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderInsertDebugMarker")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5415,11 +5415,11 @@ namespace WebGPU.NET.Dawn
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetBindGroup")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderSetBindGroup(WebGPU.WGPURenderPassEncoder renderPassEncoder, uint groupIndex, WebGPU.WGPUBindGroup group, nuint dynamicOffsetCount, ref uint dynamicOffsets);
+        public static partial void wgpuRenderPassEncoderSetBindGroup(WebGPU.WGPURenderPassEncoder renderPassEncoder, uint groupIndex, WebGPU.WGPUBindGroup group, nuint dynamicOffsetCount, uint* dynamicOffsets);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetBlendConstant")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuRenderPassEncoderSetBlendConstant(WebGPU.WGPURenderPassEncoder renderPassEncoder, WGPUColor* color);
+        public static partial void wgpuRenderPassEncoderSetBlendConstant(WebGPU.WGPURenderPassEncoder renderPassEncoder, WebGPU.WGPUColor* color);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetImmediateData")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5523,19 +5523,19 @@ namespace WebGPU.NET.Dawn
         /// </summary>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSharedBufferMemoryBeginAccess")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuSharedBufferMemoryBeginAccess(WebGPU.WGPUSharedBufferMemory sharedBufferMemory, WebGPU.WGPUBuffer buffer, WGPUSharedBufferMemoryBeginAccessDescriptor* descriptor);
+        public static partial WebGPU.WGPUStatus wgpuSharedBufferMemoryBeginAccess(WebGPU.WGPUSharedBufferMemory sharedBufferMemory, WebGPU.WGPUBuffer buffer, WebGPU.WGPUSharedBufferMemoryBeginAccessDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSharedBufferMemoryCreateBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUBuffer wgpuSharedBufferMemoryCreateBuffer(WebGPU.WGPUSharedBufferMemory sharedBufferMemory, WGPUBufferDescriptor* descriptor);
+        public static partial WebGPU.WGPUBuffer wgpuSharedBufferMemoryCreateBuffer(WebGPU.WGPUSharedBufferMemory sharedBufferMemory, WebGPU.WGPUBufferDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSharedBufferMemoryEndAccess")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuSharedBufferMemoryEndAccess(WebGPU.WGPUSharedBufferMemory sharedBufferMemory, WebGPU.WGPUBuffer buffer, WGPUSharedBufferMemoryEndAccessState* descriptor);
+        public static partial WebGPU.WGPUStatus wgpuSharedBufferMemoryEndAccess(WebGPU.WGPUSharedBufferMemory sharedBufferMemory, WebGPU.WGPUBuffer buffer, WebGPU.WGPUSharedBufferMemoryEndAccessState* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSharedBufferMemoryGetProperties")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuSharedBufferMemoryGetProperties(WebGPU.WGPUSharedBufferMemory sharedBufferMemory, WGPUSharedBufferMemoryProperties* properties);
+        public static partial WebGPU.WGPUStatus wgpuSharedBufferMemoryGetProperties(WebGPU.WGPUSharedBufferMemory sharedBufferMemory, WebGPU.WGPUSharedBufferMemoryProperties* properties);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSharedBufferMemoryIsDeviceLost")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5565,7 +5565,7 @@ namespace WebGPU.NET.Dawn
         /// </summary>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSharedFenceExportInfo")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuSharedFenceExportInfo(WebGPU.WGPUSharedFence sharedFence, WGPUSharedFenceExportInfo* info);
+        public static partial void wgpuSharedFenceExportInfo(WebGPU.WGPUSharedFence sharedFence, WebGPU.WGPUSharedFenceExportInfo* info);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSharedFenceAddRef")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5580,19 +5580,19 @@ namespace WebGPU.NET.Dawn
         /// </summary>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSharedTextureMemoryBeginAccess")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuSharedTextureMemoryBeginAccess(WebGPU.WGPUSharedTextureMemory sharedTextureMemory, WebGPU.WGPUTexture texture, WGPUSharedTextureMemoryBeginAccessDescriptor* descriptor);
+        public static partial WebGPU.WGPUStatus wgpuSharedTextureMemoryBeginAccess(WebGPU.WGPUSharedTextureMemory sharedTextureMemory, WebGPU.WGPUTexture texture, WebGPU.WGPUSharedTextureMemoryBeginAccessDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSharedTextureMemoryCreateTexture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUTexture wgpuSharedTextureMemoryCreateTexture(WebGPU.WGPUSharedTextureMemory sharedTextureMemory, WGPUTextureDescriptor* descriptor);
+        public static partial WebGPU.WGPUTexture wgpuSharedTextureMemoryCreateTexture(WebGPU.WGPUSharedTextureMemory sharedTextureMemory, WebGPU.WGPUTextureDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSharedTextureMemoryEndAccess")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuSharedTextureMemoryEndAccess(WebGPU.WGPUSharedTextureMemory sharedTextureMemory, WebGPU.WGPUTexture texture, WGPUSharedTextureMemoryEndAccessState* descriptor);
+        public static partial WebGPU.WGPUStatus wgpuSharedTextureMemoryEndAccess(WebGPU.WGPUSharedTextureMemory sharedTextureMemory, WebGPU.WGPUTexture texture, WebGPU.WGPUSharedTextureMemoryEndAccessState* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSharedTextureMemoryGetProperties")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuSharedTextureMemoryGetProperties(WebGPU.WGPUSharedTextureMemory sharedTextureMemory, WGPUSharedTextureMemoryProperties* properties);
+        public static partial WebGPU.WGPUStatus wgpuSharedTextureMemoryGetProperties(WebGPU.WGPUSharedTextureMemory sharedTextureMemory, WebGPU.WGPUSharedTextureMemoryProperties* properties);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSharedTextureMemoryIsDeviceLost")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5643,15 +5643,15 @@ namespace WebGPU.NET.Dawn
         /// </summary>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSurfaceConfigure")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuSurfaceConfigure(WebGPU.WGPUSurface surface, WGPUSurfaceConfiguration* config);
+        public static partial void wgpuSurfaceConfigure(WebGPU.WGPUSurface surface, WebGPU.WGPUSurfaceConfiguration* config);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSurfaceGetCapabilities")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUStatus wgpuSurfaceGetCapabilities(WebGPU.WGPUSurface surface, WebGPU.WGPUAdapter adapter, WGPUSurfaceCapabilities* capabilities);
+        public static partial WebGPU.WGPUStatus wgpuSurfaceGetCapabilities(WebGPU.WGPUSurface surface, WebGPU.WGPUAdapter adapter, WebGPU.WGPUSurfaceCapabilities* capabilities);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSurfaceGetCurrentTexture")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial void wgpuSurfaceGetCurrentTexture(WebGPU.WGPUSurface surface, WGPUSurfaceTexture* surfaceTexture);
+        public static partial void wgpuSurfaceGetCurrentTexture(WebGPU.WGPUSurface surface, WebGPU.WGPUSurfaceTexture* surfaceTexture);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuSurfacePresent")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5700,11 +5700,11 @@ namespace WebGPU.NET.Dawn
         /// </summary>
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureCreateErrorView")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUTextureView wgpuTextureCreateErrorView(WebGPU.WGPUTexture texture, WGPUTextureViewDescriptor* descriptor);
+        public static partial WebGPU.WGPUTextureView wgpuTextureCreateErrorView(WebGPU.WGPUTexture texture, WebGPU.WGPUTextureViewDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureCreateView")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static unsafe partial WebGPU.WGPUTextureView wgpuTextureCreateView(WebGPU.WGPUTexture texture, WGPUTextureViewDescriptor* descriptor);
+        public static partial WebGPU.WGPUTextureView wgpuTextureCreateView(WebGPU.WGPUTexture texture, WebGPU.WGPUTextureViewDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureDestroy")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]

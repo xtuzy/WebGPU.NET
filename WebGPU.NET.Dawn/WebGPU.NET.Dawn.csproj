@@ -9,9 +9,20 @@
     <PackageId>Yang.WebGPU.NET.Dawn</PackageId>
     <Authors>zhouyang</Authors>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Version>1.0.5</Version>
+    <Version>1.0.6</Version>
+    <PackageReleaseNotes>修复SetBindGroup的ref参数导致不能传递nullptr</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/xtuzy/WebGPU.NET</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/xtuzy/WebGPU.NET</PackageProjectUrl>
+    <PackageTags>webgpu;dawn;</PackageTags>
+    <PackageIcon>icon-128.png</PackageIcon>
   </PropertyGroup>
-
+  
+  <ItemGroup>
+    <None Include="..\icon-128.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
   <ItemGroup>
     <None Update="README.md">
       <Pack>True</Pack>

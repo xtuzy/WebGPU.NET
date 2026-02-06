@@ -9,7 +9,12 @@
     <PackageId>Yang.WebGPU.NET.Wgpu</PackageId>
     <Authors>zhouyang</Authors>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
+    <PackageReleaseNotes>修复SetBindGroup的ref参数导致不能传递nullptr</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/xtuzy/WebGPU.NET</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/xtuzy/WebGPU.NET</PackageProjectUrl>
+    <PackageTags>webgpu;wgpu;</PackageTags>
+    <PackageIcon>icon-128.png</PackageIcon>
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -22,6 +27,13 @@
 
   <ItemGroup>
     <Compile Include="..\WebGPU.NET.Dawn\WebGPU.Constants.cs" Link="WebGPU.Constants.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\icon-128.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Update="README.md">

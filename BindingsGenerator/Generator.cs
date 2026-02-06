@@ -73,6 +73,7 @@ namespace BindingsGenerator
                 TypedefCodeGenKind = CppTypedefCodeGenKind.NoWrap,
                 DefaultDllImportNameAndArguments = dllImportName,
                 ParseMacros = true,//企图用它能分析typedef WGPUFlags WGPUBufferUsage;定义的枚举，但没用
+                EnableAutoByRef = false, //期望它能不转换指针为ref，因为ref不能传递nullptr
             };
 
             options.MappingRules.Add(
