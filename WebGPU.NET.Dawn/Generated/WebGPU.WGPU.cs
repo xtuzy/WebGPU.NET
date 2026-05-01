@@ -288,15 +288,6 @@ namespace WebGPU.NET.Dawn
             Force32 = 2147483647,
         }
         
-        public enum WGPUDynamicBindingKind : int
-        {
-            Undefined = 0,
-            
-            SampledTexture = 1,
-            
-            Force32 = 2147483647,
-        }
-        
         public enum WGPUErrorFilter : int
         {
             Validation = 1,
@@ -417,101 +408,107 @@ namespace WebGPU.NET.Dawn
             
             Unorm16TextureFormats = 327692,
             
-            Snorm16TextureFormats = 327693,
+            MultiPlanarFormatExtendedUsages = 327693,
             
-            MultiPlanarFormatExtendedUsages = 327694,
+            MultiPlanarFormatP010 = 327694,
             
-            MultiPlanarFormatP010 = 327695,
+            HostMappedPointer = 327695,
             
-            HostMappedPointer = 327696,
+            MultiPlanarRenderTargets = 327696,
             
-            MultiPlanarRenderTargets = 327697,
+            MultiPlanarFormatNv12a = 327697,
             
-            MultiPlanarFormatNv12a = 327698,
+            FramebufferFetch = 327698,
             
-            FramebufferFetch = 327699,
+            BufferMapExtendedUsages = 327699,
             
-            BufferMapExtendedUsages = 327700,
+            AdapterPropertiesMemoryHeaps = 327700,
             
-            AdapterPropertiesMemoryHeaps = 327701,
+            AdapterPropertiesD3D = 327701,
             
-            AdapterPropertiesD3D = 327702,
+            AdapterPropertiesVk = 327702,
             
-            AdapterPropertiesVk = 327703,
+            DawnFormatCapabilities = 327703,
             
-            R8UnormStorage = 327704,
+            DawnDrmFormatCapabilities = 327704,
             
-            DawnFormatCapabilities = 327705,
+            MultiPlanarFormatNv16 = 327705,
             
-            DawnDrmFormatCapabilities = 327706,
+            MultiPlanarFormatNv24 = 327706,
             
-            Norm16TextureFormats = 327707,
+            MultiPlanarFormatP210 = 327707,
             
-            MultiPlanarFormatNv16 = 327708,
+            MultiPlanarFormatP410 = 327708,
             
-            MultiPlanarFormatNv24 = 327709,
+            SharedTextureMemoryVkDedicatedAllocation = 327709,
             
-            MultiPlanarFormatP210 = 327710,
+            SharedTextureMemoryAHardwareBuffer = 327710,
             
-            MultiPlanarFormatP410 = 327711,
+            SharedTextureMemoryDmaBuf = 327711,
             
-            SharedTextureMemoryVkDedicatedAllocation = 327712,
+            SharedTextureMemoryOpaqueFD = 327712,
             
-            SharedTextureMemoryAHardwareBuffer = 327713,
+            SharedTextureMemoryZirconHandle = 327713,
             
-            SharedTextureMemoryDmaBuf = 327714,
+            SharedTextureMemoryDXGISharedHandle = 327714,
             
-            SharedTextureMemoryOpaqueFD = 327715,
+            SharedTextureMemoryD3D11Texture2D = 327715,
             
-            SharedTextureMemoryZirconHandle = 327716,
+            SharedTextureMemoryIOSurface = 327716,
             
-            SharedTextureMemoryDXGISharedHandle = 327717,
+            SharedTextureMemoryEGLImage = 327717,
             
-            SharedTextureMemoryD3D11Texture2D = 327718,
+            SharedFenceVkSemaphoreOpaqueFD = 327718,
             
-            SharedTextureMemoryIOSurface = 327719,
+            SharedFenceSyncFD = 327719,
             
-            SharedTextureMemoryEGLImage = 327720,
+            SharedFenceVkSemaphoreZirconHandle = 327720,
             
-            SharedFenceVkSemaphoreOpaqueFD = 327721,
+            SharedFenceDXGISharedHandle = 327721,
             
-            SharedFenceSyncFD = 327722,
+            SharedFenceMTLSharedEvent = 327722,
             
-            SharedFenceVkSemaphoreZirconHandle = 327723,
+            SharedBufferMemoryD3D12Resource = 327723,
             
-            SharedFenceDXGISharedHandle = 327724,
+            StaticSamplers = 327724,
             
-            SharedFenceMTLSharedEvent = 327725,
+            YCbCrVulkanSamplers = 327725,
             
-            SharedBufferMemoryD3D12Resource = 327726,
+            ShaderModuleCompilationOptions = 327726,
             
-            StaticSamplers = 327727,
+            DawnLoadResolveTexture = 327727,
             
-            YCbCrVulkanSamplers = 327728,
+            DawnPartialLoadResolveTexture = 327728,
             
-            ShaderModuleCompilationOptions = 327729,
+            MultiDrawIndirect = 327729,
             
-            DawnLoadResolveTexture = 327730,
+            DawnTexelCopyBufferRowAlignment = 327730,
             
-            DawnPartialLoadResolveTexture = 327731,
+            FlexibleTextureViews = 327731,
             
-            MultiDrawIndirect = 327732,
+            ChromiumExperimentalSubgroupMatrix = 327732,
             
-            DawnTexelCopyBufferRowAlignment = 327733,
+            SharedFenceEGLSync = 327733,
             
-            FlexibleTextureViews = 327734,
+            DawnDeviceAllocatorControl = 327734,
             
-            ChromiumExperimentalSubgroupMatrix = 327735,
+            AdapterPropertiesWGPU = 327735,
             
-            SharedFenceEGLSync = 327736,
+            SharedBufferMemoryD3D12SharedMemoryFileMappingHandle = 327736,
             
-            DawnDeviceAllocatorControl = 327737,
+            SharedTextureMemoryD3D12Resource = 327737,
             
-            ChromiumExperimentalBindless = 327738,
+            ChromiumExperimentalSamplingResourceTable = 327738,
             
-            AdapterPropertiesWGPU = 327739,
+            ChromiumExperimentalSubgroupSizeControl = 327739,
             
-            SharedBufferMemoryD3D12SharedMemoryFileMappingHandle = 327740,
+            AtomicVec2uMinMax = 327740,
+            
+            Unorm16FormatsForExternalTexture = 327741,
+            
+            OpaqueYCbCrAndroidForExternalTexture = 327742,
+            
+            Unorm16Filterable = 327743,
             
             Force32 = 2147483647,
         }
@@ -880,7 +877,7 @@ namespace WebGPU.NET.Dawn
             
             RequestAdapterOptionsD3D11Device = 327694,
             
-            DawnRenderPassColorAttachmentRenderToSingleSampled = 327695,
+            DawnRenderPassSampleCount = 327695,
             
             RenderPassPixelLocalStorage = 327696,
             
@@ -994,21 +991,23 @@ namespace WebGPU.NET.Dawn
             
             DawnConsumeAdapterDescriptor = 327752,
             
-            BindGroupLayoutDynamicBindingArray = 327753,
+            TexelBufferBindingEntry = 327753,
             
-            DynamicBindingArrayLimits = 327754,
+            TexelBufferBindingLayout = 327754,
             
-            BindGroupDynamicBindingArray = 327755,
+            SharedTextureMemoryMetalEndAccessState = 327755,
             
-            TexelBufferBindingEntry = 327756,
+            AdapterPropertiesWGPU = 327756,
             
-            TexelBufferBindingLayout = 327757,
+            SharedBufferMemoryD3D12SharedMemoryFileMappingHandleDescriptor = 327757,
             
-            SharedTextureMemoryMetalEndAccessState = 327758,
+            SharedTextureMemoryD3D12ResourceDescriptor = 327758,
             
-            AdapterPropertiesWGPU = 327759,
+            RequestAdapterOptionsAngleVirtualizationGroup = 327759,
             
-            SharedBufferMemoryD3D12SharedMemoryFileMappingHandleDescriptor = 327760,
+            PipelineLayoutResourceTable = 327760,
+            
+            AdapterPropertiesExplicitComputeSubgroupSizeConfigs = 327761,
             
             Force32 = 2147483647,
         }
@@ -1296,21 +1295,21 @@ namespace WebGPU.NET.Dawn
             
             ASTC12x12UnormSrgb = 101,
             
-            R8BG8Biplanar420Unorm = 327686,
+            R8BG8Biplanar420Unorm = 327680,
             
-            R10X6BG10X6Biplanar420Unorm = 327687,
+            R10X6BG10X6Biplanar420Unorm = 327681,
             
-            R8BG8A8Triplanar420Unorm = 327688,
+            R8BG8A8Triplanar420Unorm = 327682,
             
-            R8BG8Biplanar422Unorm = 327689,
+            R8BG8Biplanar422Unorm = 327683,
             
-            R8BG8Biplanar444Unorm = 327690,
+            R8BG8Biplanar444Unorm = 327684,
             
-            R10X6BG10X6Biplanar422Unorm = 327691,
+            R10X6BG10X6Biplanar422Unorm = 327685,
             
-            R10X6BG10X6Biplanar444Unorm = 327692,
+            R10X6BG10X6Biplanar444Unorm = 327686,
             
-            External = 327693,
+            OpaqueYCbCrAndroid = 327687,
             
             Force32 = 2147483647,
         }
@@ -1481,15 +1480,15 @@ namespace WebGPU.NET.Dawn
             
             PointerCompositeAccess = 4,
             
-            SizedBindingArray = 327685,
+            UniformBufferStandardLayout = 5,
             
-            TexelBuffers = 327686,
+            SubgroupId = 6,
             
-            ChromiumPrint = 327687,
+            TextureAndSamplerLet = 7,
             
-            UniformBufferStandardLayout = 327688,
+            SubgroupUniformity = 8,
             
-            SubgroupId = 327689,
+            TextureFormatsTier1 = 9,
             
             ChromiumTestingUnimplemented = 327680,
             
@@ -1500,6 +1499,24 @@ namespace WebGPU.NET.Dawn
             ChromiumTestingShippedWithKillswitch = 327683,
             
             ChromiumTestingShipped = 327684,
+            
+            SizedBindingArray = 327685,
+            
+            TexelBuffers = 327686,
+            
+            ChromiumPrint = 327687,
+            
+            FragmentDepth = 327688,
+            
+            ImmediateAddressSpace = 327689,
+            
+            BufferView = 327691,
+            
+            FilteringParameters = 327692,
+            
+            SwizzleAssignment = 327693,
+            
+            LinearIndexing = 327694,
             
             Force32 = 2147483647,
         }
@@ -1729,26 +1746,6 @@ namespace WebGPU.NET.Dawn
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPUComputePassEncoder : IEquatable<WebGPU.WGPUComputePassEncoder>
-        {
-            public WGPUComputePassEncoder(nint handle) => Handle = handle;
-            
-            public nint Handle { get; }
-            
-            public bool Equals(WGPUComputePassEncoder other) => Handle.Equals(other.Handle);
-            
-            public override bool Equals(object obj) => obj is WGPUComputePassEncoder other && Equals(other);
-            
-            public override int GetHashCode() => Handle.GetHashCode();
-            
-            public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
-            
-            public static bool operator ==(WGPUComputePassEncoder left, WGPUComputePassEncoder right) => left.Equals(right);
-            
-            public static bool operator !=(WGPUComputePassEncoder left, WGPUComputePassEncoder right) => !left.Equals(right);
-        }
-        
-        [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public readonly partial struct WGPUComputePipeline : IEquatable<WebGPU.WGPUComputePipeline>
         {
             public WGPUComputePipeline(nint handle) => Handle = handle;
@@ -1909,46 +1906,6 @@ namespace WebGPU.NET.Dawn
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPURenderBundleEncoder : IEquatable<WebGPU.WGPURenderBundleEncoder>
-        {
-            public WGPURenderBundleEncoder(nint handle) => Handle = handle;
-            
-            public nint Handle { get; }
-            
-            public bool Equals(WGPURenderBundleEncoder other) => Handle.Equals(other.Handle);
-            
-            public override bool Equals(object obj) => obj is WGPURenderBundleEncoder other && Equals(other);
-            
-            public override int GetHashCode() => Handle.GetHashCode();
-            
-            public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
-            
-            public static bool operator ==(WGPURenderBundleEncoder left, WGPURenderBundleEncoder right) => left.Equals(right);
-            
-            public static bool operator !=(WGPURenderBundleEncoder left, WGPURenderBundleEncoder right) => !left.Equals(right);
-        }
-        
-        [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public readonly partial struct WGPURenderPassEncoder : IEquatable<WebGPU.WGPURenderPassEncoder>
-        {
-            public WGPURenderPassEncoder(nint handle) => Handle = handle;
-            
-            public nint Handle { get; }
-            
-            public bool Equals(WGPURenderPassEncoder other) => Handle.Equals(other.Handle);
-            
-            public override bool Equals(object obj) => obj is WGPURenderPassEncoder other && Equals(other);
-            
-            public override int GetHashCode() => Handle.GetHashCode();
-            
-            public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
-            
-            public static bool operator ==(WGPURenderPassEncoder left, WGPURenderPassEncoder right) => left.Equals(right);
-            
-            public static bool operator !=(WGPURenderPassEncoder left, WGPURenderPassEncoder right) => !left.Equals(right);
-        }
-        
-        [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public readonly partial struct WGPURenderPipeline : IEquatable<WebGPU.WGPURenderPipeline>
         {
             public WGPURenderPipeline(nint handle) => Handle = handle;
@@ -1966,6 +1923,26 @@ namespace WebGPU.NET.Dawn
             public static bool operator ==(WGPURenderPipeline left, WGPURenderPipeline right) => left.Equals(right);
             
             public static bool operator !=(WGPURenderPipeline left, WGPURenderPipeline right) => !left.Equals(right);
+        }
+        
+        [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
+        public readonly partial struct WGPUResourceTable : IEquatable<WebGPU.WGPUResourceTable>
+        {
+            public WGPUResourceTable(nint handle) => Handle = handle;
+            
+            public nint Handle { get; }
+            
+            public bool Equals(WGPUResourceTable other) => Handle.Equals(other.Handle);
+            
+            public override bool Equals(object obj) => obj is WGPUResourceTable other && Equals(other);
+            
+            public override int GetHashCode() => Handle.GetHashCode();
+            
+            public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
+            
+            public static bool operator ==(WGPUResourceTable left, WGPUResourceTable right) => left.Equals(right);
+            
+            public static bool operator !=(WGPUResourceTable left, WGPUResourceTable right) => !left.Equals(right);
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -2148,6 +2125,66 @@ namespace WebGPU.NET.Dawn
             public static bool operator !=(WGPUTextureView left, WGPUTextureView right) => !left.Equals(right);
         }
         
+        [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
+        public readonly partial struct WGPUComputePassEncoder : IEquatable<WebGPU.WGPUComputePassEncoder>
+        {
+            public WGPUComputePassEncoder(nint handle) => Handle = handle;
+            
+            public nint Handle { get; }
+            
+            public bool Equals(WGPUComputePassEncoder other) => Handle.Equals(other.Handle);
+            
+            public override bool Equals(object obj) => obj is WGPUComputePassEncoder other && Equals(other);
+            
+            public override int GetHashCode() => Handle.GetHashCode();
+            
+            public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
+            
+            public static bool operator ==(WGPUComputePassEncoder left, WGPUComputePassEncoder right) => left.Equals(right);
+            
+            public static bool operator !=(WGPUComputePassEncoder left, WGPUComputePassEncoder right) => !left.Equals(right);
+        }
+        
+        [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
+        public readonly partial struct WGPURenderBundleEncoder : IEquatable<WebGPU.WGPURenderBundleEncoder>
+        {
+            public WGPURenderBundleEncoder(nint handle) => Handle = handle;
+            
+            public nint Handle { get; }
+            
+            public bool Equals(WGPURenderBundleEncoder other) => Handle.Equals(other.Handle);
+            
+            public override bool Equals(object obj) => obj is WGPURenderBundleEncoder other && Equals(other);
+            
+            public override int GetHashCode() => Handle.GetHashCode();
+            
+            public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
+            
+            public static bool operator ==(WGPURenderBundleEncoder left, WGPURenderBundleEncoder right) => left.Equals(right);
+            
+            public static bool operator !=(WGPURenderBundleEncoder left, WGPURenderBundleEncoder right) => !left.Equals(right);
+        }
+        
+        [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
+        public readonly partial struct WGPURenderPassEncoder : IEquatable<WebGPU.WGPURenderPassEncoder>
+        {
+            public WGPURenderPassEncoder(nint handle) => Handle = handle;
+            
+            public nint Handle { get; }
+            
+            public bool Equals(WGPURenderPassEncoder other) => Handle.Equals(other.Handle);
+            
+            public override bool Equals(object obj) => obj is WGPURenderPassEncoder other && Equals(other);
+            
+            public override int GetHashCode() => Handle.GetHashCode();
+            
+            public override string ToString() => "0x" + (nint.Size == 8 ? Handle.ToString("X16") : Handle.ToString("X8"));
+            
+            public static bool operator ==(WGPURenderPassEncoder left, WGPURenderPassEncoder right) => left.Equals(right);
+            
+            public static bool operator !=(WGPURenderPassEncoder left, WGPURenderPassEncoder right) => !left.Equals(right);
+        }
+        
         /// <summary>
         /// Can be chained in WGPUAdapterInfo
         /// </summary>
@@ -2165,6 +2202,21 @@ namespace WebGPU.NET.Dawn
             public WebGPU.WGPUChainedStruct* next;
             
             public WebGPU.WGPUSType sType;
+        }
+        
+        /// <summary>
+        /// Can be chained in WGPUAdapterInfo
+        /// </summary>
+        [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
+        public partial struct WGPUAdapterPropertiesExplicitComputeSubgroupSizeConfigs
+        {
+            public WebGPU.WGPUChainedStruct chain;
+            
+            public uint minExplicitComputeSubgroupSize;
+            
+            public uint maxExplicitComputeSubgroupSize;
+            
+            public uint maxComputeWorkgroupSubgroups;
         }
         
         /// <summary>
@@ -2189,15 +2241,20 @@ namespace WebGPU.NET.Dawn
             public WebGPU.WGPUBackendType backendType;
         }
         
-        /// <summary>
-        /// Can be chained in WGPUBindGroupDescriptor
-        /// </summary>
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public partial struct WGPUBindGroupDynamicBindingArray
+        public partial struct WGPUBindingResource
         {
-            public WebGPU.WGPUChainedStruct chain;
+            public WebGPU.WGPUChainedStruct* nextInChain;
             
-            public uint dynamicArraySize;
+            public WebGPU.WGPUBuffer buffer;
+            
+            public ulong offset;
+            
+            public ulong size;
+            
+            public WebGPU.WGPUSampler sampler;
+            
+            public WebGPU.WGPUTextureView textureView;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -2456,14 +2513,14 @@ namespace WebGPU.NET.Dawn
         }
         
         /// <summary>
-        /// Can be chained in WGPURenderPassColorAttachment
+        /// Can be chained in WGPURenderPassDescriptor
         /// </summary>
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public partial struct WGPUDawnRenderPassColorAttachmentRenderToSingleSampled
+        public partial struct WGPUDawnRenderPassSampleCount
         {
             public WebGPU.WGPUChainedStruct chain;
             
-            public uint implicitSampleCount;
+            public uint sampleCount;
         }
         
         /// <summary>
@@ -2544,27 +2601,6 @@ namespace WebGPU.NET.Dawn
             public uint enableUnsafe;
             
             public uint enableTesting;
-        }
-        
-        [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public partial struct WGPUDynamicBindingArrayLayout
-        {
-            public WebGPU.WGPUChainedStruct* nextInChain;
-            
-            public uint start;
-            
-            public WebGPU.WGPUDynamicBindingKind kind;
-        }
-        
-        /// <summary>
-        /// Can be chained in WGPULimits
-        /// </summary>
-        [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public partial struct WGPUDynamicBindingArrayLimits
-        {
-            public WebGPU.WGPUChainedStruct chain;
-            
-            public uint maxDynamicBindingArraySize;
         }
         
         /// <summary>
@@ -2684,6 +2720,17 @@ namespace WebGPU.NET.Dawn
             public uint beginningOfPassWriteIndex;
             
             public uint endOfPassWriteIndex;
+        }
+        
+        /// <summary>
+        /// Can be chained in WGPUPipelineLayoutDescriptor
+        /// </summary>
+        [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
+        public partial struct WGPUPipelineLayoutResourceTable
+        {
+            public WebGPU.WGPUChainedStruct chain;
+            
+            public uint usesResourceTable;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -2851,6 +2898,16 @@ namespace WebGPU.NET.Dawn
             public WebGPU.WGPUChainedStruct chain;
             
             public uint xrCompatible;
+        }
+        
+        [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
+        public partial struct WGPUResourceTableDescriptor
+        {
+            public WebGPU.WGPUChainedStruct* nextInChain;
+            
+            public WebGPU.WGPUStringView label;
+            
+            public uint size;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -3083,8 +3140,6 @@ namespace WebGPU.NET.Dawn
             public WebGPU.WGPUChainedStruct chain;
             
             public void* handle;
-            
-            public uint useExternalFormat;
         }
         
         /// <summary>
@@ -3651,17 +3706,6 @@ namespace WebGPU.NET.Dawn
             public WebGPU.WGPUSampler sampler;
             
             public WebGPU.WGPUTextureView textureView;
-        }
-        
-        /// <summary>
-        /// Can be chained in WGPUBindGroupLayoutDescriptor
-        /// </summary>
-        [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
-        public partial struct WGPUBindGroupLayoutDynamicBindingArray
-        {
-            public WebGPU.WGPUChainedStruct chain;
-            
-            public WebGPU.WGPUDynamicBindingArrayLayout dynamicArray;
         }
         
         [global::System.Runtime.InteropServices.StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -4701,10 +4745,6 @@ namespace WebGPU.NET.Dawn
         /// <summary>
         /// Methods of BindGroup
         /// </summary>
-        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBindGroupDestroy")]
-        [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuBindGroupDestroy(WebGPU.WGPUBindGroup bindGroup);
-        
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuBindGroupSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
         public static partial void wgpuBindGroupSetLabel(WebGPU.WGPUBindGroup bindGroup, WebGPU.WGPUStringView label);
@@ -4912,9 +4952,9 @@ namespace WebGPU.NET.Dawn
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
         public static partial void wgpuComputePassEncoderSetBindGroup(WebGPU.WGPUComputePassEncoder computePassEncoder, uint groupIndex, WebGPU.WGPUBindGroup group, nuint dynamicOffsetCount, uint* dynamicOffsets);
         
-        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderSetImmediateData")]
+        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderSetImmediates")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuComputePassEncoderSetImmediateData(WebGPU.WGPUComputePassEncoder computePassEncoder, uint offset, void* data, nuint size);
+        public static partial void wgpuComputePassEncoderSetImmediates(WebGPU.WGPUComputePassEncoder computePassEncoder, uint offset, void* data, nuint size);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -4923,6 +4963,10 @@ namespace WebGPU.NET.Dawn
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderSetPipeline")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
         public static partial void wgpuComputePassEncoderSetPipeline(WebGPU.WGPUComputePassEncoder computePassEncoder, WebGPU.WGPUComputePipeline pipeline);
+        
+        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderSetResourceTable")]
+        [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
+        public static partial void wgpuComputePassEncoderSetResourceTable(WebGPU.WGPUComputePassEncoder computePassEncoder, WebGPU.WGPUResourceTable table);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuComputePassEncoderWriteTimestamp")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5028,6 +5072,10 @@ namespace WebGPU.NET.Dawn
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateRenderPipelineAsync")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
         public static partial WebGPU.WGPUFuture wgpuDeviceCreateRenderPipelineAsync(WebGPU.WGPUDevice device, WebGPU.WGPURenderPipelineDescriptor* descriptor, WebGPU.WGPUCreateRenderPipelineAsyncCallbackInfo callbackInfo);
+        
+        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateResourceTable")]
+        [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
+        public static partial WebGPU.WGPUResourceTable wgpuDeviceCreateResourceTable(WebGPU.WGPUDevice device, WebGPU.WGPUResourceTableDescriptor* descriptor);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuDeviceCreateSampler")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5326,9 +5374,9 @@ namespace WebGPU.NET.Dawn
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
         public static partial void wgpuRenderBundleEncoderSetBindGroup(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, uint groupIndex, WebGPU.WGPUBindGroup group, nuint dynamicOffsetCount, uint* dynamicOffsets);
         
-        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderSetImmediateData")]
+        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderSetImmediates")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderBundleEncoderSetImmediateData(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, uint offset, void* data, nuint size);
+        public static partial void wgpuRenderBundleEncoderSetImmediates(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, uint offset, void* data, nuint size);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderSetIndexBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5341,6 +5389,10 @@ namespace WebGPU.NET.Dawn
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderSetPipeline")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
         public static partial void wgpuRenderBundleEncoderSetPipeline(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, WebGPU.WGPURenderPipeline pipeline);
+        
+        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderSetResourceTable")]
+        [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
+        public static partial void wgpuRenderBundleEncoderSetResourceTable(WebGPU.WGPURenderBundleEncoder renderBundleEncoder, WebGPU.WGPUResourceTable table);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderBundleEncoderSetVertexBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5421,9 +5473,9 @@ namespace WebGPU.NET.Dawn
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
         public static partial void wgpuRenderPassEncoderSetBlendConstant(WebGPU.WGPURenderPassEncoder renderPassEncoder, WebGPU.WGPUColor* color);
         
-        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetImmediateData")]
+        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetImmediates")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
-        public static partial void wgpuRenderPassEncoderSetImmediateData(WebGPU.WGPURenderPassEncoder renderPassEncoder, uint offset, void* data, nuint size);
+        public static partial void wgpuRenderPassEncoderSetImmediates(WebGPU.WGPURenderPassEncoder renderPassEncoder, uint offset, void* data, nuint size);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetIndexBuffer")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5436,6 +5488,10 @@ namespace WebGPU.NET.Dawn
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetPipeline")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
         public static partial void wgpuRenderPassEncoderSetPipeline(WebGPU.WGPURenderPassEncoder renderPassEncoder, WebGPU.WGPURenderPipeline pipeline);
+        
+        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetResourceTable")]
+        [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
+        public static partial void wgpuRenderPassEncoderSetResourceTable(WebGPU.WGPURenderPassEncoder renderPassEncoder, WebGPU.WGPUResourceTable table);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPassEncoderSetScissorRect")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
@@ -5483,6 +5539,37 @@ namespace WebGPU.NET.Dawn
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuRenderPipelineRelease")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
         public static partial void wgpuRenderPipelineRelease(WebGPU.WGPURenderPipeline renderPipeline);
+        
+        /// <summary>
+        /// Methods of ResourceTable
+        /// </summary>
+        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuResourceTableDestroy")]
+        [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
+        public static partial void wgpuResourceTableDestroy(WebGPU.WGPUResourceTable resourceTable);
+        
+        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuResourceTableGetSize")]
+        [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
+        public static partial uint wgpuResourceTableGetSize(WebGPU.WGPUResourceTable resourceTable);
+        
+        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuResourceTableInsertBinding")]
+        [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
+        public static partial uint wgpuResourceTableInsertBinding(WebGPU.WGPUResourceTable resourceTable, WebGPU.WGPUBindingResource* resource);
+        
+        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuResourceTableRemoveBinding")]
+        [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
+        public static partial WebGPU.WGPUStatus wgpuResourceTableRemoveBinding(WebGPU.WGPUResourceTable resourceTable, uint slot);
+        
+        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuResourceTableUpdate")]
+        [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
+        public static partial WebGPU.WGPUStatus wgpuResourceTableUpdate(WebGPU.WGPUResourceTable resourceTable, uint slot, WebGPU.WGPUBindingResource* resource);
+        
+        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuResourceTableAddRef")]
+        [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
+        public static partial void wgpuResourceTableAddRef(WebGPU.WGPUResourceTable resourceTable);
+        
+        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuResourceTableRelease")]
+        [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
+        public static partial void wgpuResourceTableRelease(WebGPU.WGPUResourceTable resourceTable);
         
         /// <summary>
         /// Methods of Sampler
@@ -5734,6 +5821,10 @@ namespace WebGPU.NET.Dawn
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
         public static partial uint wgpuTextureGetSampleCount(WebGPU.WGPUTexture texture);
         
+        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureGetTextureBindingViewDimension")]
+        [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
+        public static partial WebGPU.WGPUTextureViewDimension wgpuTextureGetTextureBindingViewDimension(WebGPU.WGPUTexture texture);
+        
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureGetUsage")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
         public static partial WebGPU.WGPUTextureUsage wgpuTextureGetUsage(WebGPU.WGPUTexture texture);
@@ -5749,6 +5840,10 @@ namespace WebGPU.NET.Dawn
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureSetLabel")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
         public static partial void wgpuTextureSetLabel(WebGPU.WGPUTexture texture, WebGPU.WGPUStringView label);
+        
+        [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureSetOwnershipForMemoryDump")]
+        [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]
+        public static partial void wgpuTextureSetOwnershipForMemoryDump(WebGPU.WGPUTexture texture, ulong ownerGuid);
         
         [global::System.Runtime.InteropServices.LibraryImport(webgpu_native_dll_name, EntryPoint = "wgpuTextureUnpin")]
         [UnmanagedCallConv(CallConvs = new Type[] { typeof(CallConvCdecl) })]

@@ -10,6 +10,14 @@
         private const string webgpu_native_dll_name = "webgpu_dawn";
 #endif
 
+        partial struct WGPUBindingResource
+        {
+            public WGPUBindingResource()
+            {
+                this.size = WGPU_WHOLE_SIZE;
+            }
+        }
+
         partial struct WGPUCopyTextureForBrowserOptions
         {
             public WGPUCopyTextureForBrowserOptions()
@@ -19,11 +27,11 @@
             }
         }
 
-        partial struct WGPUDawnRenderPassColorAttachmentRenderToSingleSampled
+        partial struct WGPUDawnRenderPassSampleCount
         {
-            public WGPUDawnRenderPassColorAttachmentRenderToSingleSampled()
+            public WGPUDawnRenderPassSampleCount()
             {
-                this.implicitSampleCount = 1;
+                this.sampleCount = 1;
             }
         }
 
